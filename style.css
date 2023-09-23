@@ -10,8 +10,8 @@ body {
 }
 
 .container{
-  width: 302px;
-  margin: 1px auto;
+  width: 304px;
+  margin: 0 auto;
 }
 
 
@@ -21,7 +21,7 @@ body {
   padding: 10px;
   position: fixed;
   z-index: 2;
-  
+  background-color: #074097;
 }
 
 .nav__wrapper{
@@ -128,4 +128,89 @@ body {
   overflow: hidden;
   width: 100%;
   height: 70px;
+  position: absolute;
+  bottom: -30px;
+}
+
+
+.secondBlock{
+  height: 1993px;
+  background-color: #084097;
+  padding-top: 70px;
+}
+
+.secondBlock__header{
+  font-size: 54px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #fff;
+}
+
+.secondBlock__title{
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.secondBlock__title span{
+  color: #e29a01;
+}
+
+.secondBlock__list{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.secondBlock__item{
+  display: flex;
+  column-gap: 15px;
+}
+
+.secondBlock__item-number{
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 400;
+  align-self: start;
+  opacity: 0.4;
+  padding-top: 5px;
+}
+
+.secondBlock__item-title{
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 400;
+  align-self: center;
+}
+
+.secondBlock__secondList{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.secondBlock__secondListItem{
+  display: flex;
+  column-gap: 25px;
+}
+
+.secondBlock__secondItem-number{
+  color: rgb(226, 154, 1);
+  font-size: 40px;
+  line-height: 1.55;
+  font-weight: 400;
+  width: 70px;
+}
+
+.line{
+  width: 300px;
+  height: 1px;
+  background-color: #fff;
+  opacity: 0.25;
 }
