@@ -695,6 +695,84 @@ selectionButtonsMenu.addEventListener('click', (e) => {
         ).join('')    
 })
 
+// redrawing a block with a menu 1200px
+
+const selectionButtonsMenu1200px = document.querySelector('.fourthAndThirdBlockTogether__menuWrapper')
+const buttonsSelectionButtonsMenu1200px = document.querySelectorAll('.fourthAndThirdBlockTogether1200px__text')
+
+selectionButtonsMenu1200px.addEventListener('click', (e) => {
+
+    buttonsSelectionButtonsMenu1200px.forEach(button => {
+        button.classList.remove('changesBg')
+    })
+
+    let target = e.target;
+
+    target.classList.add('changesBg')
+
+
+    allItemsField.innerHTML = allCatalog
+        .map(
+            (task) => {
+                if (task.type === target.dataset.modal && target.dataset.modal != 'all') {
+                    if (task.type === 'bathhouse') {
+                        return `
+                        <div class="fourthAndThirdBlockTogether__tile">
+                            <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
+                            <a href="#" class="fourthAndThirdBlockTogether__link">
+                                <img src="./assets/icons/textSvg.svg" alt="link">
+                            </a>
+                        </div>
+                    `
+                    } else {
+                        return `
+                            <div class="fourthAndThirdBlockTogether__tile">
+                                <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.mortgage}</div>
+                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                    <img src="./assets/icons/textSvg.svg" alt="link">
+                                </a>
+                            </div>
+                        `
+                    } 
+                } else if (target.dataset.modal == 'all') {
+                    if (Object.keys(task).length == 7) {
+                        return `
+                            <div class="fourthAndThirdBlockTogether__tile">
+                                <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.mortgage}</div>
+                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                    <img src="./assets/icons/textSvg.svg" alt="link">
+                                </a>
+                            </div>
+                        `
+                    } else if (Object.keys(task).length == 6){
+                        return `
+                            <div class="fourthAndThirdBlockTogether__tile">
+                                <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
+                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                    <img src="./assets/icons/textSvg.svg" alt="link">
+                                </a>
+                            </div>
+                        `
+                    }
+                }
+            }
+        ).join('')    
+})
+
 
 
 
