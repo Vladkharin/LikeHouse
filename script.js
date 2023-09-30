@@ -70,6 +70,7 @@ window.addEventListener('scroll', () => {
     }
 })
 
+
 // create catalog items house media max 480px
 
 
@@ -83,7 +84,7 @@ let itemsHouse = [
         square: 'Площадь: 71 м2',
         coust:  'Стоимость: 2 329 000 руб.',
         mortgage: 'В ипотеку: от 12 698 руб.',
-        type: 'bathhouse'
+        type: 'two-storey house'
     } ,
     {
         img: './assets/img/secondTile.webp',
@@ -92,7 +93,7 @@ let itemsHouse = [
         square: 'Площадь: 82.4 м2',
         coust:  'Стоимость: 2 729 000 руб.',
         mortgage: 'В ипотеку: от 15 029 руб.',
-        type: 'bathhouse'
+        type: 'two-storey house'
     } ,
     {
         img: './assets/img/thirdTile.webp',
@@ -106,181 +107,181 @@ let itemsHouse = [
     {
         img: './assets/img/fourthTile.webp',
         alt: 'fourthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        size: 'Размер: 7х8',
+        square: 'Площадь: 94.7 м2',
+        coust:  'Стоимость: 3 050 000 руб.',
+        mortgage: 'В ипотеку: от 16 899 руб.',
+        type: 'two-storey house'
     },
     {
         img: './assets/img/fifthTile.webp',
         alt: 'fifthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
+        size: 'Размер: 7х8',
+        square: 'Площадь: 50 м2',
+        coust:  'Стоимость: 2 329 000 руб.',
+        mortgage: 'В ипотеку: от 12 698 руб.',
         type: 'cottage'
     },
     {
         img: './assets/img/sixthTile.webp',
         alt: 'sixthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        size: 'Размер: 8х8',
+        square: 'Площадь: 109 м2',
+        coust:  'Стоимость: 3 329 000 руб.',
+        mortgage: 'В ипотеку: от 18 525 руб.',
+        type: 'two-storey house'
     },
     {
         img: './assets/img/seventhTile.webp',
         alt: 'seventhTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
+        size: 'Размер: 10х8',
+        square: 'Площадь: 73 м2',
+        coust:  'Стоимость: 2 729 000 руб.',
+        mortgage: 'В ипотеку: от 15 029 руб.',
         type: 'cottage'
     },
     {
         img: './assets/img/eighthTile.webp',
         alt: 'eighthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        size: 'Размер: 8х9',
+        square: 'Площадь: 126 м2',
+        coust:  'Стоимость: 3 690 000 руб.',
+        mortgage: 'В ипотеку: от 20 629 руб.',
+        type: 'two-storey house'
     },
     {
         img: './assets/img/ninthTile.webp',
         alt: 'ninthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
+        size: 'Размер: 12х8',
+        square: 'Площадь: 87 м2',
+        coust:  'Стоимость: 3 229 000 руб.',
+        mortgage: 'В ипотеку: от 17 890 руб.',
         type: 'cottage'
     },
     {
         img: './assets/img/tenthTile.webp',
         alt: 'tenthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        size: 'Размер: 10х9.5',
+        square: 'Площадь: 133 м2',
+        coust:  'Стоимость: 3 970 000 руб.',
+        mortgage: 'В ипотеку: от 22 260 руб.',
+        type: 'two-storey house'
     },
     {
         img: './assets/img/eleventhTile.webp',
         alt: 'eleventhTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        size: 'Размер: 10х9.5 передняя веранда',
+        square: 'Площадь: 133 м2',
+        coust:  'Стоимость: 4 050 000 руб.',
+        mortgage: 'В ипотеку: от 22 727 руб.',
+        type: 'two-storey house'
     },
     {
         img: './assets/img/twelfthTile.webp',
         alt: 'twelfthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        size: 'Размер: 12х6',
+        square: 'Площадь: 106  м2',
+        coust:  'Стоимость: 4 270 000 руб.',
+        mortgage: 'В ипотеку: от 24 009 руб.',
+        type: 'two-storey house'
     },
     {
         img: './assets/img/thirdteenthTile.webp',
         alt: 'thirdteenthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
+        size: 'Размер: 12х8',
+        square: 'Площадь: 87 м2',
+        coust:  'Стоимость:  3 340 000 руб.',
+        mortgage: 'В ипотеку: от 18 589 руб.',
         type: 'cottage'
     },
     {
         img: './assets/img/fourteenthTile.webp',
         alt: 'fourteenthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        size: 'Размер: 11х7.5',
+        square: 'Площадь: 103 м2',
+        coust:  'Стоимость: 4 029 000 руб.',
+        mortgage: 'В ипотеку: от 22 604 руб.',
+        type: 'two-storey house'
     },
     {
         img: './assets/img/fifteenthTile.webp',
         alt: 'fifteenthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        size: 'Размер: 12х9.5',
+        square: 'Площадь: 153 м2',
+        coust:  'Стоимость: 5 029 000 руб.',
+        mortgage: 'В ипотеку: от 28 432 руб.',
+        type: 'two-storey house'
     },
     {
         img: './assets/img/sixteenthTile.webp',
         alt: 'sixteenthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        size: 'Размер: 8х10.5',
+        square: 'Площадь: 120 м2',
+        coust:  'Стоимость: 3 640 000 руб.',
+        mortgage: 'В ипотеку: от 20 337 руб.',
+        type: 'two-storey house'
     },
     {
         img: './assets/img/seventeenthTile.webp',
         alt: 'seventeenthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        size: 'Размер: 10х7.5',
+        square: 'Площадь: 114 м2',
+        coust:  'Стоимость: 3 660 000 руб.',
+        mortgage: 'В ипотеку: от 20 454 руб.',
+        type: 'two-storey house'
     },
     {
         img: './assets/img/eigthteenthTile.webp',
         alt: 'eigthteenthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
+        size: 'Размер: 21х8',
+        square: 'Площадь: 91 м2',
+        coust:  'Стоимость: 4 710 000 руб.',
+        mortgage: 'В ипотеку: от 26 573 руб.',
         type: 'cottage'
     },
     {
         img: './assets/img/nineteenthTile.webp',
         alt: 'nineteenthTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
+        size: 'Размер: 12х8',
+        square: 'Площадь: 89.7 м2',
+        coust:  'Стоимость: 3 229 000 руб.',
+        mortgage: 'В ипотеку: от 17 890 руб.',
         type: 'cottage'
     },
     {
         img: './assets/img/twentieth.webp',
         alt: 'twentieth',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
+        size: 'Размер: 6х6',
+        square: 'Площадь: 54 м2',
+        coust:  'Стоимость: 1 950 000 руб.',
+        mortgage: 'В ипотеку: от 10 489 руб.',
         type: 'cottage'
     },
     {
         img: './assets/img/twentyFirstTile.webp',
         alt: 'twentyFirstTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        size: 'Размер: 6х6',
+        square: 'Площадь: 36 м2',
+        coust:  'Стоимость: 1 349 000 руб.',
+        mortgage: 'В ипотеку: от 6 987 руб.',
+        type: 'two-storey house'
     },
     {
         img: './assets/img/twentySecondTile.webp',
         alt: 'twentySecondTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
+        size: 'Размер: 11х9',
+        square: 'Площадь: 90 м2',
+        coust:  'Стоимость: 3 239 000 руб.',
+        mortgage: 'В ипотеку: от 18 001 руб.',
         type: 'cottage'
     },
     {
         img: './assets/img/twentyThirdTile.webp',
         alt: 'twentyThirdTile',
-        size: 'Размер: 12х12',
-        square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
-        mortgage: 'В ипотеку: от 20 600 руб.',
+        size: 'Размер: 8х10',
+        square: 'Площадь: 73 м2',
+        coust:  'Стоимость: 2 750 000 руб.',
+        mortgage: 'В ипотеку: от 15 151 руб.',
         type: 'cottage'
     }
 ]
@@ -353,6 +354,8 @@ function createBathhouseElem () {
         .join('')
         console.log(itemsBathhouse)
 }
+
+
 
 const mediaQuerrymax480 = window.matchMedia('(max-width: 480px)')
 
@@ -556,6 +559,144 @@ prevModal.addEventListener('click', () => {
 
     slidesFieldModal.style.transform = `translateX(-${offsetModal}px)`
 })
+
+
+//open and close selection menu
+
+const buttonOpeningHouseSelectionMenu = document.querySelector('.fourthAndThirdBlockTogether__button');
+const selectionMenu = document.querySelector('.fourthAndThirdBlockTogether__menu')
+
+buttonOpeningHouseSelectionMenu.addEventListener('click', () => {
+    if(selectionMenu.classList.contains('notVisible')){
+        selectionMenu.classList.remove('notVisible')
+        selectionMenu.classList.add('active')
+    } else {
+        selectionMenu.classList.remove('active')
+        selectionMenu.classList.add('notVisible')
+    }
+})
+
+
+//catalog of baths, houses
+
+const allItemsField = document.querySelector('.fourthAndThirdBlockTogether__inner')
+const allCatalog = [...itemsHouse, ...itemsBathhouse]
+
+function createAllElem (arr) {
+    allItemsField.innerHTML = arr
+        .map(
+            (task) => {
+                if (Object.keys(task).length == 7) {
+                    return `
+                        <div class="fourthAndThirdBlockTogether__tile">
+                            <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.mortgage}</div>
+                            <a href="#" class="fourthAndThirdBlockTogether__link">
+                                <img src="./assets/icons/textSvg.svg" alt="link">
+                            </a>
+                        </div>
+                    `
+                } else if (Object.keys(task).length == 6){
+                    return `
+                        <div class="fourthAndThirdBlockTogether__tile">
+                            <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
+                            <a href="#" class="fourthAndThirdBlockTogether__link">
+                                <img src="./assets/icons/textSvg.svg" alt="link">
+                            </a>
+                        </div>
+                    `
+                }
+            } 
+        )
+        .join('')
+}
+
+createAllElem(allCatalog)
+
+
+// redrawing a block with a menu
+
+const selectionButtonsMenu = document.querySelector('.fourthAndThirdBlockTogether__menu')
+
+selectionButtonsMenu.addEventListener('click', (e) => {
+
+    let target = e.target;
+
+    buttonOpeningHouseSelectionMenu.textContent = target.textContent
+    selectionMenu.classList.remove('active')
+    selectionMenu.classList.add('notVisible')
+
+
+    allItemsField.innerHTML = allCatalog
+        .map(
+            (task) => {
+                if (task.type === target.dataset.modal && target.dataset.modal != 'all') {
+                    if (task.type === 'bathhouse') {
+                        return `
+                        <div class="fourthAndThirdBlockTogether__tile">
+                            <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
+                            <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
+                            <a href="#" class="fourthAndThirdBlockTogether__link">
+                                <img src="./assets/icons/textSvg.svg" alt="link">
+                            </a>
+                        </div>
+                    `
+                    } else {
+                        return `
+                            <div class="fourthAndThirdBlockTogether__tile">
+                                <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.mortgage}</div>
+                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                    <img src="./assets/icons/textSvg.svg" alt="link">
+                                </a>
+                            </div>
+                        `
+                    } 
+                } else if (target.dataset.modal == 'all') {
+                    if (Object.keys(task).length == 7) {
+                        return `
+                            <div class="fourthAndThirdBlockTogether__tile">
+                                <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.mortgage}</div>
+                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                    <img src="./assets/icons/textSvg.svg" alt="link">
+                                </a>
+                            </div>
+                        `
+                    } else if (Object.keys(task).length == 6){
+                        return `
+                            <div class="fourthAndThirdBlockTogether__tile">
+                                <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
+                                <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
+                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                    <img src="./assets/icons/textSvg.svg" alt="link">
+                                </a>
+                            </div>
+                        `
+                    }
+                }
+            }
+        ).join('')    
+})
+
+
+
 
 
 
