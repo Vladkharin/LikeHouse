@@ -478,6 +478,7 @@ const modal = document.querySelector('.modalImgSlider')
 const buttonCloseModal = document.querySelector('.modalImgSlider__close')
 const buttonMagnifyingGlass = document.querySelector('.modalImgSlider__magnifyingGlass')
 
+modal.style.visibility = 'hidden'
 
 slidesOpenModal.forEach(slide => {
     
@@ -514,52 +515,41 @@ buttonCloseModal.addEventListener('click', () => {
 const slidesModal = document.querySelectorAll('.modalImgSlider__img')
 const prevModal = document.querySelector('.modalImgSlider__button-left')
 const nextModal = document.querySelector('.modalImgSlider__button-right')
-const slidesWrapperModal = document.querySelector('.modalImgSlider')
-const slidesFieldModal = document.querySelector('.modalImgSlider__field')
-let widthModal = window.getComputedStyle(slidesWrapperModal).width;
 
-console.log(slidesFourthBlock.length)
+let slideIndex = 1;
 
-let slideIndexModal = 1;
-let offsetModal = 0;
-
-slidesFieldModal.style.width = 100 * slidesModal.length  + '%';
-slidesFieldModal.style.transition = "0.0s all"
-slidesFieldModal.style.columnGap = '20px'
+showSlides(slideIndex)
 
 
-slidesWrapperModal.style.visibility = 'hidden'
+function showSlides(n) {
+    if (n > slidesModal.length) {
+        slideIndex = 1
+    } 
 
-slidesModal.forEach((slide) => {
-    slide.style.width = widthModal;
-});
-
-widthModal = +widthModal.slice(0, widthModal.length - 2) + 20
-
-nextModal.addEventListener('click', () => {
-    if (offsetModal == widthModal * (slidesModal.length - 1)) {
-        offsetModal = 0
-    } else {
-        offsetModal += widthModal
+    if  (n < 1) {
+        slideIndex = slidesModal.length
     }
-    
-    
-    slidesFieldModal.style.transform = `translateX(-${offsetModal}px)`
+
+    console.log(slidesModal.length)
+    console.log(slideIndex)
+
+    slidesModal.forEach( slide => slide.style.display = 'none')
+
+    slidesModal[slideIndex - 1].style.display = 'block'
+
+}
+function plusSlides(n) {
+    showSlides(slideIndex += n)
+}
+
+prevModal.addEventListener('click', function(){
+    plusSlides(-1)
 })
 
 
-prevModal.addEventListener('click', () => {
-    
-    if ( offsetModal == 0) {
-        offsetModal = widthModal * (slidesModal.length - 1)
-    } else {
-        offsetModal -= widthModal
-    }
-
-
-    slidesFieldModal.style.transform = `translateX(-${offsetModal}px)`
+nextModal.addEventListener('click', function(){
+    plusSlides(1)
 })
-
 
 //open and close selection menu
 

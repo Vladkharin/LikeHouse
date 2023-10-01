@@ -871,11 +871,14 @@ body {
   position: fixed;
   top: 0;
   z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modalImgSlider__field{
   display: flex;
-  height: 100%;
+  height: 320px;
 }
 
 .modalImgSlider__field img{
@@ -1239,6 +1242,11 @@ body {
     display: flex;
     column-gap: 120px;
   }
+
+  .modalImgSlider__field img{
+    width: 481px;
+    height: 481px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -1359,6 +1367,11 @@ body {
     position: absolute;
     right: 60px;
     bottom: 20px;
+  }
+
+  .modalImgSlider__field img{
+    width: 640px;
+    height: 640px;
   }
 }
 
@@ -1486,6 +1499,11 @@ body {
   .fifthBlock__img{
     width: 220px;
     height: 220px;
+  }
+
+  .modalImgSlider__field img{
+    width: 926px;
+    height: 926px;
   }
   
 }
@@ -1654,6 +1672,11 @@ body {
 
   .secondBlock__wrapper{
     position: relative;
+  }
+
+  .modalImgSlider__field img{
+    width: 896px;
+    height: 896px;
   }
 }
 
