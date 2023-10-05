@@ -692,7 +692,7 @@ body {
 
 .footer{
   background-color: #000000;
-  padding-top: 60px;
+  padding: 60px 0;
 }
 
 .footer__wrapper{

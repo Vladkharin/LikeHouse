@@ -14,7 +14,6 @@ menuOpen.addEventListener('click', () => {
 })
 
 menu.addEventListener('click', (e) => {
-    console.log(e.target)
     if (e.target.classList.contains('menu__Close')){
         menu.classList.remove('visible');
         document.body.style.overflow = '';
@@ -40,16 +39,13 @@ const textDetailedInforamtion = document.querySelectorAll('.fifthBlock__item-sub
 
 buttonWrapper.addEventListener('click', (e) => {
     let target = e.target
-    console.log(target)
     if (e.target.classList.contains('fifthBlock__item-plus')) {
         if (e.target.classList.contains('rotate')) {
             e.target.nextElementSibling.style.maxHeight = '0px'
             e.target.classList.remove('rotate')
-            console.log('good')
         } else {
             e.target.nextElementSibling.style.maxHeight = '190px'
             e.target.classList.add('rotate')
-            console.log('good2')
         }
     }
 });
@@ -84,7 +80,8 @@ let itemsHouse = [
         square: 'Площадь: 71 м2',
         coust:  'Стоимость: 2 329 000 руб.',
         mortgage: 'В ипотеку: от 12 698 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house', 
+        link: '6x7.html'
     } ,
     {
         img: './assets/img/secondTile.webp',
@@ -93,7 +90,8 @@ let itemsHouse = [
         square: 'Площадь: 82.4 м2',
         coust:  'Стоимость: 2 729 000 руб.',
         mortgage: 'В ипотеку: от 15 029 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '7x7.html'
     } ,
     {
         img: './assets/img/thirdTile.webp',
@@ -102,7 +100,8 @@ let itemsHouse = [
         square: 'Площадь: 97 м2',
         coust:  'Стоимость: 3 685 000 руб.',
         mortgage: 'В ипотеку: от 20 600 руб.',
-        type: 'cottage'
+        type: 'cottage',
+        link: '12x12.html'
     },
     {
         img: './assets/img/fourthTile.webp',
@@ -111,16 +110,18 @@ let itemsHouse = [
         square: 'Площадь: 94.7 м2',
         coust:  'Стоимость: 3 050 000 руб.',
         mortgage: 'В ипотеку: от 16 899 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '7x8.html'
     },
     {
         img: './assets/img/fifthTile.webp',
         alt: 'fifthTile',
-        size: 'Размер: 7х8',
+        size: 'Размер: 7х8 одноэтажный',
         square: 'Площадь: 50 м2',
         coust:  'Стоимость: 2 329 000 руб.',
         mortgage: 'В ипотеку: от 12 698 руб.',
-        type: 'cottage'
+        type: 'cottage',
+        link: '7x8-one.html'
     },
     {
         img: './assets/img/sixthTile.webp',
@@ -129,7 +130,8 @@ let itemsHouse = [
         square: 'Площадь: 109 м2',
         coust:  'Стоимость: 3 329 000 руб.',
         mortgage: 'В ипотеку: от 18 525 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '8x8.html'
     },
     {
         img: './assets/img/seventhTile.webp',
@@ -138,7 +140,8 @@ let itemsHouse = [
         square: 'Площадь: 73 м2',
         coust:  'Стоимость: 2 729 000 руб.',
         mortgage: 'В ипотеку: от 15 029 руб.',
-        type: 'cottage'
+        type: 'cottage',
+        link: '10x8.html'
     },
     {
         img: './assets/img/eighthTile.webp',
@@ -147,7 +150,8 @@ let itemsHouse = [
         square: 'Площадь: 126 м2',
         coust:  'Стоимость: 3 690 000 руб.',
         mortgage: 'В ипотеку: от 20 629 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '8x9.html'
     },
     {
         img: './assets/img/ninthTile.webp',
@@ -156,7 +160,8 @@ let itemsHouse = [
         square: 'Площадь: 87 м2',
         coust:  'Стоимость: 3 229 000 руб.',
         mortgage: 'В ипотеку: от 17 890 руб.',
-        type: 'cottage'
+        type: 'cottage',
+        link: '12x8.html'
     },
     {
         img: './assets/img/tenthTile.webp',
@@ -165,7 +170,8 @@ let itemsHouse = [
         square: 'Площадь: 133 м2',
         coust:  'Стоимость: 3 970 000 руб.',
         mortgage: 'В ипотеку: от 22 260 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '10x9.html'
     },
     {
         img: './assets/img/eleventhTile.webp',
@@ -174,7 +180,8 @@ let itemsHouse = [
         square: 'Площадь: 133 м2',
         coust:  'Стоимость: 4 050 000 руб.',
         mortgage: 'В ипотеку: от 22 727 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '10x9-anterior.html'
     },
     {
         img: './assets/img/twelfthTile.webp',
@@ -183,7 +190,8 @@ let itemsHouse = [
         square: 'Площадь: 106  м2',
         coust:  'Стоимость: 4 270 000 руб.',
         mortgage: 'В ипотеку: от 24 009 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '12x6.html'
     },
     {
         img: './assets/img/thirdteenthTile.webp',
@@ -192,7 +200,8 @@ let itemsHouse = [
         square: 'Площадь: 87 м2',
         coust:  'Стоимость:  3 340 000 руб.',
         mortgage: 'В ипотеку: от 18 589 руб.',
-        type: 'cottage'
+        type: 'cottage',
+        link: '12x8-barn.html'
     },
     {
         img: './assets/img/fourteenthTile.webp',
@@ -201,7 +210,8 @@ let itemsHouse = [
         square: 'Площадь: 103 м2',
         coust:  'Стоимость: 4 029 000 руб.',
         mortgage: 'В ипотеку: от 22 604 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '11x7.html'
     },
     {
         img: './assets/img/fifteenthTile.webp',
@@ -210,7 +220,8 @@ let itemsHouse = [
         square: 'Площадь: 153 м2',
         coust:  'Стоимость: 5 029 000 руб.',
         mortgage: 'В ипотеку: от 28 432 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '12x9.html'
     },
     {
         img: './assets/img/sixteenthTile.webp',
@@ -219,7 +230,8 @@ let itemsHouse = [
         square: 'Площадь: 120 м2',
         coust:  'Стоимость: 3 640 000 руб.',
         mortgage: 'В ипотеку: от 20 337 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '8x10.html'
     },
     {
         img: './assets/img/seventeenthTile.webp',
@@ -228,43 +240,48 @@ let itemsHouse = [
         square: 'Площадь: 114 м2',
         coust:  'Стоимость: 3 660 000 руб.',
         mortgage: 'В ипотеку: от 20 454 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '10x7.html'
     },
     {
         img: './assets/img/eigthteenthTile.webp',
-        alt: 'eigthteenthTile',
-        size: 'Размер: 21х8',
-        square: 'Площадь: 91 м2',
-        coust:  'Стоимость: 4 710 000 руб.',
-        mortgage: 'В ипотеку: от 26 573 руб.',
-        type: 'cottage'
-    },
-    {
-        img: './assets/img/nineteenthTile.webp',
-        alt: 'nineteenthTile',
-        size: 'Размер: 12х8',
-        square: 'Площадь: 89.7 м2',
-        coust:  'Стоимость: 3 229 000 руб.',
-        mortgage: 'В ипотеку: от 17 890 руб.',
-        type: 'cottage'
+        alt: 'twentyThirdTile',
+        size: 'Размер: 8х10',
+        square: 'Площадь: 73 м2',
+        coust:  'Стоимость: 2 750 000 руб.',
+        mortgage: 'В ипотеку: от 15 151 руб.',
+        type: 'cottage',
+        link: '8x10-2.html'
     },
     {
         img: './assets/img/twentieth.webp',
         alt: 'twentieth',
-        size: 'Размер: 6х6',
-        square: 'Площадь: 54 м2',
-        coust:  'Стоимость: 1 950 000 руб.',
-        mortgage: 'В ипотеку: от 10 489 руб.',
-        type: 'cottage'
+        size: 'Размер: 12x8',
+        square: 'Площадь: 89.7 м2',
+        coust:  'Стоимость: 3 229 000 руб.',
+        mortgage: 'В ипотеку: от 17 890 руб.',
+        type: 'cottage',
+        link: '12x8-bay_window.html'
     },
     {
         img: './assets/img/twentyFirstTile.webp',
         alt: 'twentyFirstTile',
         size: 'Размер: 6х6',
+        square: 'Площадь: 54 м2',
+        coust:  'Стоимость: 1 950 000 руб.',
+        mortgage: 'В ипотеку: от 10 489 руб.',
+        type: 'two-storey house',
+        link: '6x6.html'
+    },
+    {
+        img: './assets/pages/6x6-oneImage/__01_1.jpg',
+        alt: 'twentyFirstTile',
+        size: 'Размер: 6х6',
         square: 'Площадь: 36 м2',
         coust:  'Стоимость: 1 349 000 руб.',
         mortgage: 'В ипотеку: от 6 987 руб.',
-        type: 'two-storey house'
+        type: 'two-storey house',
+        link: '6x6-one.html'
     },
     {
         img: './assets/img/twentySecondTile.webp',
@@ -273,17 +290,10 @@ let itemsHouse = [
         square: 'Площадь: 90 м2',
         coust:  'Стоимость: 3 239 000 руб.',
         mortgage: 'В ипотеку: от 18 001 руб.',
-        type: 'cottage'
-    },
-    {
-        img: './assets/img/twentyThirdTile.webp',
-        alt: 'twentyThirdTile',
-        size: 'Размер: 8х10',
-        square: 'Площадь: 73 м2',
-        coust:  'Стоимость: 2 750 000 руб.',
-        mortgage: 'В ипотеку: от 15 151 руб.',
-        type: 'cottage'
+        type: 'cottage',
+        link: '11x9.html'
     }
+    
 ]
 
 
@@ -297,14 +307,13 @@ function createHouseElem () {
                     <div class="thirdBlock__tile-text">${task.square}</div>
                     <div class="thirdBlock__tile-text">${task.coust}</div>
                     <div class="thirdBlock__tile-text">${task.mortgage}</div>
-                    <a href="#" class="thirdBlock__link">
+                    <a href=${task.link} class="thirdBlock__link">
                         <img src="./assets/icons/textSvg.svg" alt="link">
                     </a>
                 </div>
             `
         )
         .join('')
-        console.log(itemsHouse)
 }
 const itemsBathhouseField = document.querySelector('.fourthBlock__tiles-inner')
 
@@ -315,7 +324,8 @@ let itemsBathhouse = [
         size: 'Размер: 5х8.5',
         square: 'Площадь: 26 м2',
         coust:  'Стоимость: 1 320 000 руб.',
-        type: 'bathhouse'
+        type: 'bathhouse',
+        link: '5x8-bath.html'
     } ,
     {
         img: './assets/img/twentyFifthTile.webp',
@@ -323,7 +333,8 @@ let itemsBathhouse = [
         size: 'Размер: 8х7',
         square: 'Площадь: 33 м2',
         coust:  'Стоимость: 1 740 000 руб.',
-        type: 'bathhouse'
+        type: 'bathhouse',
+        link: '8x7-bath.html'
     } ,
     {
         img: './assets/img/twentySixthTile.webp',
@@ -331,7 +342,8 @@ let itemsBathhouse = [
         size: 'Размер: 21х8',
         square: 'Площадь: 91 м2',
         coust:  'Стоимость: 4 710 000 руб.',
-        type: 'bathhouse'
+        type: 'bathhouse',
+        link: '21x8.html'
     }
 ]
 
@@ -345,14 +357,13 @@ function createBathhouseElem () {
                     <div class="fourthBlock__tile-text">${task.size}</div>
                     <div class="fourthBlock__tile-text">${task.square}</div>
                     <div class="fourthBlock__tile-text">${task.coust}</div>
-                    <a href="#" class="fourthBlock__link">
+                    <a href=${task.link} class="fourthBlock__link">
                         <img src="./assets/icons/textSvg.svg" alt="link">
                     </a>
                 </div>
             `
         )
         .join('')
-        console.log(itemsBathhouse)
 }
 
 
@@ -374,8 +385,6 @@ const nextThirdBlock = document.querySelector('.thirdBlock__button-right')
 const slidesWrapperThirdBlock = document.querySelector('.thirdBlock__tiles')
 const slidesFieldThirdBlock = document.querySelector('.thirdBlock__tiles-inner')
 let widthThirdBlock = window.getComputedStyle(slidesWrapperThirdBlock).width;
-
-console.log(slidesThirdBlock.length)
 
 let slideIndexThirdBlock = 1;
 let offsetThirdBlock = 0;
@@ -428,12 +437,10 @@ const slidesWrapperFourthBlock = document.querySelector('.fourthBlock__tiles')
 const slidesFieldFourthBlock = document.querySelector('.fourthBlock__tiles-inner')
 let widthFourthBlock = window.getComputedStyle(slidesWrapperFourthBlock).width;
 
-console.log(slidesFourthBlock.length)
-
 let slideIndexFourthBlock = 1;
 let offsetFourthBlock = 0;
 
-slidesFieldFourthBlock.style.width = 100 * slidesFourthBlock.length + (slidesThirdBlock.length * 20) + '%';
+slidesFieldFourthBlock.style.width = 100 * slidesFourthBlock.length + (slidesFourthBlock.length * 20) + '%';
 slidesFieldFourthBlock.style.display = 'flex';
 slidesFieldFourthBlock.style.transition = "0.5s all"
 slidesFieldFourthBlock.style.columnGap = '20px'
@@ -530,9 +537,6 @@ function showSlides(n) {
         slideIndex = slidesModal.length
     }
 
-    console.log(slidesModal.length)
-    console.log(slideIndex)
-
     slidesModal.forEach( slide => slide.style.display = 'none')
 
     slidesModal[slideIndex - 1].style.display = 'block'
@@ -576,7 +580,7 @@ function createAllElem (arr) {
     allItemsField.innerHTML = arr
         .map(
             (task) => {
-                if (Object.keys(task).length == 7) {
+                if (Object.keys(task).length == 8) {
                     return `
                         <div class="fourthAndThirdBlockTogether__tile">
                             <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
@@ -584,19 +588,19 @@ function createAllElem (arr) {
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.mortgage}</div>
-                            <a href="#" class="fourthAndThirdBlockTogether__link">
+                            <a href=${task.link} class="fourthAndThirdBlockTogether__link">
                                 <img src="./assets/icons/textSvg.svg" alt="link">
                             </a>
                         </div>
                     `
-                } else if (Object.keys(task).length == 6){
+                } else if (Object.keys(task).length == 7){
                     return `
                         <div class="fourthAndThirdBlockTogether__tile">
                             <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
-                            <a href="#" class="fourthAndThirdBlockTogether__link">
+                            <a href=${task.link} class="fourthAndThirdBlockTogether__link">
                                 <img src="./assets/icons/textSvg.svg" alt="link">
                             </a>
                         </div>
@@ -634,7 +638,7 @@ selectionButtonsMenu.addEventListener('click', (e) => {
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
-                            <a href="#" class="fourthAndThirdBlockTogether__link">
+                            <a href=${task.link} class="fourthAndThirdBlockTogether__link">
                                 <img src="./assets/icons/textSvg.svg" alt="link">
                             </a>
                         </div>
@@ -647,14 +651,14 @@ selectionButtonsMenu.addEventListener('click', (e) => {
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.mortgage}</div>
-                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                <a href=${task.link} class="fourthAndThirdBlockTogether__link">
                                     <img src="./assets/icons/textSvg.svg" alt="link">
                                 </a>
                             </div>
                         `
                     } 
                 } else if (target.dataset.modal == 'all') {
-                    if (Object.keys(task).length == 7) {
+                    if (Object.keys(task).length == 8) {
                         return `
                             <div class="fourthAndThirdBlockTogether__tile">
                                 <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
@@ -662,19 +666,19 @@ selectionButtonsMenu.addEventListener('click', (e) => {
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.mortgage}</div>
-                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                <a href=${task.link} class="fourthAndThirdBlockTogether__link">
                                     <img src="./assets/icons/textSvg.svg" alt="link">
                                 </a>
                             </div>
                         `
-                    } else if (Object.keys(task).length == 6){
+                    } else if (Object.keys(task).length == 7){
                         return `
                             <div class="fourthAndThirdBlockTogether__tile">
                                 <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
-                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                <a href=${task.link} class="fourthAndThirdBlockTogether__link">
                                     <img src="./assets/icons/textSvg.svg" alt="link">
                                 </a>
                             </div>
@@ -712,7 +716,7 @@ selectionButtonsMenu1200px.addEventListener('click', (e) => {
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
-                            <a href="#" class="fourthAndThirdBlockTogether__link">
+                            <a href=${task.link} class="fourthAndThirdBlockTogether__link">
                                 <img src="./assets/icons/textSvg.svg" alt="link">
                             </a>
                         </div>
@@ -725,14 +729,14 @@ selectionButtonsMenu1200px.addEventListener('click', (e) => {
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.mortgage}</div>
-                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                <a href=${task.link} class="fourthAndThirdBlockTogether__link">
                                     <img src="./assets/icons/textSvg.svg" alt="link">
                                 </a>
                             </div>
                         `
                     } 
                 } else if (target.dataset.modal == 'all') {
-                    if (Object.keys(task).length == 7) {
+                    if (Object.keys(task).length == 8) {
                         return `
                             <div class="fourthAndThirdBlockTogether__tile">
                                 <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
@@ -740,19 +744,19 @@ selectionButtonsMenu1200px.addEventListener('click', (e) => {
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.mortgage}</div>
-                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                <a href=${task.link} class="fourthAndThirdBlockTogether__link">
                                     <img src="./assets/icons/textSvg.svg" alt="link">
                                 </a>
                             </div>
                         `
-                    } else if (Object.keys(task).length == 6){
+                    } else if (Object.keys(task).length == 7){
                         return `
                             <div class="fourthAndThirdBlockTogether__tile">
                                 <img class="fourthAndThirdBlockTogether__tile-img" src=${task.img} alt=${task.alt}>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
-                                <a href="#" class="fourthAndThirdBlockTogether__link">
+                                <a href=${task.link} class="fourthAndThirdBlockTogether__link">
                                     <img src="./assets/icons/textSvg.svg" alt="link">
                                 </a>
                             </div>
