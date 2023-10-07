@@ -546,6 +546,12 @@ body {
     background: #000;
     cursor: pointer;
 }
+.secondBlock__service-input::-moz-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: #000;
+    cursor: pointer;
+}
 
 .secondBlock__service-input::-moz-range-thumb {
     width: 20px;
@@ -555,6 +561,17 @@ body {
     cursor: pointer;
 }
 .secondBlock__service-input::-moz-range-progress {
+    height: 2px;
+    background: #000;
+}
+.secondBlock__service-input::-webkit-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius:100%;
+    background: #000;
+    cursor: pointer;
+}
+.secondBlock__service-input::-webkit-range-progress {
     height: 2px;
     background: #000;
 }
