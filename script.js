@@ -274,7 +274,7 @@ let itemsHouse = [
         link: '6x6.html'
     },
     {
-        img: './assets/pages/6x6-oneImage/__01_1.jpg',
+        img: './assets/img/thirtythTile.webp',
         alt: 'twentyFirstTile',
         size: 'Размер: 6х6',
         square: 'Площадь: 36 м2',
