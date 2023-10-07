@@ -80,6 +80,154 @@ body {
     color: rgb(49, 55, 62);
 }
 
+.payment{
+    padding-top: 150px;
+}
+
+.payment__header{
+    color: #31373e;
+    font-size: 54px;
+    line-height: 62px;
+    font-weight: 400;
+}
+
+.payment__subtitle{
+    margin-top: 20px;
+    color: #31373e;
+    font-size: 20px;
+    line-height: 31px;
+    font-weight: 400;
+}
+
+.payment__item{
+    margin-top: 40px;
+}
+
+.payment__item-text{
+    color: #31373e;
+    font-size: 20px;
+    line-height: 31px;
+    font-weight: 400;
+    display: flex;
+    column-gap: 75px;
+    align-items: center;
+    border-bottom: 1px solid #e29a01;
+}
+.payment__item-text span{
+    color: #e29a01;
+    font-size: 30px;
+    line-height: 47px;
+    font-weight: 400;
+}
+
+.payment__item-descr{
+    margin-top: 10px;
+    color: #31373e;
+    font-size: 20px;
+    line-height: 31px;
+    font-weight: 400;
+}
+
+.help{
+    margin-top: 100px;
+    padding: 100px 0;
+    background-color: #084097;
+}
+
+.help__header{
+    color: #ffffff;
+    font-size: 54px;
+    line-height: 62px;
+    font-weight: 400;
+    max-width: 240px;
+}
+
+.help img{
+    margin-top: 20px;
+    width: 304px;
+    height: 225px;
+}
+
+.help__item{
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: 400;
+    padding: 30px 0;
+}
+.help__item span{
+    color: rgb(226, 154, 1);
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: 400;
+}
+
+.line2{
+    width: 304px;
+    height: 1px;
+    opacity: 0.25;
+    background-color: #ffffff;
+}
+
+.mortgage{
+    padding: 100px 0;
+}
+
+.mortgage iframe{
+    width: 300px;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.maternalCapital{
+    padding-bottom: 100px;
+}
+
+.maternalCapital__items{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.maternalCapital__item{
+    width: 300px;
+    border: 1px solid rgba(49, 55, 62, 0.25);
+    position: relative;
+    display: flex;
+    padding: 80px 20px 20px 20px;
+}
+
+.maternalCapital__item-number{
+    position: absolute;
+    color: #e29a01;
+    font-size: 14px;
+    line-height: 1.55;
+    font-weight: 400;
+    top: 10px;
+    left: 20px;
+}
+
+.maternalCapital__item-text{
+    color: #31373e;
+    font-size: 20px;
+    line-height: 1.55;
+    font-weight: 400;
+}
+
+.requisites__item{
+    color: #31373e;
+    font-size: 20px;
+    line-height: 31px;
+    font-weight: 400;
+}
+.requisites__items{
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
 .firstBlock{
     height: 1500px;
     padding-top: 160px;
@@ -378,6 +526,7 @@ body {
     font-weight: 400;
     text-align: start;
     padding: 4px 5px; 
+    margin: 0;
 }
 
 .secondBlockMenu__text:hover{
@@ -448,7 +597,7 @@ body {
 .thirdBlock__item{
     width: 300px;
     height: 487px;
-    background: url('./icons/Iphone.webp') center center/cover no-repeat;
+    background: url('../icons/Iphone.webp') center center/cover no-repeat;
     position: relative;
 }
 
@@ -647,8 +796,26 @@ body {
 }
 
 @media (min-width: 481px){
+    
     .container{
         width: 451px;
+    }
+
+    .help img{
+        display: none;
+    }
+
+    .help__header{
+        max-width: 451px;
+        font-size: 52px;
+    }
+
+    .mortgage iframe{
+        width: 451px;
+    }
+
+    .maternalCapital__items{
+        align-items: center;
     }
 
     .nav__wrapper{
@@ -712,6 +879,20 @@ body {
 
     .container{
         width: 620px;
+    }
+
+    .mortgage iframe{
+        width: 620px;
+    }
+
+    .maternalCapital__item{
+        height: 283px;
+    }
+    .maternalCapital__items{
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 20px;
     }
 
     .nav__item-title{
@@ -799,6 +980,46 @@ body {
         width: 940px;
     }
 
+    .payment__item-text{
+        min-width: 300px;
+        border-bottom: none;
+    }
+    .payment__item{
+        display: flex;
+        column-gap: 110px;
+        border-bottom: 1px solid #e29a01;
+        padding-bottom: 30px;
+    }
+
+    .help__wrapper{
+        display: flex;
+        column-gap: 50px;
+    }
+
+    .help__item{
+        width: 560px;
+    }
+
+    .line2{
+        width: 560px;
+    }
+
+    .help img{
+        display: block;
+        width: 460px;
+        height: 345px;
+        margin-top: 60px;
+    }
+
+    .maternalCapital__item{
+        width: 450px;
+        height: 223px;
+    }
+
+    .requisites__items{
+        flex-direction: row;
+        column-gap: 40px;
+    }
 
     #phone{
         display: none;
@@ -907,8 +1128,10 @@ body {
       }
 
       .bath{
-        height: 590px;
+        margin-top: 0;
       }
+
+     
 }
 
 @media (min-width: 1200px){
@@ -916,6 +1139,20 @@ body {
         width: 1180px;
     }
 
+    .line2 {
+        width: 415px;
+    }
+
+    .help img{
+        width: 500px;
+        height: 375px;
+    }
+
+
+    .maternalCapital__item{
+        width: 560px;
+        height: 192px;
+    }
     .secondBlock__item-name{
         min-width: 340px;
         max-width: 340px;
@@ -933,6 +1170,10 @@ body {
     }
     
     .secondBlockMenu__button{
+        width: 1180px;
+    }
+
+    .secondBlockMenu__text{
         width: 1180px;
     }
 
