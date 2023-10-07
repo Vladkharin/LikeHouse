@@ -84,6 +84,13 @@ body {
   height: 35px;
 }
 
+
+.l481{
+  display: none;
+}
+.l320{
+  display: block;
+}
 .firstBlock__wrapper{
   display: flex;
   flex-direction: column;
@@ -673,7 +680,7 @@ body {
 .eightBlock{
   height: 842px;
   background-color: #f7f7f7;
-  padding-top: 50px;
+  padding-top: 85px;
 }
 
 .eightBlock__header{
@@ -988,6 +995,14 @@ body {
   .nav__item-title span{
     font-weight: 300;
     font-size: 16px;
+  }
+
+  .l320{
+    display: none;
+  }
+
+  .l481{
+    display: block;
   }
 
   .firstBlock{
