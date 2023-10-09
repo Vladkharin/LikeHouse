@@ -357,7 +357,7 @@ function createBathhouseElem () {
                     <div class="fourthBlock__tile-text">${task.size}</div>
                     <div class="fourthBlock__tile-text">${task.square}</div>
                     <div class="fourthBlock__tile-text">${task.coust}</div>
-                    <a href=${task.link} class="fourthBlock__link">
+                    <a href=${task.link} class="fourthBlock__link marginBot">
                         <img src="./assets/icons/textSvg.svg" alt="link">
                     </a>
                 </div>
@@ -600,7 +600,7 @@ function createAllElem (arr) {
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
-                            <a href=${task.link} class="fourthAndThirdBlockTogether__link">
+                            <a href=${task.link} class="fourthAndThirdBlockTogether__link marginBot">
                                 <img src="./assets/icons/textSvg.svg" alt="link">
                             </a>
                         </div>
@@ -638,7 +638,7 @@ selectionButtonsMenu.addEventListener('click', (e) => {
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
-                            <a href=${task.link} class="fourthAndThirdBlockTogether__link">
+                            <a href=${task.link} class="fourthAndThirdBlockTogether__link marginBot">
                                 <img src="./assets/icons/textSvg.svg" alt="link">
                             </a>
                         </div>
@@ -678,7 +678,7 @@ selectionButtonsMenu.addEventListener('click', (e) => {
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
-                                <a href=${task.link} class="fourthAndThirdBlockTogether__link">
+                                <a href=${task.link} class="fourthAndThirdBlockTogether__link marginBot">
                                     <img src="./assets/icons/textSvg.svg" alt="link">
                                 </a>
                             </div>
@@ -716,7 +716,7 @@ selectionButtonsMenu1200px.addEventListener('click', (e) => {
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                             <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
-                            <a href=${task.link} class="fourthAndThirdBlockTogether__link">
+                            <a href=${task.link} class="fourthAndThirdBlockTogether__link marginBot">
                                 <img src="./assets/icons/textSvg.svg" alt="link">
                             </a>
                         </div>
@@ -756,7 +756,7 @@ selectionButtonsMenu1200px.addEventListener('click', (e) => {
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.size}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.square}</div>
                                 <div class="fourthAndThirdBlockTogether__tile-text">${task.coust}</div>
-                                <a href=${task.link} class="fourthAndThirdBlockTogether__link">
+                                <a href=${task.link} class="fourthAndThirdBlockTogether__link marginBot">
                                     <img src="./assets/icons/textSvg.svg" alt="link">
                                 </a>
                             </div>
@@ -2088,6 +2088,25 @@ feedBackWrapper.addEventListener('click', (e) => {
     }
 });
 
+
+// form 
+
+const form = document.querySelector('.feedBack__form')
+
+
+form.addEventListener('submit', formSend);
+
+async function formSend(e) {
+    e.preventDefault()
+
+    let error = formValidate(form)
+}
+
+
+function formValidate(form){
+    let error = 0;
+    
+}
 
 
 

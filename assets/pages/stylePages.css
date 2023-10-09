@@ -243,6 +243,7 @@ body {
 .firstBlock__carousel-item{
     width: 300px;
     height: 225px;
+    cursor: zoom-in;
 }
 
 .firstBlock__carousel-right{

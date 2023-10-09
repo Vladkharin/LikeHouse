@@ -48,7 +48,7 @@
             <div class="firstBlock__header"> Баня 5х8,5</div>
             <div class="firstBlock__wrapper">
                 <div class="firstBlock__carousel">
-                    <img src="./assets/pages/5x8-bathImage/01.webp" class="firstBlock__carousel-item">
+                    <img src="./assets/pages/5x8-bathImage/01.webp" class="firstBlock__carousel-item" data-modal="imgs">
                     <button class="firstBlock__carousel-right">
                         <img src="./assets/icons/NextArrow.png" alt="next">
                     </button>
@@ -265,6 +265,23 @@
             </div>
         </div>
     </footer>
+
+    <div data-modal="imgs" class="modal notVisible">
+        <div class="modal__wrapper">
+            <button class="modal__close"> </button>
+            <img class="modal__img slider" src="./assets/pages/5x8-bathImage/01.webp" alt="">
+            <img class="modal__img slider" src="./assets/pages/5x8-bathImage/02.jpg" alt="">
+            <img class="modal__img slider" src="./assets/pages/5x8-bathImage/03.jpg" alt="">
+            <img class="modal__img slider" src="./assets/pages/5x8-bathImage/04.jpg" alt="">
+            <img class="modal__img slider" src="./assets/pages/5x8-bathImage/05.webp" alt="">
+            <button class="modal__right">
+                <img src="./assets/icons/NextArrow.png" alt="next">
+            </button>
+            <button class="modal__left">
+                <img src="./assets/icons/PrevArrow.png" alt="prev">
+            </button>
+        </div>
+    </div>
     <div class="cost">СТОИМОСТЬ: <span class="cost__span">1 320 000</span> руб.</div>
 
     <script src="./assets/pages/scriptBathPage.js"></script>

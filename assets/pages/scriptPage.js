@@ -191,7 +191,16 @@ selectFieldButtons.forEach(selectButton => {
 })
 
 const buttonsSpan = document.querySelectorAll('.secondBlock__service-span')
+const imgBtn = document.querySelector('.firstBlock__carousel-item')
 
+
+imgBtn.addEventListener('click', () => {
+    const modal = document.querySelector(`.modal[data-modal=${imgBtn.dataset.modal}]`)
+    console.log(imgBtn.dataset.modal)
+    console.log(modal)
+    modal.classList.add('visible')
+    modal.classList.remove('notVisible')
+})
 
 buttonsSpan.forEach(btn => {
     btn.addEventListener('click', () => {

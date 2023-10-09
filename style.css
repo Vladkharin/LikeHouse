@@ -18,7 +18,6 @@ body {
   width: 304px;
 }
 
-
 .nav{
   height: 100px;
   width: 100%;
@@ -1262,6 +1261,10 @@ body {
   .modalImgSlider__field img{
     width: 481px;
     height: 481px;
+  }
+
+  .marginBot{
+    margin-top: 85px;
   }
 }
 
