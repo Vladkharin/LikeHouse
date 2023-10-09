@@ -8,10 +8,6 @@ body {
     overflow-x:hidden;
 }
 
-::-webkit-scrollbar {
-    width: 0;
-}
-
 .container{
     margin: 0 auto;
     width: 304px;
@@ -275,7 +271,8 @@ body {
     overflow: hidden;
     width: 290px;
     margin-left: 10px;
-
+    position: absolute;
+    bottom: -150px;
 }
 
 .firstBlock__carousel-left{
@@ -534,46 +531,60 @@ body {
 }
 
 .secondBlock__service-input{
+    -webkit-appearance: none;
+    appearance: none;
     width: 300px;
-    padding-bottom: 20px;
-    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-top: 50px;
     padding-left: 5px;
 }
 
-.secondBlock__service-input::-webkit-slider-thumb {
-    width: 20px;
-    height: 20px;
-    background: #000;
-    cursor: pointer;
-}
+
 .secondBlock__service-input::-moz-slider-thumb {
     width: 20px;
     height: 20px;
     background: #000;
     cursor: pointer;
+    margin-top: -8px;
 }
 
 .secondBlock__service-input::-moz-range-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-top: -8px;
+    border-radius:100%;
+    background: #000;
+    cursor: pointer;
+}
+/* .secondBlock__service-input::-moz-range-progress {
+    height: 2px;
+    background: #000;
+} */
+.secondBlock__service-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -8px;
     width: 20px;
     height: 20px;
     border-radius:100%;
     background: #000;
     cursor: pointer;
 }
-.secondBlock__service-input::-moz-range-progress {
+.secondBlock__service-input::-webkit-slider-runnable-track {
+    width: 300px;
     height: 2px;
-    background: #000;
+    background: #fff;
+    border: none;
+    border-radius: 3px;
 }
-.secondBlock__service-input::-webkit-range-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius:100%;
+    
+.secondBlock__service-inputProgressBar{
+    position: absolute;
     background: #000;
-    cursor: pointer;
-}
-.secondBlock__service-input::-webkit-range-progress {
     height: 2px;
-    background: #000;
+    top: 60px;
+    left: 10px;
 }
 
 .secondBlock__service-numberStart{
@@ -812,6 +823,14 @@ body {
     text-decoration: none;
 }
 
+.firstBlock__wrapper-field{
+    bottom: -85px;
+}
+
+.big {
+    height: 1650px;
+}
+
 @media (min-width: 481px){
     
     .container{
@@ -890,12 +909,20 @@ body {
     .square{
         width: 310px;
     }
+
+    .big {
+        height: 1650px;
+    }
 }
 
 @media (min-width: 640px){
 
     .container{
         width: 620px;
+    }
+
+    .firstBlock{
+        height: 1750px;
     }
 
     .mortgage iframe{
@@ -922,9 +949,6 @@ body {
     .firstBlock__carousel-item{
         width: 620px;
         height: 465px;
-    }
-    .secondBlock{
-        margin-top: 300px;
     }
 
     .line{
@@ -979,6 +1003,14 @@ body {
 
     .square{
         width: 410px;
+    }
+
+    .firstBlock__wrapper-field{
+        left: 25%;
+    }
+
+    .big {
+        height: 1850px;
     }
 
 }
@@ -1072,19 +1104,16 @@ body {
 
     .firstBlock__wrapper-field{
         width: 530px;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 2;
-        align-self: start;
         margin-top: 10px;
-        
+        left: 0;
+        bottom: -150px;
     }
     .firstBlock__wrapper{
         display: grid;
         grid-template-columns: 560px 480px;
-        grid-template-rows: 650px 400px;
+        grid-template-rows: minmax(auto, auto) 400px;
         column-gap: 40px;
+        align-items: start;
     }   
 
     
@@ -1093,7 +1122,6 @@ body {
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 2;
-        align-self: start;
     }
 
     .firstBlock__information{
@@ -1138,15 +1166,19 @@ body {
 
     .footer__socialItem{
         position: static;
-      }
+    }
     
-      .footer__items{
+    .footer__items{
         column-gap: 70px;
-      }
+    }
 
-      .bath{
+    .bath{
         margin-top: 0;
-      }
+    }
+
+    .big {
+        height: 1250px;
+    }
 
      
 }
@@ -1206,6 +1238,10 @@ body {
 
     .firstBlock__wrapper{
         column-gap: 150px;
+    }
+
+    .big {
+        height: 1250px;
     }
 }
 

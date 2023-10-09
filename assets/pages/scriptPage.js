@@ -1,5 +1,5 @@
 const cost = document.querySelector('.cost__span')
-let totalCost = +cost.textContent;
+const startCost = +cost.textContent;
 
 // slider house img 
 
@@ -94,16 +94,22 @@ buttonOpeningHouseSelectionMenu.addEventListener('click', () => {
     }
 })
 
+let priceChange = 0;
+
+
+
 selectionMenu.addEventListener('click', (e) => {
     console.log(e.target)
     if (e.target.classList.contains('secondBlockMenu__text')) {
         buttonOpeningHouseSelectionMenu.textContent = e.target.textContent
         selectionMenu.classList.remove('visible')
         selectionMenu.classList.add('notVisible')
-        console.log((+e.target.value) - (+buttonOpeningHouseSelectionMenu.value))
-        totalCost = totalCost + (+e.target.value) - (+buttonOpeningHouseSelectionMenu.value)
-        cost.textContent = totalCost
+        // console.log((+e.target.value) - (+buttonOpeningHouseSelectionMenu.value))
+        // priceChange =  (+e.target.value) - (+buttonOpeningHouseSelectionMenu.value)
+        priceChange +=  (+e.target.value) - (+buttonOpeningHouseSelectionMenu.value)
         buttonOpeningHouseSelectionMenu.setAttribute('value', e.target.value)
+        cost.textContent = startCost + priceChange
+        console.log(priceChange)
     }
 })
 
@@ -111,74 +117,52 @@ selectionMenu.addEventListener('click', (e) => {
 
 const sliderInputs = document.querySelectorAll('.secondBlock__service-input')
 const counters = document.querySelectorAll('.secondBlock__service-numberCounter')
+const progressBar = document.querySelectorAll('.secondBlock__service-inputProgressBar')
 
-const mediaQuerrymax481 = window.matchMedia('(max-width: 480px)')
-const mediaQuerrymax640 = window.matchMedia('(max-width: 639px)')
-const mediaQuerrymax960 = window.matchMedia('(max-width: 959px)')
-const mediaQuerrymax1200 = window.matchMedia('(max-width: 1199px)')
-
-if (mediaQuerrymax481.matches) {
-    console.log('320')
-} else if (mediaQuerrymax640.matches){
-    console.log('481')
-} else if (mediaQuerrymax960.matches){
-    console.log('640')
-}else if (mediaQuerrymax1200.matches){
-    console.log('960')
-} else {
-    console.log('1200')
-}
 let price = 0;
+let pricePositionSlider = 0;
+let secondPositionSlider = 0;
 let secondPrice = 0;
 
 sliderInputs[0].addEventListener('input', (e) => {
-    price = 0
-    let positionCounter = 0;
-    if (mediaQuerrymax481.matches) {
-        positionCounter = e.target.scrollWidth / 11.5
-    } else if (mediaQuerrymax640.matches){
-        positionCounter = e.target.scrollWidth / 11.5
-    } else if (mediaQuerrymax960.matches){
-        positionCounter = e.target.scrollWidth /11
-    }else if (mediaQuerrymax1200.matches){
-        positionCounter = e.target.scrollWidth /10.5
-    } else {
-        positionCounter = e.target.scrollWidth /10.5
-    }
-    counters[0].style.left = e.target.value * Math.ceil(positionCounter) + 'px'
+    progressBar[0].style.width =  (e.target.offsetWidth - 20) * (e.target.value/e.target.max) + 'px'
+    counters[0].style.left = counters[0].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
     counters[0].textContent = e.target.value
-    
-    let modificator = (+e.target.value) * 7500
-    let intermediatePrice = totalCost + modificator + secondPrice 
-    price = modificator
+})
 
-    cost.textContent = intermediatePrice
+sliderInputs[0].addEventListener('change', (e) => {
 
+    if ((+e.target.value) > pricePositionSlider) {
+        price = e.target.value * 7500
+        priceChange += price - (pricePositionSlider * 7500)
+        pricePositionSlider = e.target.value
+    } else if ((+e.target.value) < pricePositionSlider) {
+        price = pricePositionSlider * 7500
+        pricePositionSlider = e.target.value
+        priceChange -= price - (e.target.value * 7500)
+    }
+    cost.textContent = startCost + priceChange
 })
 
 sliderInputs[1].addEventListener('input', (e) => {
-    let positionCounter = 0;
-    if (mediaQuerrymax481.matches) {
-        positionCounter = e.target.scrollWidth / 110
-    } else if (mediaQuerrymax640.matches){
-        positionCounter = e.target.scrollWidth / 110
-    } else if (mediaQuerrymax960.matches){
-        positionCounter = e.target.scrollWidth /105
-    }else if (mediaQuerrymax1200.matches){
-        positionCounter = e.target.scrollWidth /103
-    } else {
-        positionCounter = e.target.scrollWidth /105
-    }
-
-    secondPrice = 0
-    counters[1].style.left = e.target.value * positionCounter + 'px'
+    progressBar[1].style.width =  (e.target.offsetWidth - 20) * (e.target.value/e.target.max) + 'px'
+    counters[1].style.left = counters[1].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
     counters[1].textContent = e.target.value
-    
-    let modificator = (+e.target.value) * 2900
-    let intermediatePrice = totalCost + modificator + price 
-    secondPrice = modificator
+})
 
-    cost.textContent = intermediatePrice
+
+sliderInputs[1].addEventListener('change', (e) => {
+
+    if ((+e.target.value) > secondPositionSlider) {
+        secondPrice = e.target.value * 2900
+        priceChange += secondPrice - (secondPositionSlider * 2900)
+        secondPositionSlider = e.target.value
+    } else if ((+e.target.value) < secondPositionSlider) {
+        secondPrice = secondPositionSlider * 2900
+        secondPositionSlider = e.target.value
+        priceChange -= secondPrice - (e.target.value * 2900)
+    }
+    cost.textContent = startCost + priceChange
 })
 
 
@@ -194,14 +178,15 @@ selectFieldButtons.forEach(selectButton => {
         if (btn.classList.contains('inactiveBtn')) {
             btn.classList.add('activeBtn')
             btn.classList.remove('inactiveBtn')
-            totalCost = totalCost + value
-            cost.textContent = totalCost
+            priceChange += value
+            console.log(priceChange)
         } else {
             btn.classList.add('inactiveBtn')
             btn.classList.remove('activeBtn')
-            totalCost = totalCost - value
-            cost.textContent = totalCost
+            priceChange -= value
+            console.log(priceChange)
         }
+        cost.textContent = startCost + priceChange
     })
 })
 
