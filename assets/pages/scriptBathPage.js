@@ -79,6 +79,79 @@ nextModal.addEventListener('click', function(){
     }
 })
 
+const imgBtn = document.querySelector('.firstBlock__carousel-item')
+
+
+imgBtn.addEventListener('click', () => {
+    const modal = document.querySelector(`.modal[data-modal=${imgBtn.dataset.modal}]`)
+    console.log(imgBtn.dataset.modal)
+    console.log(modal)
+    modal.classList.add('visible')
+    modal.classList.remove('notVisible')
+})
+
+
+const modals = document.querySelectorAll('.modal')
+modals.forEach(modal => {
+    buttonWrapper = modal.children[0]
+    btnClose = buttonWrapper.children[0]
+    btnClose.addEventListener('click', (e) => {
+        if (modal.classList.contains('visible')){
+            modal.classList.remove('visible')
+            modal.classList.add('notVisible')
+        }
+    })
+
+    buttonWrapper.addEventListener('click', (e) => {
+        console.log(e.target)
+        if (e.target.classList.contains('modal__wrapper')){
+            modal.classList.remove('visible')
+            modal.classList.add('notVisible')
+        }
+    })
+
+    // modal slider
+
+
+    const sliderImgs = buttonWrapper.querySelectorAll('.modal__img')
+    const btnNext = buttonWrapper.children[buttonWrapper.children.length - 2]
+    const btnPrev = buttonWrapper.children[buttonWrapper.children.length - 1]
+
+    let slideIndex = 1;
+
+    showSlides(slideIndex)
+
+
+    function showSlides(n) {
+
+        if (n > sliderImgs.length) {
+            slideIndex = 1
+        } 
+
+        if  (n < 1) {
+            slideIndex = sliderImgs.length
+        }
+
+        sliderImgs.forEach( slide => slide.classList.add('none'))
+        sliderImgs.forEach( slide => slide.classList.remove('block'))
+
+        sliderImgs[slideIndex - 1].classList.add('block')
+        sliderImgs[slideIndex - 1].classList.remove('none')
+
+    }
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n)
+    }
+
+    btnPrev.addEventListener('click', function(){
+        plusSlides(-1)
+    })
+
+    btnNext.addEventListener('click', function(){
+        plusSlides(1)
+    })
+})
 
 
 
