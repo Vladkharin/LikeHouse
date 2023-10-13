@@ -555,6 +555,19 @@ nextModal.addEventListener('click', function(){
     plusSlides(1)
 })
 
+slidesModal.forEach(slide => {
+    slide.addEventListener('click', (e) => {
+        if (slide.style.scale == '1.3') {
+            slide.style.scale = '1.0'
+            slide.style.cursor ='zoom-in'
+        } else {
+                slide.style.scale = '1.3'
+                slide.style.cursor ='zoom-out'
+    
+        }
+    })   
+})
+
 //open and close selection menu
 
 const buttonOpeningHouseSelectionMenu = document.querySelector('.fourthAndThirdBlockTogether__button');
@@ -2091,22 +2104,23 @@ feedBackWrapper.addEventListener('click', (e) => {
 
 // form 
 
-const form = document.querySelector('.feedBack__form')
+// const form = document.querySelector('.feedBack__form')
 
 
-form.addEventListener('submit', formSend);
+// form.addEventListener('submit', formSend);
 
-async function formSend(e) {
-    e.preventDefault()
+// async function formSend(e) {
+//     e.preventDefault()
 
-    let error = formValidate(form)
-}
+//     let error = formValidate(form)
+// }
 
 
-function formValidate(form){
-    let error = 0;
+// function formValidate(form){
+//     let error = 0;
     
-}
+// }
+
 
 
 

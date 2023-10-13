@@ -275,6 +275,19 @@ modals.forEach(modal => {
     })
 })
 
+const sliderImgs = buttonWrapper.querySelectorAll('.modal__img')
+
+sliderImgs.forEach(slide => {
+    slide.addEventListener('click', (e) => {
+        if (slide.style.scale == '2') {
+            slide.style.scale = '1.0'
+            slide.style.cursor ='zoom-in'
+        } else {
+                slide.style.scale = '2'
+                slide.style.cursor ='zoom-out'
+        }
+    })   
+})
 
 
 

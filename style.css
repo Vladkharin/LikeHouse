@@ -123,7 +123,6 @@ body {
 }
 
 .firstBlock__buttonMediaMin940px{
-  margin: 0 auto;
   margin-top: 70px;
   width: 300px;
   height: 70px;
@@ -134,7 +133,11 @@ body {
   width: 300px;
   height: 70px;
   border: #fff solid 3px;
-  background: rgba(0, 0, 0, 0)
+  background: rgba(0, 0, 0, 0);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
 }
 
 .firstBlock__buttonMediaMin940px button{
@@ -200,19 +203,26 @@ body {
 }
 
 .secondBlock__title{
-  margin-top: 20px;
+  margin-top: 23px;
   color: #ffffff;
   font-size: 20px;
-  line-height: 1.55;
+  font-style: normal;
   font-weight: 400;
+  line-height: 31px;
 }
 
 .secondBlock__title span{
-  color: #e29a01;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  color: #E29A01; 
+  display: block;
+  margin:  40px 0;
 }
 
 .secondBlock__list{
-  margin-top: 60px;
+  margin-top: 72px;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
@@ -225,12 +235,13 @@ body {
 
 .secondBlock__item-number{
   color: #fff;
-  font-size: 14px;
-  line-height: 1.55;
-  font-weight: 400;
   align-self: start;
   opacity: 0.4;
   padding-top: 5px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 .secondBlock__item-title{
@@ -239,6 +250,7 @@ body {
   line-height: 1.55;
   font-weight: 400;
   align-self: center;
+  width: 250px;
 }
 
 .secondBlock__secondList{
@@ -258,7 +270,7 @@ body {
   font-size: 40px;
   line-height: 1.55;
   font-weight: 400;
-  width: 70px;
+  min-width: 64px;
 }
 
 .line{
@@ -322,7 +334,7 @@ body {
 .thirdBlock__tile-img{
   height: 210px;
   width: 280px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .thirdBlock__tile-text{
@@ -330,7 +342,7 @@ body {
   font-size: 20px;
   line-height: 1.55;
   font-weight: 400;
-  margin: 5px 0;
+  margin-top: 11px;
 }
 
 .thirdBlock__tile a img{
@@ -455,19 +467,23 @@ body {
 }
 
 .fifthBlock__item-text{
-  font-size: 20px;
   color: #31373e;
-  font-weight: 400;
   width: 250px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
 }
 
 .fifthBlock__item-subtitle{
-  font-size: 20px;
   color: #31373e;
-  font-weight: 400;
   transition: max-height ease-in-out .3s,opacity ease-in-out .3s;
   overflow: hidden;
   max-height: 0px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
 }
 
 .fifthBlock__item-plus{
@@ -571,7 +587,7 @@ body {
   font-size: 20px;
   line-height: 1.55;
   font-weight: 400;
-  margin-top: 20px;
+  margin-top: 21px;
 }
 
 
@@ -645,8 +661,9 @@ body {
 .seventhBlock__item-title{
   color: #31373e;
   font-size: 20px;
-  line-height: 1.55;
+  font-style: normal;
   font-weight: 400;
+  line-height: 31px;
   width: 530px;
 }
 
@@ -742,6 +759,7 @@ body {
   font-size: 18px;
   line-height: 1.55;
   font-weight: 300;
+  margin-top: 10px;
 }
 
 .footer__item-linkWithOutdecoration{
@@ -867,10 +885,6 @@ body {
 	transform: rotate(-45deg);
 }
 
-
-
-
-
 .modalImgSlider{
   width: 100%;
   height: 100%;
@@ -885,7 +899,12 @@ body {
 
 .modalImgSlider__field{
   display: flex;
-  height: 320px;
+  height: 100%;
+}
+
+.modalImgSlider__img{
+  scale: 1;
+  cursor: zoom-in;
 }
 
 .modalImgSlider__field img{
@@ -893,7 +912,6 @@ body {
   position: relative;
   height: 320px;
   align-self: center;
-  cursor: zoom-in;
 }
 
 .modalImgSlider__button-right{
@@ -902,12 +920,14 @@ body {
   top: 50%;
   transform: translate(0, -50%);
   position: absolute;
-  border-top: 2px solid;
-  border-right: 2px solid;
-  width: 10px;
-  height: 10px;
+  width: 25px;
+  height: 25px;
   background: 0 0;
-  transform: rotate(45deg);
+}
+
+.modalImgSlider__button-right img{
+  width: 25px;
+  height: 25px;
 }
 
 .modalImgSlider__button-left:hover{
@@ -930,12 +950,16 @@ body {
   top: 50%;
   transform: translate(0, -50%);
   position: absolute;
-  border-top: 2px solid;
-  border-right: 2px solid;
-  width: 10px;
-  height: 10px;
+  /* border-top: 2px solid;
+  border-right: 2px solid; */
+  width: 25px;
+  height: 25px;
   background: 0 0;
-  transform: rotate(225deg);
+}
+
+.modalImgSlider__button-left img{
+  width: 25px;
+  height: 25px;
 }
 
 .modalImgSlider__magnifyingGlass{
@@ -960,6 +984,7 @@ body {
 .acitve{
   display: flex;
 }
+
 
 @media (min-width: 481px) {
   .container{
@@ -989,11 +1014,21 @@ body {
     border-bottom:none;
     box-shadow: none;
     text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
   }
+
+  /* .margin{
+    margin-top: 27px;
+  } */
   
   .nav__item-title span{
-    font-weight: 300;
-    font-size: 16px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px
   }
 
   .l320{
@@ -1311,9 +1346,13 @@ body {
   }
 
   .firstBlock__title{
-    margin-top: 50px;
+    margin-top: 90px;
     text-align: start;
     width: 300px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
   }
 
   .secondBlock{
@@ -1386,12 +1425,15 @@ body {
     position: absolute;
     right: 60px;
     bottom: 20px;
+    padding-top: 20px;
   }
 
   .modalImgSlider__field img{
     width: 640px;
     height: 640px;
   }
+
+
 }
 
 @media (min-width: 940px) {
@@ -1409,7 +1451,7 @@ body {
   }
 
   .smallLine{
-    margin-top: 65px;
+    margin-top: 105px;
     display: block;
     width: 310px;
     height: 2px;
@@ -1743,7 +1785,7 @@ body {
   }
 
   .nav__icons{
-    width: 30%;
+    width: 25%;
   }
 
   .menu__Open{
@@ -1760,7 +1802,7 @@ body {
   }
 
   .firstBlock__buttonMediaMin940px{
-    margin-top: 240px;
+    margin-top: 230px;
   }
 
   .smallLine{
@@ -1777,10 +1819,6 @@ body {
 
   .secondBlock__title{
     width: 660px;
-  }
-
-  .secondBlock__item-title{
-    align-self: center;
   }
 
   .secondBlock__item{
@@ -1804,8 +1842,8 @@ body {
     display: flex;
   }
   .fourthAndThirdBlockTogether1200px__text{
-    width: 114px;
-    height: 67px;
+    width: 140px;
+    height: 48px;
     text-align: center;
     color: #31373e;
     background: rgba(256, 256, 256, 1);
@@ -1844,6 +1882,7 @@ body {
 
   .sixthBlock__item{
     width: 260px;
+    padding: 31px 20px;
   }
 
   .sixthBlock__wrapper{
@@ -1902,6 +1941,10 @@ body {
   .modalImgSlider__field img{
     width: 896px;
     height: 896px;
+  }
+
+  .fifthBlock__item-subtitle{
+    min-width: 541px;
   }
 }
 
