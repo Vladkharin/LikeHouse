@@ -485,9 +485,11 @@ const modal = document.querySelector('.modalImgSlider')
 const buttonCloseModal = document.querySelector('.modalImgSlider__close')
 const buttonMagnifyingGlass = document.querySelector('.modalImgSlider__magnifyingGlass')
 
+let slideIndex = 1;
+
 modal.style.visibility = 'hidden'
 
-slidesOpenModal.forEach(slide => {
+slidesOpenModal.forEach((slide, i) => {
     
     slide.addEventListener('click', () => {
         modal.style.visibility = 'visible'
@@ -498,32 +500,12 @@ buttonCloseModal.addEventListener('click', () => {
     modal.style.visibility = 'hidden'
 })
 
-
-// zoom in / zoom out
-
-// const slidesZoomModal = document.querySelectorAll('.modalImgSlider__img')
-
-// slidesZoomModal.forEach(slide => {
-//     slide.addEventListener('click', (e) => {
-//         slide.addEventListener('mousemove', (e) => {
-//             slide.style.width = '100%';
-//             let zoomer = e.currentTarget;
-//             e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
-//             e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
-//             x = offsetX/zoomer.offsetWidth*100
-//             y = offsetY/zoomer.offsetHeight*100
-//             zoomer.style.backgroundPosition = x + '% ' + y + '%';
-//         })
-//     })
-// })
-
 // modal img slider
 
 const slidesModal = document.querySelectorAll('.modalImgSlider__img')
 const prevModal = document.querySelector('.modalImgSlider__button-left')
 const nextModal = document.querySelector('.modalImgSlider__button-right')
 
-let slideIndex = 1;
 
 showSlides(slideIndex)
 
@@ -536,6 +518,7 @@ function showSlides(n) {
     if  (n < 1) {
         slideIndex = slidesModal.length
     }
+
 
     slidesModal.forEach( slide => slide.style.display = 'none')
 
@@ -561,8 +544,8 @@ slidesModal.forEach(slide => {
             slide.style.scale = '1.0'
             slide.style.cursor ='zoom-in'
         } else {
-                slide.style.scale = '1.3'
-                slide.style.cursor ='zoom-out'
+            slide.style.scale = '1.3'
+            slide.style.cursor ='zoom-out'
     
         }
     })   
