@@ -704,7 +704,6 @@ body {
 .eightBlock{
   height: 750px;
   background-color: #f7f7f7;
-  padding-top: 30px;
 }
 
 .eightBlock__header{
@@ -1377,11 +1376,11 @@ body {
     margin-top: 90px;
     text-align: start;
     width: 321px;
-    font-size: 20px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
-    padding-left: 45px;
+    padding-left: 30px;
   }
 
   .secondBlock{
@@ -1574,7 +1573,7 @@ body {
 
   .sixthBlock__button{
     position: absolute;
-    right: 5px;
+    right: 0px;
     bottom: 0px;
     width: 220px;
   }
