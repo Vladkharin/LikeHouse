@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'FuturaPTWebCondMedium';
 	src: 
-		url('Futura-PT_Cond-Medium.woff') format('woff');
+		url('futura-PT_Cond-Medium.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -9,7 +9,7 @@
 @font-face {
 	font-family: 'FuturaPTWebBook';
 	src: 
-		url('Futura-PT_Book.woff') format('woff');
+		url('futura-PT_Book.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -18,7 +18,7 @@
 @font-face {
 	font-family: 'FuturaPTWebBold';
 	src: 
-		url('Futura-PT_Bold.woff') format('woff');
+		url('futura-PT_Bold.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -26,7 +26,7 @@
 @font-face {
 	font-family: 'FuturaPTWebLight';
 	src: 
-		url('Futura-PT_Light.woff') format('woff');
+		url('futura-PT_Light.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
