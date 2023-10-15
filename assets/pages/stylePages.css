@@ -14,6 +14,7 @@ body {
 }
   
 .nav{
+    font-family: 'FuturaPTWebLight';
     height: 101px;
     width: 100%;
     position: fixed;
@@ -1155,7 +1156,7 @@ body {
     }
 
     .firstBlock{
-        min-height: 1120px;
+        min-height: 1080px;
     }
 
     .secondBlock__item{

@@ -80,7 +80,7 @@ let itemsHouse = [
         alt: 'firstTile',
         size: 'Размер: 6х7',
         square: 'Площадь: 71 м2',
-        coust:  'Стоимость: 2 329 000 руб.',
+        coust:  'Стоимость: 2 489 000 руб.',
         mortgage: 'В ипотеку: от 12 698 руб.',
         type: 'two-storey house', 
         link: '6x7.html'
@@ -90,7 +90,7 @@ let itemsHouse = [
         alt: 'secondTile',
         size: 'Размер: 7х7',
         square: 'Площадь: 82.4 м2',
-        coust:  'Стоимость: 2 729 000 руб.',
+        coust:  'Стоимость: 2 889 000 руб.',
         mortgage: 'В ипотеку: от 15 029 руб.',
         type: 'two-storey house',
         link: '7x7.html'
@@ -100,7 +100,7 @@ let itemsHouse = [
         alt: 'thirdTile',
         size: 'Размер: 12х12',
         square: 'Площадь: 97 м2',
-        coust:  'Стоимость: 3 685 000 руб.',
+        coust:  'Стоимость: 3 845 000 руб.',
         mortgage: 'В ипотеку: от 20 600 руб.',
         type: 'cottage',
         link: '12x12.html'
@@ -110,7 +110,7 @@ let itemsHouse = [
         alt: 'fourthTile',
         size: 'Размер: 7х8',
         square: 'Площадь: 94.7 м2',
-        coust:  'Стоимость: 3 050 000 руб.',
+        coust:  'Стоимость: 3 210 000 руб.',
         mortgage: 'В ипотеку: от 16 899 руб.',
         type: 'two-storey house',
         link: '7x8.html'
@@ -120,7 +120,7 @@ let itemsHouse = [
         alt: 'fifthTile',
         size: 'Размер: 7х8 одноэтажный',
         square: 'Площадь: 50 м2',
-        coust:  'Стоимость: 2 329 000 руб.',
+        coust:  'Стоимость: 2 489 000 руб.',
         mortgage: 'В ипотеку: от 12 698 руб.',
         type: 'cottage',
         link: '7x8-one.html'
@@ -130,7 +130,7 @@ let itemsHouse = [
         alt: 'sixthTile',
         size: 'Размер: 8х8',
         square: 'Площадь: 109 м2',
-        coust:  'Стоимость: 3 329 000 руб.',
+        coust:  'Стоимость: 3 489 000 руб.',
         mortgage: 'В ипотеку: от 18 525 руб.',
         type: 'two-storey house',
         link: '8x8.html'
@@ -140,7 +140,7 @@ let itemsHouse = [
         alt: 'seventhTile',
         size: 'Размер: 10х8',
         square: 'Площадь: 73 м2',
-        coust:  'Стоимость: 2 729 000 руб.',
+        coust:  'Стоимость: 2 889 000 руб.',
         mortgage: 'В ипотеку: от 15 029 руб.',
         type: 'cottage',
         link: '10x8.html'
@@ -150,7 +150,7 @@ let itemsHouse = [
         alt: 'eighthTile',
         size: 'Размер: 8х9',
         square: 'Площадь: 126 м2',
-        coust:  'Стоимость: 3 690 000 руб.',
+        coust:  'Стоимость: 3 850 000 руб.',
         mortgage: 'В ипотеку: от 20 629 руб.',
         type: 'two-storey house',
         link: '8x9.html'
@@ -160,7 +160,7 @@ let itemsHouse = [
         alt: 'ninthTile',
         size: 'Размер: 12х8',
         square: 'Площадь: 87 м2',
-        coust:  'Стоимость: 3 229 000 руб.',
+        coust:  'Стоимость: 3 389 000 руб.',
         mortgage: 'В ипотеку: от 17 890 руб.',
         type: 'cottage',
         link: '12x8.html'
@@ -170,7 +170,7 @@ let itemsHouse = [
         alt: 'tenthTile',
         size: 'Размер: 10х9.5',
         square: 'Площадь: 133 м2',
-        coust:  'Стоимость: 3 970 000 руб.',
+        coust:  'Стоимость: 4 130 000 руб.',
         mortgage: 'В ипотеку: от 22 260 руб.',
         type: 'two-storey house',
         link: '10x9.html'
@@ -180,7 +180,7 @@ let itemsHouse = [
         alt: 'eleventhTile',
         size: 'Размер: 10х9.5 передняя веранда',
         square: 'Площадь: 133 м2',
-        coust:  'Стоимость: 4 050 000 руб.',
+        coust:  'Стоимость: 4 210 000 руб.',
         mortgage: 'В ипотеку: от 22 727 руб.',
         type: 'two-storey house',
         link: '10x9-anterior.html'
@@ -190,7 +190,7 @@ let itemsHouse = [
         alt: 'twelfthTile',
         size: 'Размер: 12х6',
         square: 'Площадь: 106  м2',
-        coust:  'Стоимость: 4 270 000 руб.',
+        coust:  'Стоимость: 4 430 000 руб.',
         mortgage: 'В ипотеку: от 24 009 руб.',
         type: 'two-storey house',
         link: '12x6.html'
@@ -200,7 +200,7 @@ let itemsHouse = [
         alt: 'thirdteenthTile',
         size: 'Размер: 12х8',
         square: 'Площадь: 87 м2',
-        coust:  'Стоимость:  3 340 000 руб.',
+        coust:  'Стоимость:  3 500 000 руб.',
         mortgage: 'В ипотеку: от 18 589 руб.',
         type: 'cottage',
         link: '12x8-barn.html'
@@ -210,7 +210,7 @@ let itemsHouse = [
         alt: 'fourteenthTile',
         size: 'Размер: 11х7.5',
         square: 'Площадь: 103 м2',
-        coust:  'Стоимость: 4 029 000 руб.',
+        coust:  'Стоимость: 4 189 000 руб.',
         mortgage: 'В ипотеку: от 22 604 руб.',
         type: 'two-storey house',
         link: '11x7.html'
@@ -220,7 +220,7 @@ let itemsHouse = [
         alt: 'fifteenthTile',
         size: 'Размер: 12х9.5',
         square: 'Площадь: 153 м2',
-        coust:  'Стоимость: 5 029 000 руб.',
+        coust:  'Стоимость: 5 189 000 руб.',
         mortgage: 'В ипотеку: от 28 432 руб.',
         type: 'two-storey house',
         link: '12x9.html'
@@ -230,7 +230,7 @@ let itemsHouse = [
         alt: 'sixteenthTile',
         size: 'Размер: 8х10.5',
         square: 'Площадь: 120 м2',
-        coust:  'Стоимость: 3 640 000 руб.',
+        coust:  'Стоимость: 3 800 000 руб.',
         mortgage: 'В ипотеку: от 20 337 руб.',
         type: 'two-storey house',
         link: '8x10.html'
@@ -240,7 +240,7 @@ let itemsHouse = [
         alt: 'seventeenthTile',
         size: 'Размер: 10х7.5',
         square: 'Площадь: 114 м2',
-        coust:  'Стоимость: 3 660 000 руб.',
+        coust:  'Стоимость: 3 820 000 руб.',
         mortgage: 'В ипотеку: от 20 454 руб.',
         type: 'two-storey house',
         link: '10x7.html'
@@ -250,7 +250,7 @@ let itemsHouse = [
         alt: 'twentyThirdTile',
         size: 'Размер: 8х10',
         square: 'Площадь: 73 м2',
-        coust:  'Стоимость: 2 750 000 руб.',
+        coust:  'Стоимость: 2 910 000 руб.',
         mortgage: 'В ипотеку: от 15 151 руб.',
         type: 'cottage',
         link: '8x10-2.html'
@@ -260,7 +260,7 @@ let itemsHouse = [
         alt: 'twentieth',
         size: 'Размер: 12x8',
         square: 'Площадь: 89.7 м2',
-        coust:  'Стоимость: 3 229 000 руб.',
+        coust:  'Стоимость: 3 389 000 руб.',
         mortgage: 'В ипотеку: от 17 890 руб.',
         type: 'cottage',
         link: '12x8-bay_window.html'
@@ -270,7 +270,7 @@ let itemsHouse = [
         alt: 'twentyFirstTile',
         size: 'Размер: 6х6',
         square: 'Площадь: 54 м2',
-        coust:  'Стоимость: 1 950 000 руб.',
+        coust:  'Стоимость: 2 110 000 руб.',
         mortgage: 'В ипотеку: от 10 489 руб.',
         type: 'two-storey house',
         link: '6x6.html'
@@ -280,7 +280,7 @@ let itemsHouse = [
         alt: 'twentyFirstTile',
         size: 'Размер: 6х6',
         square: 'Площадь: 36 м2',
-        coust:  'Стоимость: 1 349 000 руб.',
+        coust:  'Стоимость: 1 509 000 руб.',
         mortgage: 'В ипотеку: от 6 987 руб.',
         type: 'cottage',
         link: '6x6-one.html'
@@ -290,7 +290,7 @@ let itemsHouse = [
         alt: 'twentySecondTile',
         size: 'Размер: 11х9',
         square: 'Площадь: 90 м2',
-        coust:  'Стоимость: 3 239 000 руб.',
+        coust:  'Стоимость: 3 399 000 руб.',
         mortgage: 'В ипотеку: от 18 001 руб.',
         type: 'cottage',
         link: '11x9.html'
@@ -343,7 +343,7 @@ let itemsBathhouse = [
         alt: 'twentySixthTile',
         size: 'Размер: 21х8',
         square: 'Площадь: 91 м2',
-        coust:  'Стоимость: 4 710 000 руб.',
+        coust:  'Стоимость: 4 870 000 руб.',
         type: 'bathhouse',
         link: '21x8.html'
     }
