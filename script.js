@@ -42,9 +42,11 @@ buttonWrapper.addEventListener('click', (e) => {
     if (e.target.classList.contains('fifthBlock__item-plus')) {
         if (e.target.classList.contains('rotate')) {
             e.target.nextElementSibling.style.maxHeight = '0px'
+            e.target.nextElementSibling.style.marginBottom = '0px'
             e.target.classList.remove('rotate')
         } else {
             e.target.nextElementSibling.style.maxHeight = '190px'
+            e.target.nextElementSibling.style.marginBottom = '20px'
             e.target.classList.add('rotate')
         }
     }
@@ -493,6 +495,8 @@ slidesOpenModal.forEach((slide, i) => {
     
     slide.addEventListener('click', () => {
         modal.style.visibility = 'visible'
+        slideIndex = i + 1;
+        showSlides(slideIndex)
     })
 })
 
@@ -507,7 +511,7 @@ const prevModal = document.querySelector('.modalImgSlider__button-left')
 const nextModal = document.querySelector('.modalImgSlider__button-right')
 
 
-showSlides(slideIndex)
+// showSlides(slideIndex)
 
 
 function showSlides(n) {

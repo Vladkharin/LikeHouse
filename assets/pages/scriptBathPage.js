@@ -84,8 +84,6 @@ const imgBtn = document.querySelector('.firstBlock__carousel-item')
 
 imgBtn.addEventListener('click', () => {
     const modal = document.querySelector(`.modal[data-modal=${imgBtn.dataset.modal}]`)
-    console.log(imgBtn.dataset.modal)
-    console.log(modal)
     modal.classList.add('visible')
     modal.classList.remove('notVisible')
 })
@@ -103,7 +101,6 @@ modals.forEach(modal => {
     })
 
     buttonWrapper.addEventListener('click', (e) => {
-        console.log(e.target)
         if (e.target.classList.contains('modal__wrapper')){
             modal.classList.remove('visible')
             modal.classList.add('notVisible')

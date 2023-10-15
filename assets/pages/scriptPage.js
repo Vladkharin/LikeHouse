@@ -10,8 +10,6 @@ const slideModalField = document.querySelector('.firstBlock__field')
 const mainSlide = document.querySelector('.firstBlock__carousel-item')
 
 let slideIndex = 1;
-
-
 const mediaQuerrymax = window.matchMedia('(max-width: 959px)')
 
 let lastSlideIndex = 0
@@ -99,17 +97,14 @@ let priceChange = 0;
 
 
 selectionMenu.addEventListener('click', (e) => {
-    console.log(e.target)
     if (e.target.classList.contains('secondBlockMenu__text')) {
         buttonOpeningHouseSelectionMenu.textContent = e.target.textContent
         selectionMenu.classList.remove('visible')
         selectionMenu.classList.add('notVisible')
-        // console.log((+e.target.value) - (+buttonOpeningHouseSelectionMenu.value))
         // priceChange =  (+e.target.value) - (+buttonOpeningHouseSelectionMenu.value)
         priceChange +=  (+e.target.value) - (+buttonOpeningHouseSelectionMenu.value)
         buttonOpeningHouseSelectionMenu.setAttribute('value', e.target.value)
         cost.textContent = startCost + priceChange
-        console.log(priceChange)
     }
 })
 
@@ -179,12 +174,10 @@ selectFieldButtons.forEach(selectButton => {
             btn.classList.add('activeBtn')
             btn.classList.remove('inactiveBtn')
             priceChange += value
-            console.log(priceChange)
         } else {
             btn.classList.add('inactiveBtn')
             btn.classList.remove('activeBtn')
             priceChange -= value
-            console.log(priceChange)
         }
         cost.textContent = startCost + priceChange
     })
@@ -196,8 +189,6 @@ const imgBtn = document.querySelector('.firstBlock__carousel-item')
 
 imgBtn.addEventListener('click', () => {
     const modal = document.querySelector(`.modal[data-modal=${imgBtn.dataset.modal}]`)
-    console.log(imgBtn.dataset.modal)
-    console.log(modal)
     modal.classList.add('visible')
     modal.classList.remove('notVisible')
 })
@@ -205,8 +196,6 @@ imgBtn.addEventListener('click', () => {
 buttonsSpan.forEach(btn => {
     btn.addEventListener('click', () => {
         const modal = document.querySelector(`.modal[data-modal=${btn.dataset.modal}]`)
-        console.log(btn.dataset.modal)
-        console.log(modal)
         modal.classList.add('visible')
         modal.classList.remove('notVisible')
     })
@@ -225,7 +214,6 @@ modals.forEach(modal => {
     })
 
     buttonWrapper.addEventListener('click', (e) => {
-        console.log(e.target)
         if (e.target.classList.contains('modal__wrapper')){
             modal.classList.remove('visible')
             modal.classList.add('notVisible')

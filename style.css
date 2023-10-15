@@ -93,6 +93,7 @@ body {
 .firstBlock__wrapper{
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .firstBlock__header{
@@ -116,7 +117,6 @@ body {
 }
 
 .firstBlock__buttonMediaMax940px{
-  margin: 0 auto;
   margin-top: 230px;
   width: 300px;
   height: 70px;
@@ -141,14 +141,14 @@ body {
 }
 
 .firstBlock__buttonMediaMin940px button{
-  width: 300px;
+  width: 308px;
   height: 70px;
   border: #fff solid 3px;
   background: rgba(0, 0, 0, 0)
 }
 
 .firstBlock__buttonMediaMax940px button a {
-  font-family: 'Futura PT';
+  font-family: 'FuturaPTWebBold';
   font-size: 20px;
   line-height: 1.55;
   font-weight: 500;
@@ -161,7 +161,7 @@ body {
 }
 
 .firstBlock__buttonMediaMin940px button {
-  font-family: 'Futura PT';
+  font-family: 'FuturaPTWebBold';
   font-size: 20px;
   line-height: 1.55;
   font-weight: 500;
@@ -252,6 +252,14 @@ body {
   align-self: center;
   width: 250px;
 }
+.secondBlock__item-title2{
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 400;
+  align-self: center;
+  width: 250px;
+}
 
 .secondBlock__secondList{
   margin-top: 60px;
@@ -271,6 +279,7 @@ body {
   line-height: 1.55;
   font-weight: 400;
   min-width: 64px;
+  margin-right: 20px;
 }
 
 .line{
@@ -281,7 +290,7 @@ body {
 }
 
 .thirdBlock{
-  height: 860px;
+  height: 800px;
   padding-top: 80px;
 }
 
@@ -429,7 +438,7 @@ body {
 
 .fifthBlock{
   height: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
 }
 
 .fifthBlock__header{
@@ -510,7 +519,7 @@ body {
 .sixthBlock{
   height: 1356px;
   background: url('./assets/img/sixthBlockBG320media.jpg') center center/cover no-repeat;
-  padding-top: 100px;
+  padding-top: 69px;
 }
 
 .sixthBlock__headerMax481{
@@ -593,7 +602,7 @@ body {
 
 .sixthBlock__button{
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 25px;
   width: 300px;
   height: 70px;
 }
@@ -605,7 +614,7 @@ body {
 }
 
 .sixthBlock__button button a {
-  font-family: 'Futura PT';
+  font-family: 'FuturaPTWebBold';
   font-size: 20px;
   line-height: 1.55;
   font-weight: 500;
@@ -616,7 +625,7 @@ body {
 
 .seventhBlock{
   height: 790px;
-  padding-top: 90px;
+  padding-top: 80px;
   background-color: #f7f7f7;
 }
 
@@ -694,9 +703,9 @@ body {
 
 
 .eightBlock{
-  height: 842px;
+  height: 750px;
   background-color: #f7f7f7;
-  padding-top: 85px;
+  padding-top: 30px;
 }
 
 .eightBlock__header{
@@ -721,18 +730,22 @@ body {
 
 .footer__wrapper{
   display: flex;
-  column-gap: 40px;
+  column-gap: 72px;
+  position: relative;
 }
 
 .footer__img{
   width: 50px;
   height: 50px;
   opacity: 0.25;
+  position: absolute;
+  left: -7px;
 }
 
 .footer__items{
   display: flex;
   flex-direction: column;
+  padding-left: 123px;
 }
 
 .footer__item{
@@ -741,6 +754,8 @@ body {
 
 .footer__item-linkWithdecoration{
   border-bottom: 1px solid rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: 'FuturaPTWebLight';
   color: #fff;
   box-shadow: none;
   text-decoration: none;
@@ -749,6 +764,7 @@ body {
 .footer__item-header{
   color: #ffffff;
   font-size: 18px;
+  font-family: 'FuturaPTWebLight';
   line-height: 1.7;
   font-weight: 400;
   opacity: 0.5;
@@ -758,6 +774,7 @@ body {
   color: #ffffff;
   font-size: 18px;
   line-height: 1.55;
+  font-family: 'FuturaPTWebLight';
   font-weight: 300;
   margin-top: 10px;
 }
@@ -766,10 +783,12 @@ body {
   color: #fff;
   border-bottom:none;
   box-shadow: none;
+  font-family: 'FuturaPTWebLight';
   text-decoration: none;
 }
 
 .footer__item-title span{
+  font-family: 'FuturaPTWebLight';
   font-weight: 300;
   font-size: 16px;
 }
@@ -821,9 +840,10 @@ body {
 
 .menu__link{
   color: #ffffff;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   text-decoration: none;
+  font-family: 'FuturaPTWebLight';
 }
 
 .menu__Close{
@@ -985,6 +1005,10 @@ body {
   display: flex;
 }
 
+.plNumber{
+  padding-left: 4px;
+}
+
 
 @media (min-width: 481px) {
   .container{
@@ -1014,10 +1038,11 @@ body {
     border-bottom:none;
     box-shadow: none;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
+    font-family: 'FuturaPTWebLight';
   }
 
   /* .margin{
@@ -1025,7 +1050,7 @@ body {
   } */
   
   .nav__item-title span{
-    font-size: 13px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 25px
@@ -1092,7 +1117,7 @@ body {
   }
 
   .fourthAndThirdBlockTogether{
-    padding-top: 100px;
+    padding-top: 69px;
     display: block;
   }
 
@@ -1208,7 +1233,7 @@ body {
   }
 
   .fifthBlock{
-    margin-top: 100px;
+    margin-top: 168px;
   }
 
   .fifthBlock__imgs{
@@ -1242,7 +1267,7 @@ body {
   }
 
   .line{
-    width: 400px;
+    width: 460px;
   }
 
   .fifthBlock__item-number{
@@ -1250,6 +1275,7 @@ body {
     color: rgb(226, 154, 1);
     font-size: 40px;
     font-weight: 400;
+    min-width: 46px;
   }
 
   .sixthBlock{
@@ -1301,6 +1327,9 @@ body {
   .marginBot{
     margin-top: 85px;
   }
+  .footer__items{
+    padding-left: 280px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -1327,7 +1356,7 @@ body {
   .firstBlock__wrapper{
     flex-direction: row;
     height: 250px;
-    column-gap: 30px;
+    justify-content: space-between;
   }
 
   .firstBlock__header{
@@ -1348,11 +1377,12 @@ body {
   .firstBlock__title{
     margin-top: 90px;
     text-align: start;
-    width: 300px;
+    width: 321px;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
+    padding-left: 45px;
   }
 
   .secondBlock{
@@ -1364,6 +1394,10 @@ body {
     row-gap: 20px;
     flex-wrap: wrap;
     column-gap: 20px;
+  }
+
+  .secondBlock__secondListItem{
+    width: 640px;
   }
 
   .fourthAndThirdBlockTogether__tile{
@@ -1406,6 +1440,7 @@ body {
     flex-direction: row;
     column-gap: 55px;
     position: relative;
+    padding-left: 220px;
   }
 
   .footer__item{
@@ -1433,12 +1468,16 @@ body {
     height: 640px;
   }
 
+  .fourthAndThirdBlockTogether__inner{
+    justify-content: normal;
+  }
+
 
 }
 
-@media (min-width: 940px) {
+@media (min-width: 960px) {
   .container{
-    width: 930px;
+    width: 940px;
   }
 
   .nav__icons{
@@ -1447,7 +1486,7 @@ body {
   }
 
   .line{
-    width: 310px;
+    width: 360px;
   }
 
   .smallLine{
@@ -1458,6 +1497,10 @@ body {
     opacity: 1;
   }
 
+  .secondBlock__secondListItem{
+    width: 380px;
+  }
+
   .firstBlock__buttonMediaMax940px{
     display: none;
   }
@@ -1466,13 +1509,17 @@ body {
     display: block;
   }
 
+  .firstBlock__header span{
+    width: 98%;
+  }
+
   .secondBlock{
     position: relative;
-    height: 1100px;
+    height: 1140px;
   }
 
   .secondBlock__list{
-    column-gap: 10px;
+    column-gap: 20px;
   }
 
   .secondBlock__title{
@@ -1514,12 +1561,12 @@ body {
 
   .sixthBlock{
     background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.65)),  url('./assets/img/sixthBlockBG650media.jpg') center center/cover no-repeat;
-    height: 670px;
+    height: 575px;
     position: relative;
   }
 
   .sixthBlock__items{
-    column-gap: 15px;
+    column-gap: 20px;
   }
 
   .sixthBlock__item{
@@ -1528,12 +1575,13 @@ body {
 
   .sixthBlock__button{
     position: absolute;
-    right: 10px;
-    bottom: 10px;
+    right: 5px;
+    bottom: 25px;
     width: 220px;
   }
   .sixthBlock__button button{
     width: 220px;
+    font-family: 'FuturaPTWebBold';
   }
 
   .eightBlock__wrapper{
@@ -1551,7 +1599,7 @@ body {
   }
 
   .footer__items{
-    column-gap: 70px;
+    column-gap: 148px;
   }
   .fifthBlock__imgs {
     column-gap: 20px;
@@ -1777,7 +1825,10 @@ body {
 
 @media (min-width:1200px){
   .container{
-    width: 1180px;
+    width: 1160px;
+  }
+  .sixthBlock__button button{
+    width: 260px;
   }
 
   .nav__links{
@@ -1802,19 +1853,21 @@ body {
   }
 
   .firstBlock__buttonMediaMin940px{
-    margin-top: 230px;
+    margin-top: 210px;
   }
 
   .smallLine{
-    width: 490px;
+    width: 505px;
+    position: absolute;
+    left: 309px;
   }
 
   .secondBlock__secondList{
-    right: 40px;
+    right: 0px;
   }
 
   .secondBlock__secondListItem{
-    width: 330px;
+    width: 360px;
   }
 
   .secondBlock__title{
@@ -1828,6 +1881,7 @@ body {
   .secondBlock__list{
     column-gap: 40px;
     justify-content: center;
+    row-gap: 40px;
   }
 
   .fourthAndThirdBlockTogether__button{
@@ -1859,7 +1913,8 @@ body {
   }
 
   .fourthAndThirdBlockTogether__inner {
-    column-gap: 60px;
+    column-gap: 41px;
+    justify-content: start;
   }
 
   .fifthBlock__img{
@@ -1872,12 +1927,12 @@ body {
   }
 
   .fifthBlock__item{
-    width: 1100px;
+    width: 1160px;
     column-gap: 185px;
   }
 
   .gold{
-    width: 1100px;
+    width: 1160px;
   }
 
   .sixthBlock__item{
@@ -1890,14 +1945,14 @@ body {
   }
 
   .sixthBlock__items{
-    column-gap: 30px;
+    column-gap: 40px;
     align-items: center;
     justify-content: center;
   }
 
   .nav__links {
     display: flex;
-    column-gap: 30px;
+    column-gap: 36px;
   }
 
   .footer__socials{
@@ -1907,7 +1962,12 @@ body {
   .footer__wrapper{
     display: flex;
     justify-content: center;
-    column-gap: 200px;
+    column-gap: 150px;
+    padding-left: 160px;
+  }
+
+  .footer__items{
+    padding-left: 0;
   }
 
   .eightBlock__header{
@@ -1944,7 +2004,21 @@ body {
   }
 
   .fifthBlock__item-subtitle{
-    min-width: 541px;
+    min-width: 595px;
+  }
+
+  .fourthAndThirdBlockTogether__tile{
+    width: 359px;
+    height: 532px;
+  }
+
+  .fourthAndThirdBlockTogether__tile-img{
+    width: 340px;
+    height: 255px;
+  }
+
+  .firstBlock__header span{
+    width: 95%;
   }
 }
 
@@ -1977,6 +2051,7 @@ body {
 }
 
 .changesBg{
+  font-family: 'FuturaPTWebBold';
   background: #31373e;
   color: #ffffff;
 }

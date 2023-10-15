@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: 'Futura PT', sans-serif;
+    font-family: 'FuturaPTWebBook', sans-serif;
     margin: 0;
     overflow-x:hidden;
 }
@@ -122,6 +122,7 @@ body {
     font-size: 20px;
     line-height: 31px;
     font-weight: 400;
+    padding-left: 10px;
 }
 
 .help{
@@ -191,7 +192,7 @@ body {
     border: 1px solid rgba(49, 55, 62, 0.25);
     position: relative;
     display: flex;
-    padding: 80px 20px 20px 20px;
+    padding: 55px 20px 20px 20px;
 }
 
 .maternalCapital__item-number{
@@ -231,7 +232,7 @@ body {
 
 .firstBlock__header{
     color: #31373e;
-    font-size: 54px;
+    font-size: 74px;
     line-height: 1.55;
     font-weight: 400;
 }
@@ -337,7 +338,7 @@ body {
 .firstBlock__gridBlock img{
     width: 300px;
     height: 300px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .firstBlock__grid-header{
@@ -565,7 +566,7 @@ body {
 .secondBlock__service-input::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    margin-top: -8px;
+    margin-top: -1px;
     width: 20px;
     height: 20px;
     border-radius:100%;
@@ -628,6 +629,7 @@ body {
     height: 487px;
     background: url('../icons/Iphone.webp') center center/cover no-repeat;
     position: relative;
+    margin-left: -50px;
 }
 
 .thirdBlock__item iframe{
@@ -639,76 +641,86 @@ body {
 .footer{
     background-color: #000000;
     padding: 60px 0;
-
-}
+  }
   
-.footer__wrapper{
+  .footer__wrapper{
     display: flex;
-    column-gap: 40px;
-}
+    column-gap: 72px;
+    position: relative;
+  }
   
-.footer__img{ 
+  .footer__img{
     width: 50px;
     height: 50px;
     opacity: 0.25;
-}
+    position: absolute;
+    left: -7px;
+  }
   
-.footer__items{
+  .footer__items{
     display: flex;
     flex-direction: column;
-}
+    padding-left: 123px;
+  }
   
-.footer__item{
+  .footer__item{
     margin-bottom: 30px;
-}
+  }
   
-.footer__item-linkWithdecoration{
+  .footer__item-linkWithdecoration{
     border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: 'FuturaPTWebLight';
     color: #fff;
     box-shadow: none;
     text-decoration: none;
-}
+  }
   
-.footer__item-header{
+  .footer__item-header{
     color: #ffffff;
     font-size: 18px;
+    font-family: 'FuturaPTWebLight';
     line-height: 1.7;
     font-weight: 400;
     opacity: 0.5;
-}
+  }
   
-.footer__item-title{
+  .footer__item-title{
     color: #ffffff;
     font-size: 18px;
     line-height: 1.55;
+    font-family: 'FuturaPTWebLight';
     font-weight: 300;
-}
+    margin-top: 10px;
+  }
   
-.footer__item-linkWithOutdecoration{
+  .footer__item-linkWithOutdecoration{
     color: #fff;
     border-bottom:none;
     box-shadow: none;
+    font-family: 'FuturaPTWebLight';
     text-decoration: none;
-}
+  }
   
-.footer__item-title span{
+  .footer__item-title span{
+    font-family: 'FuturaPTWebLight';
     font-weight: 300;
     font-size: 16px;
-}
+  }
   
-.footer__socials{
+  .footer__socials{
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 20px;
     width: 110px;
-}
+  }
   
-.footer__social{
+  .footer__social{
     height: 45px;
     width: 45px;
-}
+  }
 .modal{
     position: fixed;
     z-index: 3;
@@ -848,7 +860,7 @@ body {
     }
 
     .help__header{
-        max-width: 451px;
+        max-width: 510px;
         font-size: 52px;
     }
 
@@ -971,32 +983,35 @@ body {
 
     .thirdBlock__items{
         flex-direction: row;
+        column-gap: 50px
     }
 
     .footer__items{
         flex-direction: row;
         column-gap: 55px;
         position: relative;
-    }
+        padding-left: 220px;
+      }
     
-    .footer__item{
+      .footer__item{
         padding-top: 20px;
-    }
+      }
     
-    .footer{
+      .footer{
         column-gap: 150px;
         height: 465px;
-    }
+      }
     
-    .footer__wrapper{
+      .footer__wrapper{
         height: 360px;
-    }
+      }
     
-    .footer__socialItem{
+      .footer__socialItem{
         position: absolute;
         right: 60px;
         bottom: 20px;
-    }
+        padding-top: 20px;
+      }
 
     .modal__img {
         width: 300px;
@@ -1073,7 +1088,7 @@ body {
 
     .requisites__items{
         flex-direction: row;
-        column-gap: 40px;
+        column-gap: 70px;
     }
 
     #phone{
@@ -1167,16 +1182,16 @@ body {
     }
 
     .thirdBlock__items{
-        justify-content: center;
+        justify-content: normal;
     }
 
     .footer__socialItem{
         position: static;
-    }
+      }
     
-    .footer__items{
-        column-gap: 70px;
-    }
+      .footer__items{
+        column-gap: 148px;
+      }
 
     .bath{
         margin-top: 0;
@@ -1191,7 +1206,7 @@ body {
 
 @media (min-width: 1200px){
     .container{
-        width: 1180px;
+        width: 1160px;
     }
 
     .line2 {
@@ -1214,10 +1229,10 @@ body {
     }
 
     .line{
-        width: 900px;
+        width: 1160px;
     }
     .secondBlock__item{
-        width: 900px;
+        width: 1160px;
     }
 
     .secondBlock__service-input{
@@ -1234,16 +1249,21 @@ body {
 
     .footer__socials{
         flex-wrap: nowrap;
-    }
+      }
     
-    .footer__wrapper{
+      .footer__wrapper{
         display: flex;
         justify-content: center;
-        column-gap: 200px;
-    }
+        column-gap: 150px;
+        padding-left: 160px;
+      }
+    
+      .footer__items{
+        padding-left: 0;
+      }
 
     .firstBlock__wrapper{
-        column-gap: 150px;
+        column-gap: 146px;
     }
 
     .big {
