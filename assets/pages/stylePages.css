@@ -219,7 +219,7 @@ body {
     font-weight: 400;
 }
 .requisites__items{
-    margin: 100px 0;
+    margin: 10px 0 139px 0;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
