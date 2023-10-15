@@ -588,7 +588,7 @@ body {
   font-size: 54px;
   line-height: 1.55;
   font-weight: 400;
-  margin-top: 80px;
+  margin-top: 130px;
 }
 
 .sixthBlock__text{
@@ -596,7 +596,6 @@ body {
   font-size: 20px;
   line-height: 1.55;
   font-weight: 400;
-  margin-top: 21px;
 }
 
 
@@ -1561,7 +1560,7 @@ body {
 
   .sixthBlock{
     background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.65)),  url('./assets/img/sixthBlockBG650media.jpg') center center/cover no-repeat;
-    height: 575px;
+    height: 690px;
     position: relative;
   }
 
@@ -1576,7 +1575,7 @@ body {
   .sixthBlock__button{
     position: absolute;
     right: 5px;
-    bottom: 25px;
+    bottom: 0px;
     width: 220px;
   }
   .sixthBlock__button button{

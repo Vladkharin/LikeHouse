@@ -282,7 +282,7 @@ let itemsHouse = [
         square: 'Площадь: 36 м2',
         coust:  'Стоимость: 1 349 000 руб.',
         mortgage: 'В ипотеку: от 6 987 руб.',
-        type: 'two-storey house',
+        type: 'cottage',
         link: '6x6-one.html'
     },
     {
