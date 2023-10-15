@@ -181,7 +181,7 @@ body {
 }
 
 .maternalCapital__items{
-    margin-top: 59px;
+    margin-top: 39px;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
@@ -615,7 +615,8 @@ body {
 }
 
 .thirdBlock{
-    margin-top: 100px;
+    margin-top: 36px;
+    margin-bottom: 60px;
 }
 
 .thirdBlock__header{
