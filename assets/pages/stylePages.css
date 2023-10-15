@@ -226,7 +226,7 @@ body {
 }
 
 .firstBlock{
-    height: 1500px;
+    min-height: 1500px;
     padding-top: 160px;
 }
 
@@ -349,7 +349,7 @@ body {
 }
 
 .secondBlock{
-    margin-top: 60px;
+    margin-top: 75px;
 }
 
 .secondBlock__header{
@@ -940,7 +940,7 @@ body {
     }
 
     .firstBlock{
-        height: 1750px;
+        min-height: 1750px;
     }
 
     .mortgage iframe{
@@ -1154,7 +1154,7 @@ body {
     }
 
     .firstBlock{
-        height: 1050px;
+        min-height: 1120px;
     }
 
     .secondBlock__item{
@@ -1199,6 +1199,10 @@ body {
 
     .big {
         height: 1250px;
+    }
+
+    .secondBlock__services-subtitle{
+        max-width: 430px;
     }
 
      
@@ -1305,6 +1309,10 @@ body {
 
 .none{
     display: none;
+}
+
+.mb60px{
+    margin-bottom: 60px;
 }
 
 .block{
