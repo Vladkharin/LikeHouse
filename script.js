@@ -331,7 +331,7 @@ let itemsBathhouse = [
         square: 'Площадь: 26 м2',
         coust:  'Стоимость: 1 320 000 руб.',
         type: 'bathhouse',
-        link: '5x8-bath.html'
+        link: '5X8-bath.html'
     } ,
     {
         img: './assets/img/twentyFifthTile.webp',

@@ -535,6 +535,7 @@ body {
     text-align: start;
     padding: 4px 5px; 
     margin: 0;
+    font-family: 'FuturaPTWebBook';
 }
 
 .secondBlockMenu__text:hover{
@@ -974,6 +975,10 @@ body {
         width: 620px;
     }
 
+    .secondBlockMenu__text {
+        width: 620px;
+      }
+
     .firstBlock{
         min-height: 1750px;
     }
@@ -1288,15 +1293,15 @@ body {
     }
 
     .secondBlock__service-input{
-        width: 1180px;
+        width: 1160px;
     }
     
     .secondBlockMenu__button{
-        width: 1180px;
+        width: 1160px;
     }
 
     .secondBlockMenu__text{
-        width: 1180px;
+        width: 1160px;
     }
 
     .footer__socials{
