@@ -2095,22 +2095,116 @@ feedBackWrapper.addEventListener('click', (e) => {
 
 // form 
 
-// const form = document.querySelector('.feedBack__form')
+const form = document.querySelector('.feedBack__form')
+
+const loader = document.querySelector('.loader')
+const btnText = document.querySelector('.feedBack__form-submitText')
+const feedBackModal = document.querySelector('.feedBackModal')
 
 
-// form.addEventListener('submit', formSend);
+form.addEventListener('submit', formSend);
 
-// async function formSend(e) {
-//     e.preventDefault()
+async function formSend(e) {
+    e.preventDefault()
 
-//     let error = formValidate(form)
-// }
+    let error = formValidate(form)
+
+    let formData = new FormData(form)
+
+    if (error === 0) {
+        loader.classList.add('block')
+        loader.classList.remove('none')
+        btnText.classList.remove('block')
+        btnText.classList.add('none')
+        let response = await fetch('sendmail.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (response.ok) {
+            let result = await response.json();
+            alert(result.message)
+            form.reset();
+            feedBackModal.classList.add('block')
+            feedBackModal.classList.remove('none')
+            btnText.classList.add('block')
+            btnText.classList.remove('none')
+            loader.classList.remove('block')
+            loader.classList.add('none')
+        } else {
+            alert('ERROR')
+        }
+    }
+}
 
 
-// function formValidate(form){
-//     let error = 0;
+function formValidate(form){
+    let error = 0;
     
-// }
+    let formReq = document.querySelectorAll('._req')
+    let errorInfo = document.querySelectorAll('.error')
+    let errorInfoTel = document.querySelector('.errorTel')
+
+    for (let index = 0; index < formReq.length; index++) {
+        const input = formReq[index];
+        const errorCar = errorInfo[index]
+        formRemoveError(input, errorCar)
+        formRemoveError(input, errorInfoTel)
+        
+        console.log(input.value.length)
+        if (input.value === '' || input.value === '(___) ___-____'){
+            formAddError(input, errorCar)
+           
+            error++;
+        } else if(input.type === 'tel' && input.value.length < 14) {
+            formAddError(input, errorInfoTel)
+        }
+        
+    }
+
+    return error;
+
+}
+
+
+function formAddError(input, error) {
+    input.parentElement.classList.add('_error')
+    input.classList.add('_error')
+    error.classList.add('show')
+    error.classList.remove('notVisible')
+}
+function formRemoveError(input, error) {
+    input.parentElement.classList.remove('_error')
+    input.classList.remove('_error')
+    error.classList.remove('show')
+    error.classList.add('notVisible')
+}
+
+
+const formInputMask = document.querySelector('.feedBack__from-inputPhone')
+const maskOptions = {
+    mask: '(000) 000-0000',
+    lazy: true
+}
+
+const mask = new IMask(formInputMask, maskOptions)
+
+
+const btnCLoseBlackCrestik = document.querySelector('.crestikBlack')
+const feedBackModalWrapper = document.querySelector('.feedBackModal__wrapper')
+
+btnCLoseBlackCrestik.addEventListener('click', (e) => {
+    feedBackModal.classList.add('none')
+    feedBackModal.classList.remove('block')
+})
+
+feedBackModal.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('feedBackModal__wrapper')) {
+        feedBackModal.classList.add('none')
+        feedBackModal.classList.remove('block')
+    }
+})
+
 
 
 

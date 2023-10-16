@@ -469,16 +469,19 @@
     <div class="feedBack" style="display: none;">
         <div class="feedBack__wrapper">
             <img class="feedBack__mainImg" src="./assets/img/feedback.jpg" alt="feedback">
-            <form class="feedBack__form">
+            <form action="sendmail.php" class="feedBack__form">
                 <div class="feedBack__form-header">Оставьте заявку</div>
-                <input class="feedBack__from-inputText" type="text" placeholder="Ваше имя">
+                <input class="feedBack__from-inputText _req" name="user_name" type="text" placeholder="Ваше имя">
                 <div class="feedBack__menu">
                     <div class="feedBack__menu-flag"></div>
                     <div class="feedBack__menu-arrow"></div>
                     <div class="feedBack__menu-number">+7</div>
                 </div>
-                <input class="feedBack__from-inputPhone" type="text" placeholder="99-999-9999"  data-phonemask="+7">
-                <button type="submit" class="feedBack__form-submit">Отправить</button>
+                <input class="feedBack__from-inputPhone _req" name="user_phone" type="tel" placeholder="99-999-9999"  data-phonemask="+7">
+                <button type="submit" class="feedBack__form-submit">
+                    <div class="loader none"></div>
+                    <div class="feedBack__form-submitText block">Отправить</div>
+                </button>
                 <div class="feedBack__form-text">Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
                 <div class="feedBack__form-imgs">
                     <a href=""><img src="./assets/icons/Tilda_Icons_26snw_vk.svg" alt="" class="feedBack__form-img"></a>
@@ -488,12 +491,22 @@
                 <div class="feedBack__menu-buttons" style="display: none;">
                 
                 </div>
-
+                <div class="error tl17585 notVisible">Обязательное поле</div>
+                <div class="error tl24085 notVisible">Обязательное поле</div>
+                <div class="errorTel tl24085">Слишком короткое значение</div>
                 <div class="crestik"><img src="./assets/icons/crestik.svg" alt=""></div>
             </form>
+            <div class="feedBackModal none">
+                <div class="feedBackModal__wrapper">
+                    <img src="./assets/icons/crestikBlack.svg" alt="" class="crestikBlack">
+                    <div class="feedBackModal__complete"></div>
+                    <div class="feedBackModal__text">Спасибо! Данные успешно отправлены.</div>
+                </div>
+            </div>
         </div>
-    </div>
 
+    </div>
+    <script src="https://unpkg.com/imask"></script>
     <script src="script.js"></script>
 </body>
 </html>

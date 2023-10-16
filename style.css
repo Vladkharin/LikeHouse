@@ -1687,12 +1687,12 @@ body {
   }
 
   .feedBack__menu{
-    width: 100px;
+    width: 70px;
     height: 48px;
     background: rgba(0, 0, 0, 0);
     position: absolute;
     top: 193px;
-    right: 250px;
+    right: 270px;
     display: flex;
     align-items: center;
     column-gap: 6px;
@@ -2054,13 +2054,220 @@ body {
   visibility: visible;
 }
 
+.changesBg{
+  font-family: 'FuturaPTWebBold';
+  background: #31373e;
+  color: #ffffff;
+}
+
+._req:focus{
+  border: 1px solid #000;
+}
+._req._error{
+  border: 1px solid red;
+}
+
+.error{
+  position: absolute;
+  top: 0;
+  color: red;
+  background-color: #fff;
+  padding: 8px 10px;
+  border-radius: 2px;
+  z-index: 1;
+  margin-top: 5px;
+  left: 0;
+  box-shadow: 0 1px 20px 0 rgba(0,0,0,.2);
+  opacity: 0;
+}
+.errorTel{
+  position: absolute;
+  top: 0;
+  color: red;
+  background-color: #fff;
+  padding: 8px 10px;
+  border-radius: 2px;
+  z-index: 1;
+  margin-top: 5px;
+  left: 0;
+  box-shadow: 0 1px 20px 0 rgba(0,0,0,.2);
+  opacity: 0;
+}
+.error::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -12px;
+  left: 15%;
+  border: 6px solid transparent;
+  border-bottom-color: transparent;
+  border-bottom-color: #fff;
+}
+.errorTel::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -12px;
+  left: 15%;
+  border: 6px solid transparent;
+  border-bottom-color: transparent;
+  border-bottom-color: #fff;
+}
+
+.tl17585{
+  top: 175px;
+  left: 85px;
+}
+.tl24085{
+  top: 240px;
+  left: 85px;
+}
+
+.show{
+  opacity:1;
+  visibility: visible;
+}
+
 .notVisible{
   opacity: 0;
   visibility: hidden;
 }
 
-.changesBg{
-  font-family: 'FuturaPTWebBold';
-  background: #31373e;
-  color: #ffffff;
+.loader {
+  overflow:hidden;
+  font-size: 10px;
+  text-indent: -9999em;
+  width: 5em;
+  height: 5em;
+  border-radius: 100%;
+  background: #65abf8;
+  background: -moz-linear-gradient(left, #65abf8 10%, rgba(101,171,248, 0) 42%);
+  background: -webkit-linear-gradient(left, #65abf8 10%, rgba(101,171,248, 0) 42%);
+  background: -o-linear-gradient(left, #65abf8 10%, rgba(101,171,248, 0) 42%);
+  background: -ms-linear-gradient(left, #65abf8 10%, rgba(101,171,248, 0) 42%);
+  background: linear-gradient(to right, #65abf8 10%, rgba(101,171,248, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  margin: 0 auto;
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #65abf8;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  background: white;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.feedBackModal{
+  background-color: #fff;
+  padding: 40px 40px 50px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  background-color: rgba(0, 0, 0 , 0.6);
+  cursor: default;
+  width: 940px;
+  height: 470px;
+  position: absolute;
+}
+
+.feedBackModal__wrapper{
+  background-color: #fff;
+  padding: 40px 40px 50px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  cursor: default;
+  width: 360px;
+  height: 185px;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+}
+
+
+.crestikBlack{
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.feedBackModal__complete{
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #62C584;
+  border-radius: 100%;
+  position: relative;
+
+}
+/* .feedBackModal__complete::before{
+  top: 50%;
+  height: 50%;
+  width: 3px;
+  background-color: #336699;
+  content: "";
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+} */
+.feedBackModal__complete::after{
+  width: 15px;
+  height: 11px;
+  content: '\2713';
+  color: #62C584;
+  position: absolute;
+  top: 12px;
+  left: 18px;
+}
+
+.feedBackModal__text{
+  padding-top: 20px;
+  font-family: 'FuturaPTWebLight';
 }
