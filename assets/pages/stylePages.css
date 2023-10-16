@@ -5,7 +5,7 @@
 body {
     font-family: 'FuturaPTWebBook', sans-serif;
     margin: 0;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .container{
@@ -227,13 +227,13 @@ body {
 }
 
 .firstBlock{
-    min-height: 1500px;
+    min-height: 1000px;
     padding-top: 160px;
 }
 
 .firstBlock__header{
     color: #31373e;
-    font-size: 74px;
+    font-size: 54px;
     line-height: 1.55;
     font-weight: 400;
 }
@@ -263,11 +263,17 @@ body {
 .firstBlock__carousel-right img{
     width: 15px;
     height: 15px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
 }
 
 .firstBlock__carousel-left img{
     width: 15px;
     height: 15px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }
 
 .firstBlock__wrapper-field{
@@ -362,7 +368,7 @@ body {
 
 .secondBlock__items{
     margin-top: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 97px;
     display: flex;
     flex-direction: column;
 }
@@ -375,18 +381,19 @@ body {
 .secondBlock__item{
     display: flex;
     padding: 20px 0;
+    column-gap: 35px;
 }
 
 
 .secondBlock__item-name{
-    min-width: 144px;
+    min-width: 135px;
     color: #31373e;
     font-size: 19px;
     font-weight: 400;
 }
 
 .secondBlock__item-key{
-    min-width: 170px;
+    min-width: 140px;
     color: #31373e;
     font-size: 19px;
     font-weight: 400;
@@ -429,8 +436,9 @@ body {
     font-size: 19px;
     font-weight: 400;
     color: rgb(0, 0, 0);
-    text-indent: 80px;
+    text-indent: 65px;
     line-height: 1.55;
+    text-decoration: none;
 }
 .secondBlock__service-span{
     color: #ff8562;
@@ -732,7 +740,22 @@ body {
     overflow: hidden;
     top: 0;
 }
+.modalMain{
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    top: 0;
+}
 .modal__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.modalMain__wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -740,6 +763,11 @@ body {
 }
 
 .modal__img{
+    width: 170px;
+    height: 200px;
+    cursor: zoom-in;
+}
+.modalMain__img{
     width: 170px;
     height: 200px;
     cursor: zoom-in;
@@ -780,7 +808,7 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    right: 10px;
+    right: 10%;
     top: 50%;
     transform: translate(0, -50%);
     padding-top: 3px;
@@ -792,7 +820,7 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    left: 10px;
+    left: 10%;
     top: 50%;
     transform: translate(0, -50%);
     padding-top: 3px;
@@ -824,6 +852,7 @@ body {
     font-weight: 400;
     color: #ffffff;
     text-align: center;
+    text-decoration: none;
 }
 
 .nav__item-linkWithOutdecoration{
@@ -918,6 +947,10 @@ body {
         column-gap: 120px;
     }
     .modal__img {
+        width: 250px;
+        height: 310px;
+    }
+    .modalMain__img {
         width: 250px;
         height: 310px;
     }
@@ -1016,6 +1049,11 @@ body {
       }
 
     .modal__img {
+        width: 300px;
+        height: 410px;
+        scale: 1.5;
+    }
+    .modalMain__img {
         width: 300px;
         height: 410px;
     }
@@ -1156,7 +1194,7 @@ body {
     }
 
     .firstBlock{
-        min-height: 1080px;
+        min-height: 860px;
     }
 
     .secondBlock__item{
@@ -1224,6 +1262,10 @@ body {
         height: 375px;
     }
 
+    .mortgage iframe {
+        width: 1160px;
+      }
+
 
     .maternalCapital__item{
         width: 560px;
@@ -1233,6 +1275,10 @@ body {
         min-width: 340px;
         max-width: 340px;
     }
+    .firstBlock__header{
+        font-size: 74px;
+    }
+    
 
     .line{
         width: 1160px;
@@ -1274,6 +1320,10 @@ body {
 
     .big {
         height: 1250px;
+    }
+
+    .bath-grid{
+        grid-template-rows: minmax(auto, auto);
     }
 }
 

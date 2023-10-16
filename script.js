@@ -22,7 +22,11 @@ menu.addEventListener('click', (e) => {
         overlay.classList.remove('block')
         menu.classList.remove('visible');
         document.body.style.overflow = '';
-    }
+    } else if (e.target.classList.contains('menu__link')){
+        overlay.classList.remove('block')
+        menu.classList.remove('visible');
+        document.body.style.overflow = '';
+    } 
 })
 
 overlay.addEventListener('click', () => {

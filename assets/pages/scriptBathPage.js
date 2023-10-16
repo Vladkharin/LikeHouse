@@ -79,15 +79,6 @@ nextModal.addEventListener('click', function(){
     }
 })
 
-const imgBtn = document.querySelector('.firstBlock__carousel-item')
-
-
-imgBtn.addEventListener('click', () => {
-    const modal = document.querySelector(`.modal[data-modal=${imgBtn.dataset.modal}]`)
-    modal.classList.add('visible')
-    modal.classList.remove('notVisible')
-})
-
 
 const modals = document.querySelectorAll('.modal')
 modals.forEach(modal => {
@@ -151,6 +142,90 @@ modals.forEach(modal => {
 })
 
 
+const buttonsSpan = document.querySelectorAll('.secondBlock__service-span')
+const imgBtnModal = document.querySelector('.firstBlock__carousel-item')
+const modal = document.querySelector(`.modalMain.bgwhite`)
+let slideIndexModal = 1;
+
+
+imgBtnModal.addEventListener('click', () => {
+    modal.classList.add('visible')
+    modal.classList.remove('notVisible')
+    slidesModal.forEach((slide, i) => {
+        if (slide.classList.contains('active')){
+            slideIndexModal = i + 1
+            console.log(slideIndexModal)
+            showSlidesModal(slideIndexModal)
+        }
+    }) 
+})
+
+buttonWrapper = modal.children[0]
+btnClose = buttonWrapper.children[0]
+btnClose.addEventListener('click', (e) => {
+    if (modal.classList.contains('visible')){
+        modal.classList.remove('visible')
+        modal.classList.add('notVisible')
+    }
+})
+
+buttonWrapper.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal__wrapper')){
+        modal.classList.remove('visible')
+        modal.classList.add('notVisible')
+    }
+})
+
+const sliderImgsModal = modal.querySelectorAll('.modalMain__img')
+const btnNext = buttonWrapper.children[buttonWrapper.children.length - 2]
+const btnPrev = buttonWrapper.children[buttonWrapper.children.length - 1]
+
+
+function showSlidesModal(n) {
+
+    if (n > sliderImgsModal.length) {
+        slideIndexModal= 1
+    } 
+
+    if  (n < 1) {
+        slideIndexModal = sliderImgsModal.length
+    }
+
+    sliderImgsModal.forEach( slide => slide.classList.add('none'))
+    sliderImgsModal.forEach( slide => slide.classList.remove('block'))
+    sliderImgsModal.forEach( slide => slide.style.scale = '1.0')
+
+    sliderImgsModal[slideIndexModal - 1].classList.add('block')
+    sliderImgsModal[slideIndexModal - 1].classList.remove('none')
+
+}
+
+function plusSlidesModal(n) {
+    showSlidesModal(slideIndexModal += n)
+}
+
+btnPrev.addEventListener('click', function(){
+    plusSlidesModal(-1)
+})
+
+btnNext.addEventListener('click', function(){
+    plusSlidesModal(1)
+})
+
+
+const sliderImgsModalMain = modal.querySelectorAll('.modalMain__img')
+
+sliderImgsModalMain.forEach(slide => {
+    slide.addEventListener('click', (e) => {
+        if (slide.style.scale == '2') {
+            slide.style.scale = '1.0'
+            slide.style.cursor ='zoom-in'
+        } else {
+            slide.style.scale = '2'
+            slide.style.cursor ='zoom-out'
+        }
+    })   
+})
 
 
 

@@ -123,10 +123,6 @@ sliderInputs[0].addEventListener('input', (e) => {
     progressBar[0].style.width =  (e.target.offsetWidth - 20) * (e.target.value/e.target.max) + 'px'
     counters[0].style.left = counters[0].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
     counters[0].textContent = e.target.value
-})
-
-sliderInputs[0].addEventListener('change', (e) => {
-
     if ((+e.target.value) > pricePositionSlider) {
         price = e.target.value * 7500
         priceChange += price - (pricePositionSlider * 7500)
@@ -142,12 +138,6 @@ sliderInputs[0].addEventListener('change', (e) => {
 sliderInputs[1].addEventListener('input', (e) => {
     progressBar[1].style.width =  (e.target.offsetWidth - 20) * (e.target.value/e.target.max) + 'px'
     counters[1].style.left = counters[1].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
-    counters[1].textContent = e.target.value
-})
-
-
-sliderInputs[1].addEventListener('change', (e) => {
-
     if ((+e.target.value) > secondPositionSlider) {
         secondPrice = e.target.value * 2900
         priceChange += secondPrice - (secondPositionSlider * 2900)
@@ -158,6 +148,7 @@ sliderInputs[1].addEventListener('change', (e) => {
         priceChange -= secondPrice - (e.target.value * 2900)
     }
     cost.textContent = startCost + priceChange
+    counters[1].textContent = e.target.value
 })
 
 
@@ -185,12 +176,75 @@ selectFieldButtons.forEach(selectButton => {
 
 const buttonsSpan = document.querySelectorAll('.secondBlock__service-span')
 const imgBtn = document.querySelector('.firstBlock__carousel-item')
+const modal = document.querySelector(`.modalMain.bgwhite`)
+let slideIndexModal = 1;
 
 
 imgBtn.addEventListener('click', () => {
-    const modal = document.querySelector(`.modal[data-modal=${imgBtn.dataset.modal}]`)
     modal.classList.add('visible')
     modal.classList.remove('notVisible')
+    document.body.style.overflow = 'hidden';
+    slidesModal.forEach((slide, i) => {
+        if (slide.classList.contains('active')){
+            slideIndexModal = i + 1
+            console.log(slideIndexModal)
+            showSlidesModal(slideIndexModal)
+        }
+    }) 
+})
+
+buttonWrapper = modal.children[0]
+btnClose = buttonWrapper.children[0]
+btnClose.addEventListener('click', (e) => {
+    if (modal.classList.contains('visible')){
+        modal.classList.remove('visible')
+        modal.classList.add('notVisible')
+        document.body.style.overflow = '';
+    }
+})
+
+buttonWrapper.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal__wrapper')){
+        modal.classList.remove('visible')
+        modal.classList.add('notVisible')
+        document.body.style.overflow = '';
+    }
+})
+
+const sliderImgsModal = modal.querySelectorAll('.modalMain__img')
+const btnNext = buttonWrapper.children[buttonWrapper.children.length - 2]
+const btnPrev = buttonWrapper.children[buttonWrapper.children.length - 1]
+
+
+function showSlidesModal(n) {
+
+    if (n > sliderImgsModal.length) {
+        slideIndexModal= 1
+    } 
+
+    if  (n < 1) {
+        slideIndexModal = sliderImgsModal.length
+    }
+
+    sliderImgsModal.forEach( slide => slide.classList.add('none'))
+    sliderImgsModal.forEach( slide => slide.classList.remove('block'))
+    sliderImgsModal.forEach( slide => slide.style.scale = '1.0')
+
+    sliderImgsModal[slideIndexModal - 1].classList.add('block')
+    sliderImgsModal[slideIndexModal - 1].classList.remove('none')
+
+}
+
+function plusSlidesModal(n) {
+    showSlidesModal(slideIndexModal += n)
+}
+
+btnPrev.addEventListener('click', function(){
+    plusSlidesModal(-1)
+})
+
+btnNext.addEventListener('click', function(){
+    plusSlidesModal(1)
 })
 
 buttonsSpan.forEach(btn => {
@@ -198,6 +252,7 @@ buttonsSpan.forEach(btn => {
         const modal = document.querySelector(`.modal[data-modal=${btn.dataset.modal}]`)
         modal.classList.add('visible')
         modal.classList.remove('notVisible')
+        document.body.style.overflow = 'hidden';
     })
 })
 
@@ -210,6 +265,7 @@ modals.forEach(modal => {
         if (modal.classList.contains('visible')){
             modal.classList.remove('visible')
             modal.classList.add('notVisible')
+            document.body.style.overflow = '';
         }
     })
 
@@ -217,6 +273,7 @@ modals.forEach(modal => {
         if (e.target.classList.contains('modal__wrapper')){
             modal.classList.remove('visible')
             modal.classList.add('notVisible')
+            document.body.style.overflow = '';
         }
     })
 
@@ -261,18 +318,31 @@ modals.forEach(modal => {
     btnNext.addEventListener('click', function(){
         plusSlides(1)
     })
+    
+    sliderImgs.forEach(slide => {
+        slide.addEventListener('click', (e) => {
+            if (slide.style.scale == '2') {
+                slide.style.scale = '1.5'
+                slide.style.cursor ='zoom-in'
+            } else {
+                slide.style.scale = '2'
+                slide.style.cursor ='zoom-out'
+            }
+        })   
+    })
 })
 
-const sliderImgs = buttonWrapper.querySelectorAll('.modal__img')
 
-sliderImgs.forEach(slide => {
+const sliderImgsModalMain = modal.querySelectorAll('.modalMain__img')
+
+sliderImgsModalMain.forEach(slide => {
     slide.addEventListener('click', (e) => {
         if (slide.style.scale == '2') {
             slide.style.scale = '1.0'
             slide.style.cursor ='zoom-in'
         } else {
-                slide.style.scale = '2'
-                slide.style.cursor ='zoom-out'
+            slide.style.scale = '2'
+            slide.style.cursor ='zoom-out'
         }
     })   
 })
