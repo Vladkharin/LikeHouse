@@ -2120,8 +2120,9 @@ async function formSend(e) {
             method: 'POST',
             body: formData
         });
-
+        
         if (response.ok) {
+            console.log(formData)
             let result = await response.json();
             alert(result.message)
             form.reset();
@@ -2132,7 +2133,13 @@ async function formSend(e) {
             loader.classList.remove('block')
             loader.classList.add('none')
         } else {
-            alert('ERROR')
+            console.log(formData)
+            form.reset();
+            btnText.classList.add('block')
+            btnText.classList.remove('none')
+            loader.classList.remove('block')
+            loader.classList.add('none')
+            // alert('ERROR')
         }
     }
 }
@@ -2152,7 +2159,7 @@ function formValidate(form){
         formRemoveError(input, errorInfoTel)
         
         console.log(input.value.length)
-        if (input.value === '' || input.value === '(___) ___-____'){
+        if (input.value === '' || input.value === '(___) ___-__-__'){
             formAddError(input, errorCar)
            
             error++;
@@ -2183,7 +2190,7 @@ function formRemoveError(input, error) {
 
 const formInputMask = document.querySelector('.feedBack__from-inputPhone')
 const maskOptions = {
-    mask: '(000) 000-0000',
+    mask: '(000) 000-00-00',
     lazy: true
 }
 

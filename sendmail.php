@@ -6,9 +6,9 @@
     require 'phpmailer/src/PHPMailer.php';
 
     $mail = new PHPMailer(true)
-    $mail-> CharSet = 'UTF-8';
-    $mail-> setLanguage('ru', 'phpmailer/language/');
-    $mail-> IsHTML(true);
+    $mail->CharSet = 'UTF-8';
+    $mail->setLanguage('ru', 'phpmailer/language/');
+    $mail->IsHTML(true);
 
     $mail->setFROM('vlad.kharin.dev@gmail.com', 'VLAD')
     $mail->addAddress('koooornienko@gmail.com');
@@ -35,3 +35,5 @@
 
     header('Content-type: application/json');
     echo json_encode($response)
+
+?>

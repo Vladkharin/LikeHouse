@@ -832,6 +832,9 @@ body {
 .modal__right img{
     width: 15px;
     height: 15px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
 }
 
 .modal__left img{
@@ -1057,7 +1060,7 @@ body {
     .modal__img {
         width: 300px;
         height: 410px;
-        scale: 1.5;
+        scale: 1;
     }
     .modalMain__img {
         width: 300px;
@@ -1107,6 +1110,10 @@ body {
         padding-bottom: 30px;
     }
 
+    .modal__img{
+        scale: 1.5;
+    }
+
     .help__wrapper{
         display: flex;
         column-gap: 50px;
@@ -1134,7 +1141,7 @@ body {
 
     .requisites__items{
         flex-direction: row;
-        column-gap: 70px;
+        column-gap: 100px;
     }
 
     #phone{
