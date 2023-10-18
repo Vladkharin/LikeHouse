@@ -1113,7 +1113,16 @@ body {
     .modal__img{
         scale: 1.5;
     }
+    .imgSmallest{
+        width: 574px;
+        height: 374px;
+    }
 
+    .imgsmall{
+        height: 277px;
+        width: 574px;
+
+    }
     .help__wrapper{
         display: flex;
         column-gap: 50px;
