@@ -784,6 +784,7 @@ body {
     cursor: pointer;
     background: rgba(0, 0, 0 , 0);
     border: none;
+    z-index: 1;
 }
   
 .modal__close::before,
@@ -794,7 +795,7 @@ body {
     display: block;
     width: 24px;
     height: 2px;
-    background: #000;
+    background: #fff;
 }
   
 .modal__close::before {
@@ -1114,8 +1115,15 @@ body {
         scale: 1.5;
     }
     .imgSmallest{
-        width: 574px;
-        height: 374px;
+        width: 592px;
+        height: 498px;
+        scale: 1.15;
+    }
+
+    .igmliitleBit{
+        width: 793px;
+        height: 560px;
+        scale: 1;
     }
 
     .imgsmall{

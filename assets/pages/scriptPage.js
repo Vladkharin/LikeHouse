@@ -211,6 +211,7 @@ buttonWrapper.addEventListener('click', (e) => {
     }
 })
 
+const mediaQuerrymax1200 = window.matchMedia('(max-width: 1199px)')
 const sliderImgsModal = modal.querySelectorAll('.modalMain__img')
 const btnNext = buttonWrapper.children[buttonWrapper.children.length - 2]
 const btnPrev = buttonWrapper.children[buttonWrapper.children.length - 1]
@@ -228,7 +229,13 @@ function showSlidesModal(n) {
 
     sliderImgsModal.forEach( slide => slide.classList.add('none'))
     sliderImgsModal.forEach( slide => slide.classList.remove('block'))
-    sliderImgsModal.forEach( slide => slide.style.scale = '1.0')
+    if (mediaQuerrymax1200.matches){
+        console.log('1200 matches')
+        sliderImgsModal.forEach( slide => slide.style.scale = '1')
+    } else {
+        console.log('1200 notmatches')
+        sliderImgsModal.forEach( slide => slide.style.scale = '2')
+    }
 
     sliderImgsModal[slideIndexModal - 1].classList.add('block')
     sliderImgsModal[slideIndexModal - 1].classList.remove('none')
@@ -319,33 +326,57 @@ modals.forEach(modal => {
         plusSlides(1)
     })
     
-    sliderImgs.forEach(slide => {
-        slide.addEventListener('click', (e) => {
-            if (slide.style.scale == '2') {
-                slide.style.scale = '1.5'
-                slide.style.cursor ='zoom-in'
-            } else {
-                slide.style.scale = '2'
-                slide.style.cursor ='zoom-out'
-            }
-        })   
-    })
+    // sliderImgs.forEach(slide => {
+    //     slide.addEventListener('click', (e) => {
+    //         if (mediaQuerrymax1200.matches){
+    //             if (slide.style.scale == '1.5') {
+    //                 slide.style.scale = '1'
+    //                 slide.style.cursor ='zoom-in'
+    //             } else {
+    //                 slide.style.scale = '1.5'
+    //                 slide.style.cursor ='zoom-out'
+    //             }
+    //             console.log('1200 matches')
+    //         } else {
+    //             console.log('1200 notmatches')
+    //             if (slide.style.scale == '2') {
+    //                 slide.style.scale = '1.5'
+    //                 slide.style.cursor ='zoom-in'
+    //             } else {
+    //                 slide.style.scale = '2'
+    //                 slide.style.cursor ='zoom-out'
+    //             }
+    //         }
+    //     })   
+    // })
 })
 
 
-const sliderImgsModalMain = modal.querySelectorAll('.modalMain__img')
+// const sliderImgsModalMain = modal.querySelectorAll('.modalMain__img')
 
-sliderImgsModalMain.forEach(slide => {
-    slide.addEventListener('click', (e) => {
-        if (slide.style.scale == '2') {
-            slide.style.scale = '1.0'
-            slide.style.cursor ='zoom-in'
-        } else {
-            slide.style.scale = '2'
-            slide.style.cursor ='zoom-out'
-        }
-    })   
-})
+// sliderImgsModalMain.forEach(slide => {
+//     slide.addEventListener('click', (e) => {
+//         if (mediaQuerrymax1200.matches){
+//             if (slide.style.scale == '1.5') {
+//                 slide.style.scale = '1'
+//                 slide.style.cursor ='zoom-in'
+//             } else {
+//                 slide.style.scale = '1.5'
+//                 slide.style.cursor ='zoom-out'
+//             }
+//             console.log('1200 matches')
+//         } else {
+//             console.log('1200 notmatches')
+//             if (slide.style.scale == '2') {
+//                 slide.style.scale = '1.5'
+//                 slide.style.cursor ='zoom-in'
+//             } else {
+//                 slide.style.scale = '2'
+//                 slide.style.cursor ='zoom-out'
+//             }
+//         }
+//     })   
+// })
 
 
 
