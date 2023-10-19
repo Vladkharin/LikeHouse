@@ -234,7 +234,7 @@ function showSlidesModal(n) {
         sliderImgsModal.forEach( slide => slide.style.scale = '1')
     } else {
         console.log('1200 notmatches')
-        sliderImgsModal.forEach( slide => slide.style.scale = '2')
+        sliderImgsModal.forEach( slide => slide.style.scale = '1.8')
     }
 
     sliderImgsModal[slideIndexModal - 1].classList.add('block')

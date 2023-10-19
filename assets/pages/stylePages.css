@@ -805,6 +805,36 @@ body {
 .modal__close::after {
     transform: rotate(-45deg);
 }
+.modal__closeBlack{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: rgba(0, 0, 0 , 0);
+    border: none;
+    z-index: 1;
+}
+  
+.modal__closeBlack::before,
+.modal__closeBlack::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #000;
+}
+  
+.modal__closeBlack::before {
+    transform: rotate(45deg);
+}
+  
+.modal__closeBlack::after {
+    transform: rotate(-45deg);
+}
 
 .modal__right{
     position: absolute;
