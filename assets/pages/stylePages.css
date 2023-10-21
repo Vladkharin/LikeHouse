@@ -1180,10 +1180,7 @@ body {
         scale: 1;
     }
 
-     .slider {
-        height: 925px;
-        width: 1222px;
-    }
+
     .help__wrapper{
         display: flex;
         column-gap: 50px;
@@ -1260,6 +1257,10 @@ body {
         align-items: start;
     }   
 
+    .modalBig {
+        height: 925px;
+        width: 1222px;
+    }
     .modalSmall{
         width: 600px;
         height: 450px;
