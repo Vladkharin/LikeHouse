@@ -1144,6 +1144,12 @@ body {
     .modal__img{
         scale: 1.5;
     }
+
+    .imgHeight100{
+        height: 560px;
+        width: 670px;
+        scale: 1;
+    }
     .imgSmallest{
         width: 592px;
         height: 498px;
