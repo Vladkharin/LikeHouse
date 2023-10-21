@@ -1147,9 +1147,21 @@ body {
     .imgSmallest{
         width: 592px;
         height: 498px;
-        scale: 1.15;
+        scale: 1;
     }
 
+    .img396560{
+        width: 396px;
+        height: 560px;
+        scale: 1;
+    }
+
+    .imgsquare{
+        width: 560px;
+        height: 560px;
+        scale: 1;
+    }
+    
     .igmliitleBit{
         width: 793px;
         height: 560px;
@@ -1157,9 +1169,20 @@ body {
     }
 
     .imgsmall{
-        height: 277px;
-        width: 574px;
+        height: 415px;
+        width: 860px;
+        scale: 1;
+    }
 
+    .imgconvector{
+        width: 750px;
+        height: 560px;
+        scale: 1;
+    }
+
+     .slider {
+        height: 925px;
+        width: 1222px;
     }
     .help__wrapper{
         display: flex;
@@ -1236,6 +1259,16 @@ body {
         column-gap: 40px;
         align-items: start;
     }   
+
+    .modalSmall{
+        width: 600px;
+        height: 450px;
+    }
+
+    .modalAverage{
+        width: 960px;
+        height: 720px;
+    }
 
     
     .firstBlock__gridBlock{

@@ -229,13 +229,13 @@ function showSlidesModal(n) {
 
     sliderImgsModal.forEach( slide => slide.classList.add('none'))
     sliderImgsModal.forEach( slide => slide.classList.remove('block'))
-    if (mediaQuerrymax1200.matches){
-        console.log('1200 matches')
-        sliderImgsModal.forEach( slide => slide.style.scale = '1')
-    } else {
-        console.log('1200 notmatches')
-        sliderImgsModal.forEach( slide => slide.style.scale = '1.8')
-    }
+    // if (mediaQuerrymax1200.matches){
+    //     console.log('1200 matches')
+    //     sliderImgsModal.forEach( slide => slide.style.scale = '1')
+    // } else {
+    //     console.log('1200 notmatches')
+    //     sliderImgsModal.forEach( slide => slide.style.scale = '1.8')
+    // }
 
     sliderImgsModal[slideIndexModal - 1].classList.add('block')
     sliderImgsModal[slideIndexModal - 1].classList.remove('none')
