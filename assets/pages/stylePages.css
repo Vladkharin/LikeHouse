@@ -1264,8 +1264,8 @@ body {
     }   
 
     .modalBig {
-        height: 925px;
-        width: 1222px;
+        height: 96%;
+        width: 96%;
     }
     .modalSmall{
         width: 600px;
