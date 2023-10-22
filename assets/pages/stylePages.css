@@ -1264,8 +1264,8 @@ body {
     }   
 
     .modalBig {
-        height: 96%;
-        width: 96%;
+        height: 85%;
+        width: 720px;
     }
     .modalSmall{
         width: 600px;
@@ -1353,6 +1353,7 @@ body {
         width: 1160px;
     }
 
+
     .line2 {
         width: 415px;
     }
@@ -1424,6 +1425,11 @@ body {
 
     .bath-grid{
         grid-template-rows: minmax(auto, auto);
+    }
+
+    .modalBig {
+        height: 96%;
+        width: 1200px;
     }
 }
 
