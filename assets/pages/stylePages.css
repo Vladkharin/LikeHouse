@@ -841,7 +841,7 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    right: 10%;
+    right: 2%;
     top: 50%;
     transform: translate(0, -50%);
     padding-top: 3px;
@@ -853,7 +853,7 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    left: 10%;
+    left: 2%;
     top: 50%;
     transform: translate(0, -50%);
     padding-top: 3px;
@@ -1128,6 +1128,30 @@ body {
 @media (min-width: 960px){
     .container{
         width: 940px;
+    }
+
+    .modal__right{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        right: 10%;
+        top: 50%;
+        transform: translate(0, -50%);
+        padding-top: 3px;
+        border: none;
+    }
+
+    .modal__left{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        left: 2%;
+        top: 50%;
+        transform: translate(0, -50%);
+        padding-top: 3px;
+        border: none;
     }
 
     .payment__item-text{
