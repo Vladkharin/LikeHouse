@@ -213,19 +213,5 @@ btnNext.addEventListener('click', function(){
 })
 
 
-const sliderImgsModalMain = modal.querySelectorAll('.modalMain__img')
-
-sliderImgsModalMain.forEach(slide => {
-    slide.addEventListener('click', (e) => {
-        if (slide.style.scale == '2') {
-            slide.style.scale = '1.0'
-            slide.style.cursor ='zoom-in'
-        } else {
-            slide.style.scale = '2'
-            slide.style.cursor ='zoom-out'
-        }
-    })   
-})
-
 
 
