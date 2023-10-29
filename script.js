@@ -2103,50 +2103,54 @@ window.addEventListener('DOMContentLoaded', () => {
     const loader = document.querySelector('.loader')
     const btnText = document.querySelector('.feedBack__form-submitText')
     const feedBackModal = document.querySelector('.feedBackModal')
+    
+    const message = {
+        loading: 'Загрузка...',
+        success: 'Спасибо! Скоро мы с вами свяжемся',
+        failure: 'Что-то пошло не так...'
+    };
+    
+    postData(form)
+    
+    function postData(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
 
+            let error = formValidate(form)
 
-    form.addEventListener('submit', formSend);
-
-    async function formSend(e) {
-        e.preventDefault()
-
-        let error = formValidate(form)
-
-        let formData = new FormData(form)
-
-        if (error === 0) {
-            loader.classList.add('block')
-            loader.classList.remove('none')
-            btnText.classList.remove('block')
-            btnText.classList.add('none')
-            let response = await fetch('sendmail.php', {
-                method: 'POST',
-                body: formData
-            });
+            const indexNumber = document.querySelector('.feedBack__menu-number').textContent
+            const inputTel = document.querySelector('.feedBack__from-inputPhone').value
             
-            if (response.ok) {
+            btnText.classList.add('block')
+            btnText.classList.remove('none')
+            loader.classList.remove('block')
+            loader.classList.add('none')
+            
+            if (error === 0) {
+                const request = new XMLHttpRequest();
+                request.open('POST', 'sendmail.php');
+                const formData = new FormData(form);
+                
+                const phone = indexNumber + inputTel
+                
+                formData.set('user_phone', phone)
                 console.log(formData)
-                let result = await response.json();
-                alert(result.message)
-                form.reset();
-                feedBackModal.classList.add('block')
-                feedBackModal.classList.remove('none')
-                btnText.classList.add('block')
-                btnText.classList.remove('none')
-                loader.classList.remove('block')
-                loader.classList.add('none')
-            } else {
-                console.log(formData)
-                form.reset();
-                btnText.classList.add('block')
-                btnText.classList.remove('none')
-                loader.classList.remove('block')
-                loader.classList.add('none')
-                // alert('ERROR')
+    
+    
+                request.send(formData);
+    
+                request.addEventListener('load', () => {
+                    if (request.status === 200) {
+                        console.log(request.response);
+                        showThanksModal()
+                        form.reset();
+                    } else {
+                        alert(message.failure)
+                    }
+                });
             }
-        }
+        });
     }
-
 
     function formValidate(form){
         let error = 0;
@@ -2189,6 +2193,19 @@ window.addEventListener('DOMContentLoaded', () => {
         error.classList.remove('show')
         error.classList.add('notVisible')
     }
+    function hideThanksModal() {
+        const thanksModal = document.querySelector('.feedBackModal')
+        thanksModal.classList.add('none')
+        thanksModal.classList.remove('block')
+    }
+
+    function showThanksModal() {
+        const thanksModal = document.querySelector('.feedBackModal')
+        thanksModal.classList.remove('none')
+        thanksModal.classList.add('block')
+
+        setTimeout(hideThanksModal, 4000)
+    }
 
 
     const formInputMask = document.querySelector('.feedBack__from-inputPhone')
@@ -2201,12 +2218,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const btnCLoseBlackCrestik = document.querySelector('.crestikBlack')
-    const feedBackModalWrapper = document.querySelector('.feedBackModal__wrapper')
 
-    btnCLoseBlackCrestik.addEventListener('click', (e) => {
-        feedBackModal.classList.add('none')
-        feedBackModal.classList.remove('block')
-    })
+    btnCLoseBlackCrestik.addEventListener('click', hideThanksModal)
 
     feedBackModal.addEventListener('click', (e) => {
         if (!e.target.classList.contains('feedBackModal__wrapper')) {
@@ -2214,14 +2227,4 @@ window.addEventListener('DOMContentLoaded', () => {
             feedBackModal.classList.remove('block')
         }
     })
-
-
-
-
-
-
-
-
-
-
 })

@@ -1,39 +1,43 @@
-<?php
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
+<?php 
 
-    require 'phpmailer/src/Esception.php';
-    require 'phpmailer/src/PHPMailer.php';
+$name = $_POST['user_name'];
+$phone = $_POST['user_phone'];
 
-    $mail = new PHPMailer(true)
-    $mail->CharSet = 'UTF-8';
-    $mail->setLanguage('ru', 'phpmailer/language/');
-    $mail->IsHTML(true);
+require_once('phpmailer/PHPMailerAutoload.php');
 
-    $mail->setFROM('vlad.kharin.dev@gmail.com', 'VLAD')
-    $mail->addAddress('koooornienko@gmail.com');
-    $mail->Subject = 'Заявка';
+$mail = new PHPMailer;
+$mail->CharSet = 'utf-8';
 
+// $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-    if(trim(!empty($_POST['user_name']))) {
-        $body.=`<p><strong> Имя :</strong> '.$_POST['user_name]'.'</p>`
-    }
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'koooornienko@gmail.com';                 // Наш логин
+$mail->Password = 'ibnn pqcs zjve ndpx';                           // Наш пароль от ящика
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465;                                    // TCP port to connect to
+ 
+$mail->setFrom('koooornienko@gmail.com', 'likehouse');   // От кого письмо 
+$mail->addAddress('koooornienko@gmail.com');     // Add a recipient
+//$mail->addAddress('ellen@example.com');               // Name is optional
+//$mail->addReplyTo('info@example.com', 'Information');
+//$mail->addCC('cc@example.com');
+//$mail->addBCC('bcc@example.com');
+//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+$mail->isHTML(true);                                  // Set email format to HTML
 
-    if(trim(!empty($_POST['user_phone']))) {
-        $body.=`<p><strong> Имя :</strong> '.$_POST['user_phone]'.'</p>`
-    }
+$mail->Subject = 'Данные';
+$mail->Body    = '
+		Пользователь оставил данные <br> 
+	Имя: ' . $name . ' <br>
+	Номер телефона: ' . $phone . '';
 
-    $mail->Body = $body;
-
-    if(!$mail->send()){
-        $message = 'Error'
-    } else {
-        $message = 'sucsses'
-    }
-
-    $response = ['message' => $message]
-
-    header('Content-type: application/json');
-    echo json_encode($response)
+if(!$mail->send()) {
+    return false;
+} else {
+    return true;
+}
 
 ?>
