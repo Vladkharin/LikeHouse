@@ -305,8 +305,10 @@ body {
 }
 
 .firstBlock__field-img{
-    width: 95px;
-    height: 75px;
+    min-height: 75px;
+    max-width: 95px;
+    max-height: 75px;
+    min-width: 95px;
     transform: scale(.9);
     filter: grayscale(1);
     transition: all .3s ease-in-out;
