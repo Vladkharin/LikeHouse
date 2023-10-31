@@ -134,7 +134,6 @@ sliderInputs[0].addEventListener('input', (e) => {
     }
     cost.textContent = startCost + priceChange
 
-    console.log(pricePositionSlider)
 
     if (pricePositionSlider > 0) {
         sliderInputs[1].setAttribute('disabled', true)
@@ -176,24 +175,18 @@ selectFieldButtons.forEach(selectButton => {
 
         if (e.target.dataset.select){
             const btns = document.querySelectorAll('.secondBlock__service-buttonSelector[data-select="'+e.target.dataset.select+'"]')
-            console.log(btns)
-            console.log('good')
-            console.log(btns.length)
-            
 
             let btn = e.target
             let value = +btn.value
             if (btn.classList.contains('inactiveBtn')) {
-                btn.classList.add('activeBtn')
-                btn.classList.remove('inactiveBtn')
                 for (let i = 0; i < btns.length; i++){
-                    console.log(i)
                     if (e.target === btns[i]){
-                        console.log(btns[i])
+                        btns[i].classList.add('activeBtn')
+                        btns[i].classList.remove('inactiveBtn')
                         continue
                     } else {
-                        console.log(btns[i])
-                        btns[i].setAttribute('disabled', true)
+                        btns[i].classList.add('inactiveBtn')
+                        btns[i].classList.remove('activeBtn')
                     }
                 }
                 priceChange += value
@@ -201,12 +194,9 @@ selectFieldButtons.forEach(selectButton => {
                 btn.classList.add('inactiveBtn')
                 btn.classList.remove('activeBtn')
                 for (let i = 0; i < btns.length; i++){
-                    console.log(i)
                     if (e.target === btns[i]){
-                        console.log(btns[i])
                         continue
                     } else {
-                        console.log(btns[i])
                         btns[i].removeAttribute('disabled')
                     }
                 }
@@ -226,7 +216,6 @@ selectFieldButtons.forEach(selectButton => {
             }
         }
 
-        console.log(e.target.dataset.select)
         
         cost.textContent = startCost + priceChange
     })
@@ -247,7 +236,6 @@ imgBtn.addEventListener('click', () => {
     slidesModal.forEach((slide, i) => {
         if (slide.classList.contains('active')){
             slideIndexModal = i + 1
-            console.log(slideIndexModal)
             showSlidesModal(slideIndexModal)
         }
     }) 
