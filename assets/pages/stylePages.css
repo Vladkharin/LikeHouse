@@ -919,6 +919,16 @@ body {
     background: #fff;
 }
 
+.imgsquare{
+    height: 210px;
+    width: 210px;
+}
+
+.imgsmall{
+    width: 320px;
+    height: 180px;
+}
+
 @media (min-width: 481px){
     
     .container{
