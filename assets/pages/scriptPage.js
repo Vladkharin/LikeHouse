@@ -133,6 +133,14 @@ sliderInputs[0].addEventListener('input', (e) => {
         priceChange -= price - (e.target.value * 7500)
     }
     cost.textContent = startCost + priceChange
+
+    console.log(pricePositionSlider)
+
+    if (pricePositionSlider > 0) {
+        sliderInputs[1].setAttribute('disabled', true)
+    } else {
+        sliderInputs[1].removeAttribute('disabled')
+    }
 })
 
 sliderInputs[1].addEventListener('input', (e) => {
@@ -149,30 +157,82 @@ sliderInputs[1].addEventListener('input', (e) => {
     }
     cost.textContent = startCost + priceChange
     counters[1].textContent = e.target.value
+
+    if (secondPositionSlider > 0) {
+        sliderInputs[0].setAttribute('disabled', true)
+    } else {
+        sliderInputs[0].removeAttribute('disabled')
+    }
 })
 
 
 
 // click select button
 
-const selectFieldButtons = document.querySelectorAll('.secondBlock__service-button')
+const selectFieldButtons = document.querySelectorAll('.secondBlock__service-buttonSelector')
 
 selectFieldButtons.forEach(selectButton => {
     selectButton.addEventListener('click', (e) => {
-        let btn = selectButton.children[0]
-        let value = +btn.value
-        if (btn.classList.contains('inactiveBtn')) {
-            btn.classList.add('activeBtn')
-            btn.classList.remove('inactiveBtn')
-            priceChange += value
+
+        if (e.target.dataset.select){
+            const btns = document.querySelectorAll('.secondBlock__service-buttonSelector[data-select="'+e.target.dataset.select+'"]')
+            console.log(btns)
+            console.log('good')
+            console.log(btns.length)
+            
+
+            let btn = e.target
+            let value = +btn.value
+            if (btn.classList.contains('inactiveBtn')) {
+                btn.classList.add('activeBtn')
+                btn.classList.remove('inactiveBtn')
+                for (let i = 0; i < btns.length; i++){
+                    console.log(i)
+                    if (e.target === btns[i]){
+                        console.log(btns[i])
+                        continue
+                    } else {
+                        console.log(btns[i])
+                        btns[i].setAttribute('disabled', true)
+                    }
+                }
+                priceChange += value
+            } else {
+                btn.classList.add('inactiveBtn')
+                btn.classList.remove('activeBtn')
+                for (let i = 0; i < btns.length; i++){
+                    console.log(i)
+                    if (e.target === btns[i]){
+                        console.log(btns[i])
+                        continue
+                    } else {
+                        console.log(btns[i])
+                        btns[i].removeAttribute('disabled')
+                    }
+                }
+                priceChange -= value
+            }
         } else {
-            btn.classList.add('inactiveBtn')
-            btn.classList.remove('activeBtn')
-            priceChange -= value
+            let btn = e.target
+            let value = +btn.value
+            if (btn.classList.contains('inactiveBtn')) {
+                btn.classList.add('activeBtn')
+                btn.classList.remove('inactiveBtn')
+                priceChange += value
+            } else {
+                btn.classList.add('inactiveBtn')
+                btn.classList.remove('activeBtn')
+                priceChange -= value
+            }
         }
+
+        console.log(e.target.dataset.select)
+        
         cost.textContent = startCost + priceChange
     })
 })
+
+
 
 const buttonsSpan = document.querySelectorAll('.secondBlock__service-span')
 const imgBtn = document.querySelector('.firstBlock__carousel-item')
@@ -229,14 +289,6 @@ function showSlidesModal(n) {
 
     sliderImgsModal.forEach( slide => slide.classList.add('none'))
     sliderImgsModal.forEach( slide => slide.classList.remove('block'))
-    // if (mediaQuerrymax1200.matches){
-    //     console.log('1200 matches')
-    //     sliderImgsModal.forEach( slide => slide.style.scale = '1')
-    // } else {
-    //     console.log('1200 notmatches')
-    //     sliderImgsModal.forEach( slide => slide.style.scale = '1.8')
-    // }
-
     sliderImgsModal[slideIndexModal - 1].classList.add('block')
     sliderImgsModal[slideIndexModal - 1].classList.remove('none')
 
@@ -325,58 +377,9 @@ modals.forEach(modal => {
     btnNext.addEventListener('click', function(){
         plusSlides(1)
     })
-    
-    // sliderImgs.forEach(slide => {
-    //     slide.addEventListener('click', (e) => {
-    //         if (mediaQuerrymax1200.matches){
-    //             if (slide.style.scale == '1.5') {
-    //                 slide.style.scale = '1'
-    //                 slide.style.cursor ='zoom-in'
-    //             } else {
-    //                 slide.style.scale = '1.5'
-    //                 slide.style.cursor ='zoom-out'
-    //             }
-    //             console.log('1200 matches')
-    //         } else {
-    //             console.log('1200 notmatches')
-    //             if (slide.style.scale == '2') {
-    //                 slide.style.scale = '1.5'
-    //                 slide.style.cursor ='zoom-in'
-    //             } else {
-    //                 slide.style.scale = '2'
-    //                 slide.style.cursor ='zoom-out'
-    //             }
-    //         }
-    //     })   
-    // })
+
 })
 
-
-// const sliderImgsModalMain = modal.querySelectorAll('.modalMain__img')
-
-// sliderImgsModalMain.forEach(slide => {
-//     slide.addEventListener('click', (e) => {
-//         if (mediaQuerrymax1200.matches){
-//             if (slide.style.scale == '1.5') {
-//                 slide.style.scale = '1'
-//                 slide.style.cursor ='zoom-in'
-//             } else {
-//                 slide.style.scale = '1.5'
-//                 slide.style.cursor ='zoom-out'
-//             }
-//             console.log('1200 matches')
-//         } else {
-//             console.log('1200 notmatches')
-//             if (slide.style.scale == '2') {
-//                 slide.style.scale = '1.5'
-//                 slide.style.cursor ='zoom-in'
-//             } else {
-//                 slide.style.scale = '2'
-//                 slide.style.cursor ='zoom-out'
-//             }
-//         }
-//     })   
-// })
 
 
 
