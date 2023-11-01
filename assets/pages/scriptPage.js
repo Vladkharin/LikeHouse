@@ -181,43 +181,165 @@ sliderInputs[1].addEventListener('change', ()=> {
 
 // click select button
 
-const selectFieldButtons = document.querySelectorAll('.secondBlock__service-buttonSelector')
+// const selectFieldButtons = document.querySelectorAll('.secondBlock__service-button')
+
+// selectFieldButtons.forEach(selectButton => {
+//     selectButton.addEventListener('click', (e) => {
+
+//         if (e.target.dataset.select){
+//             const btns = document.querySelectorAll('.secondBlock__service-buttonSelector[data-select="'+e.target.dataset.select+'"]')
+
+//             let btn = selectButton.children[0]
+//             let value = +btn.value
+//             if (btn.classList.contains('inactiveBtn')) {
+//                 for (let i = 0; i < btns.length; i++){
+//                     if (e.target === btns[i]){
+//                         btns[i].classList.add('activeBtn')
+//                         btns[i].classList.remove('inactiveBtn')
+//                         continue
+//                     } else {
+//                         btns[i].classList.add('inactiveBtn')
+//                         btns[i].classList.remove('activeBtn')
+//                         priceChange -= +btns[i].value
+//                     }
+//                     priceChange += +btns[i].value
+//                 }
+//             } else {
+//                 btn.classList.add('inactiveBtn')
+//                 btn.classList.remove('activeBtn')
+//                 for (let i = 0; i < btns.length; i++){
+//                     if (e.target === btns[i]){
+//                         btns[i].classList.add('inactiveBtn')
+//                         btns[i].classList.remove('activeBtn')
+//                         priceChange -= +btns[i].value
+//                         continue
+//                     } else {
+//                         btns[i].classList.add('activeBtn')
+//                         btns[i].classList.remove('inactiveBtn')
+//                         priceChange += +btns[i].value
+//                     }
+//                 }
+//                 priceChange -= value
+//             }
+//         } else {
+//             let btn = e.target
+//             let value = +btn.value
+//             if (btn.classList.contains('inactiveBtn')) {
+//                 btn.classList.add('activeBtn')
+//                 btn.classList.remove('inactiveBtn')
+//                 priceChange += value
+//             } else {
+//                 btn.classList.add('inactiveBtn')
+//                 btn.classList.remove('activeBtn')
+//                 priceChange -= value
+//             }
+//         }
+
+        
+//         cost.textContent = startCost + priceChange
+//     })
+// })
+
+const selectFieldButtons = document.querySelectorAll('.secondBlock__service-button')
 
 selectFieldButtons.forEach(selectButton => {
     selectButton.addEventListener('click', (e) => {
 
-        if (e.target.dataset.select){
-            const btns = document.querySelectorAll('.secondBlock__service-buttonSelector[data-select="'+e.target.dataset.select+'"]')
+        if (selectButton.dataset.select){
 
-            let btn = e.target
-            let value = +btn.value
-            if (btn.classList.contains('inactiveBtn')) {
+            const btns = document.querySelectorAll('.secondBlock__service-buttonSelector[data-select="'+e.target.dataset.select+'"]')
+            let counter = 0
+            for (let i = 0; i < btns.length; i++){
+                if(btns[i].classList.contains('inactiveBtn')){
+                    counter++
+                }
+            }
+            console.log(counter)
+            if (counter > 1) {
+                console.log('0')
                 for (let i = 0; i < btns.length; i++){
-                    if (e.target === btns[i]){
+                    if (btns[i] === e.target || btns[i] === e.target.children[0]){
                         btns[i].classList.add('activeBtn')
                         btns[i].classList.remove('inactiveBtn')
-                        continue
-                    } else {
-                        btns[i].classList.add('inactiveBtn')
-                        btns[i].classList.remove('activeBtn')
+                        priceChange += +btns[i].value
                     }
-                }
-                priceChange += value
-            } else {
-                btn.classList.add('inactiveBtn')
-                btn.classList.remove('activeBtn')
-                for (let i = 0; i < btns.length; i++){
-                    if (e.target === btns[i]){
-                        continue
-                    } else {
-                        btns[i].removeAttribute('disabled')
+                } 
+                cost.textContent = startCost + priceChange
+            } else if (counter === 1) {
+
+                if (e.target.classList.contains('secondBlock__service-button')){
+                    
+                    if (e.target.children[0].classList.contains('inactiveBtn')){
+                        for (let i = 0; i < btns.length; i++){
+                            if (e.target.children[0] === btns[i]){
+                                btns[i].classList.add('activeBtn')
+                                btns[i].classList.remove('inactiveBtn')
+                                priceChange += +btns[i].value
+                            } else {
+                                btns[i].classList.remove('activeBtn')
+                                btns[i].classList.add('inactiveBtn')
+                                priceChange -= +btns[i].value
+                            }
+                        } 
+                    } else if (e.target.children[0].classList.contains('activeBtn')) {
+                        e.target.children[0].classList.remove('activeBtn')
+                        e.target.children[0].classList.add('inactiveBtn')
+                        priceChange -= +e.target.children[0].value
                     }
+
+                    cost.textContent = startCost + priceChange
+                    
+                } else if (e.target.classList.contains('secondBlock__service-buttonSelector')) {
+                    if (e.target.classList.contains('inactiveBtn')){
+                        for (let i = 0; i < btns.length; i++){
+                            if (e.target === btns[i]){
+                                btns[i].classList.add('activeBtn')
+                                btns[i].classList.remove('inactiveBtn')
+                                priceChange += +btns[i].value
+                            } else {
+                                btns[i].classList.remove('activeBtn')
+                                btns[i].classList.add('inactiveBtn')
+                                priceChange -= +btns[i].value
+                            }
+                        } 
+                    } else if (e.target.classList.contains('activeBtn')) {
+                        e.target.classList.remove('activeBtn')
+                        e.target.classList.add('inactiveBtn')
+                        priceChange -= +e.target.value
+                    }
+
+                    cost.textContent = startCost + priceChange
                 }
-                priceChange -= value
+                // console.log('>0')
+                // for (let i = 0; i < btns.length; i++){
+                //     if (btns[i].classList.contains('inactiveBtn')) {
+                //         console.log('incative')
+                //         if (btns[i] === e.target || btns[i] === e.target.children[0]){
+                //             console.log('good')
+                //             btns[i].classList.add('activeBtn')
+                //             btns[i].classList.remove('inactiveBtn')
+                //             priceChange += +btns[i].value
+                //         } else {
+                //             console.log('good1')
+                //             btns[i].classList.remove('activeBtn')
+                //             btns[i].classList.add('inactiveBtn')
+                //             priceChange -= +btns[i].value
+                //         }
+                //     } else {
+                //         console.log('ative')
+                //         btns[i].classList.remove('activeBtn')
+                //         btns[i].classList.add('inactiveBtn')
+                //         priceChange -= +btns[i].value
+                //     }
+                    
+                // } 
+                // cost.textContent = startCost + priceChange
             }
         } else {
-            let btn = e.target
-            let value = +btn.value
+
+            const btn = selectButton.querySelector('button')
+            const value = +btn.value
+
             if (btn.classList.contains('inactiveBtn')) {
                 btn.classList.add('activeBtn')
                 btn.classList.remove('inactiveBtn')
@@ -227,10 +349,10 @@ selectFieldButtons.forEach(selectButton => {
                 btn.classList.remove('activeBtn')
                 priceChange -= value
             }
+
+            cost.textContent = startCost + priceChange
         }
 
-        
-        cost.textContent = startCost + priceChange
     })
 })
 
