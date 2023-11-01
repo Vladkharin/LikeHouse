@@ -120,6 +120,7 @@ let secondPositionSlider = 0;
 let secondPrice = 0;
 
 sliderInputs[0].addEventListener('input', (e) => {
+
     progressBar[0].style.width =  (e.target.offsetWidth - 20) * (e.target.value/e.target.max) + 'px'
     counters[0].style.left = counters[0].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
     counters[0].textContent = e.target.value
@@ -134,15 +135,22 @@ sliderInputs[0].addEventListener('input', (e) => {
     }
     cost.textContent = startCost + priceChange
 
+    
+})
 
-    if (pricePositionSlider > 0) {
-        sliderInputs[1].setAttribute('disabled', true)
-    } else {
-        sliderInputs[1].removeAttribute('disabled')
-    }
+sliderInputs[0].addEventListener('change', () => {
+    priceChange -= secondPrice;
+    sliderInputs[1].value = 0;
+    secondPositionSlider = 0;
+    secondPrice = 0;
+    counters[1].textContent = 0;
+    progressBar[1].style.width = 0 + 'px';
+    counters[1].style.left = 0 + 'px';
+    cost.textContent = startCost + priceChange
 })
 
 sliderInputs[1].addEventListener('input', (e) => {
+
     progressBar[1].style.width =  (e.target.offsetWidth - 20) * (e.target.value/e.target.max) + 'px'
     counters[1].style.left = counters[1].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
     if ((+e.target.value) > secondPositionSlider) {
@@ -156,12 +164,17 @@ sliderInputs[1].addEventListener('input', (e) => {
     }
     cost.textContent = startCost + priceChange
     counters[1].textContent = e.target.value
+})
 
-    if (secondPositionSlider > 0) {
-        sliderInputs[0].setAttribute('disabled', true)
-    } else {
-        sliderInputs[0].removeAttribute('disabled')
-    }
+sliderInputs[1].addEventListener('change', ()=> {
+    priceChange -= price;
+    sliderInputs[0].value = 0;
+    pricePositionSlider = 0;
+    price = 0;
+    counters[0].textContent = 0;
+    progressBar[0].style.width = 0 + 'px';
+    counters[0].style.left = 0 + 'px';
+    cost.textContent = startCost + priceChange
 })
 
 
