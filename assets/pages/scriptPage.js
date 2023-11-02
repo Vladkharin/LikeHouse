@@ -166,7 +166,7 @@ sliderInputs[1].addEventListener('input', (e) => {
     counters[1].textContent = e.target.value
 })
 
-sliderInputs[1].addEventListener('change', ()=> {
+sliderInputs[1].addEventListener('change', () => {
     priceChange -= price;
     sliderInputs[0].value = 0;
     pricePositionSlider = 0;

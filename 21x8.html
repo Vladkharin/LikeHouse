@@ -272,14 +272,14 @@
             <div class="secondBlock__services">
                 <div class="secondBlock__services-header">Фасад</div>
                 <div class="secondBlock__service">
-                    <div class="secondBlock__service-button">
-                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="30000"></button>
+                    <div class="secondBlock__service-button" data-select="facade">
+                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="30000" data-select="facade"></button>
                     </div>
                     <div class="secondBlock__service-text">Вертикально забитая имитация бруса + 30 000 руб.</div>
                 </div>
                 <div class="secondBlock__service">
-                    <div class="secondBlock__service-button">
-                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="198000"></button>
+                    <div class="secondBlock__service-button" data-select="facade">
+                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="198000" data-select="facade"></button>
                     </div>
                     <div class="secondBlock__service-text">Хауберг плитка фасадная + 198 000 руб.<span data-modal="facade" class="secondBlock__service-span">Подробнее</span></div>
                 </div>
@@ -343,27 +343,27 @@
                 </div>
                 <div class="secondBlock__services-header">Электрификация</div>
                 <div class="secondBlock__service">
-                    <div class="secondBlock__service-button">
-                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="259000"></button>
+                    <div class="secondBlock__service-button" data-select="electrification">
+                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="259000" data-select="electrification"></button>
                     </div>
                     <div class="secondBlock__service-text">Монтаж распределительного щита, монтаж электропроводки (совокупность проводов и кабелей с относящимися к ним креплениями, поддерживающими защитными конструкциями и деталями), монтаж выключателей и розеток + 259 000 руб.<span data-modal="electrification" class="secondBlock__service-span">Подробнее</span></div>
                 </div>
                 <div class="secondBlock__service">
-                    <div class="secondBlock__service-button">
-                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="324000"></button>
+                    <div class="secondBlock__service-button" data-select="electrification">
+                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="324000" data-select="electrification"></button>
                     </div>
                     <div class="secondBlock__service-text">Ретро провода, монтаж распределительного щита, монтаж электропроводки (совокупность проводов и кабелей с относящимися к ним креплениями, поддерживающими защитными конструкциями и деталями), монтаж выключателей и розеток + 324 000 руб.</div>
                 </div>
                 <div class="secondBlock__services-header">Отопление</div>
                 <div class="secondBlock__service">
-                    <div class="secondBlock__service-button">
-                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="499000"></button>
+                    <div class="secondBlock__service-button" data-select="Heating">
+                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="499000" data-select="Heating"></button>
                     </div>
                     <div class="secondBlock__service-text">Монтаж электрического котла (котёл ЭВАН EXPERT PLUS-12 квт или аналог), бойлер косвенного нагрева, монтаж радиаторов, разводка труб, насос для рециркуляции и клапан + 499 000 руб.<span data-modal="Heating1" class="secondBlock__service-span">Подробнее</span></div>
                 </div>
                 <div class="secondBlock__service">
-                    <div class="secondBlock__service-button">
-                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="150000"></button>
+                    <div class="secondBlock__service-button" data-select="Heating">
+                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="150000" data-select="Heating"></button>
                     </div>
                     <div class="secondBlock__service-text">Электроконвектора (монтаж, оборудование) + 150 000 руб.<span data-modal="Heating2" class="secondBlock__service-span">Подробнее</span></div>
                 </div>
@@ -380,14 +380,14 @@
                 </div>
                 <div class="secondBlock__services-header">Водоснабжение</div>
                 <div class="secondBlock__service">
-                    <div class="secondBlock__service-button">
-                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="239000"></button>
+                    <div class="secondBlock__service-button" data-select="WaterSupply">
+                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="239000" data-select="WaterSupply"></button>
                     </div>
                     <div class="secondBlock__service-text">Установка кессона с гидробаком, насосом, ввод в дом, разводка труб по дому, подключение сантехники + 239 000 руб.<span data-modal="WaterSupply1" class="secondBlock__service-span">Подробнее</span></div>
                 </div>
                 <div class="secondBlock__service">
-                    <div class="secondBlock__service-button">
-                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="199000"></button>
+                    <div class="secondBlock__service-button" data-select="WaterSupply">
+                        <button class="secondBlock__service-buttonSelector inactiveBtn" value="199000" data-select="WaterSupply"></button>
                     </div>
                     <div class="secondBlock__service-text">Ввод в дом с установкой оборудования в котельной, с гидробаком, насосом, разводка труб по дому, подключение сантехники + 199 000 руб.<span data-modal="WaterSupply2" class="secondBlock__service-span">Подробнее</span></div>
                 </div>
@@ -414,8 +414,8 @@
                 </div>
                 <div class="secondBlock__services-header">Скважина Сталь 133 + Пластик 117</div>
                 <div class="secondBlock__services-subtitle">Количество метров</div>
-                <div class="secondBlock__service mb60px">
-                    <input class="secondBlock__service-input" type="range" min="0" max="100" step="1" value="0" >
+                <div class="secondBlock__service">
+                    <input class="secondBlock__service-input" type="range" min="0" max="100" step="1" value="0">
                     <div class="secondBlock__service-numberStart">0</div>
                     <div class="secondBlock__service-numberEnd">100</div>
                     <div class="secondBlock__service-numberCounter">0</div>
