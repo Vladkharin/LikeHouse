@@ -125,13 +125,13 @@ sliderInputs[0].addEventListener('input', (e) => {
     counters[0].style.left = counters[0].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
     counters[0].textContent = e.target.value
     if ((+e.target.value) > pricePositionSlider) {
-        price = e.target.value * 7500
-        priceChange += price - (pricePositionSlider * 7500)
+        price = e.target.value * 8250
+        priceChange += price - (pricePositionSlider * 8250)
         pricePositionSlider = e.target.value
     } else if ((+e.target.value) < pricePositionSlider) {
-        price = pricePositionSlider * 7500
+        price = pricePositionSlider * 8250
         pricePositionSlider = e.target.value
-        priceChange -= price - (e.target.value * 7500)
+        priceChange -= price - (e.target.value * 8250)
     }
     cost.textContent = startCost + priceChange
 
@@ -154,13 +154,13 @@ sliderInputs[1].addEventListener('input', (e) => {
     progressBar[1].style.width =  (e.target.offsetWidth - 20) * (e.target.value/e.target.max) + 'px'
     counters[1].style.left = counters[1].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
     if ((+e.target.value) > secondPositionSlider) {
-        secondPrice = e.target.value * 2900
-        priceChange += secondPrice - (secondPositionSlider * 2900)
+        secondPrice = e.target.value * 3190
+        priceChange += secondPrice - (secondPositionSlider * 3190)
         secondPositionSlider = e.target.value
     } else if ((+e.target.value) < secondPositionSlider) {
-        secondPrice = secondPositionSlider * 2900
+        secondPrice = secondPositionSlider * 3190
         secondPositionSlider = e.target.value
-        priceChange -= secondPrice - (e.target.value * 2900)
+        priceChange -= secondPrice - (e.target.value * 3190)
     }
     cost.textContent = startCost + priceChange
     counters[1].textContent = e.target.value
