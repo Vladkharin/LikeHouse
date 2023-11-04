@@ -308,7 +308,7 @@ window.addEventListener('DOMContentLoaded', () => {
         itemsHouseField.innerHTML = itemsHouse
             .map(
                 (task) => `
-                    <div class="thirdBlock__tile">
+                    <div class="thirdBlock__tile swiper-slide">
                         <img class="thirdBlock__tile-img" src=${task.img} alt=${task.alt}>
                         <div class="thirdBlock__tile-text">${task.size}</div>
                         <div class="thirdBlock__tile-text">${task.square}</div>
@@ -359,7 +359,7 @@ window.addEventListener('DOMContentLoaded', () => {
         itemsBathhouseField.innerHTML = itemsBathhouse
             .map(
                 (task) => `
-                    <div class="fourthBlock__tile">
+                    <div class="fourthBlock__tile swiper-slide">
                         <img class="fourthBlock__tile-img" src=${task.img} alt=${task.alt}>
                         <div class="fourthBlock__tile-text">${task.size}</div>
                         <div class="fourthBlock__tile-text">${task.square}</div>
@@ -386,104 +386,129 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //slider House
 
-    const slidesThirdBlock = document.querySelectorAll('.thirdBlock__tile')
-    const prevThirdBlock = document.querySelector('.thirdBlock__button-left')
-    const nextThirdBlock = document.querySelector('.thirdBlock__button-right')
-    const slidesWrapperThirdBlock = document.querySelector('.thirdBlock__tiles')
-    const slidesFieldThirdBlock = document.querySelector('.thirdBlock__tiles-inner')
-    let widthThirdBlock = window.getComputedStyle(slidesWrapperThirdBlock).width;
-
-    let slideIndexThirdBlock = 1;
-    let offsetThirdBlock = 0;
-
-    slidesFieldThirdBlock.style.width = 100 * slidesThirdBlock.length + (slidesThirdBlock.length * 20) + '%';
-    slidesFieldThirdBlock.style.display = 'flex';
-    slidesFieldThirdBlock.style.transition = "0.5s all"
-    slidesFieldThirdBlock.style.columnGap = '20px'
-
-
-    slidesWrapperThirdBlock.style.overflow = 'hidden'
-
-    slidesThirdBlock.forEach((slide) => {
-        slide.style.width = widthThirdBlock;
-    });
-
-    widthThirdBlock = +widthThirdBlock.slice(0, widthThirdBlock.length - 2) + 20
-
-    nextThirdBlock.addEventListener('click', () => {
-        if (offsetThirdBlock == widthThirdBlock * (slidesThirdBlock.length - 1)) {
-            offsetThirdBlock = 0
-        } else {
-            offsetThirdBlock += widthThirdBlock
+    const swiper = new Swiper('.thirdBlock__tiles', {
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: '.thirdBlock__button-right',
+            prevEl: '.thirdBlock__button-left',
         }
-        
-        
-        slidesFieldThirdBlock.style.transform = `translateX(-${offsetThirdBlock}px)`
     })
 
-
-    prevThirdBlock.addEventListener('click', () => {
-        
-        if ( offsetThirdBlock == 0) {
-            offsetThirdBlock = widthThirdBlock * (slidesThirdBlock.length - 1)
-        } else {
-            offsetThirdBlock -= widthThirdBlock
+    const swiper1 = new Swiper('.fourthBlock__tiles', {
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: '.fourthBlock__button-right',
+            prevEl: '.fourthBlock__button-left',
         }
-
-
-        slidesFieldThirdBlock.style.transform = `translateX(-${offsetThirdBlock}px)`
     })
+
+    // const slidesThirdBlock = document.querySelectorAll('.thirdBlock__tile')
+    // const prevThirdBlock = document.querySelector('.thirdBlock__button-left')
+    // const nextThirdBlock = document.querySelector('.thirdBlock__button-right')
+    // const slidesWrapperThirdBlock = document.querySelector('.thirdBlock__tiles')
+    // const slidesFieldThirdBlock = document.querySelector('.thirdBlock__tiles-inner')
+    // let widthThirdBlock = window.getComputedStyle(slidesWrapperThirdBlock).width;
+
+    // let offsetThirdBlock = 0;
+
+    // slidesFieldThirdBlock.style.width = 100 * slidesThirdBlock.length + (slidesThirdBlock.length * 20) + '%';
+    // slidesFieldThirdBlock.style.display = 'flex';
+    // slidesFieldThirdBlock.style.transition = "0.5s all"
+    // slidesFieldThirdBlock.style.columnGap = '20px'
+
+
+    // slidesWrapperThirdBlock.style.overflow = 'hidden'
+
+    // slidesThirdBlock.forEach((slide) => {
+    //     slide.style.width = widthThirdBlock;
+    // });
+
+    // widthThirdBlock = +widthThirdBlock.slice(0, widthThirdBlock.length - 2) + 20
+
+    // nextThirdBlock.addEventListener('click', () => {
+    //     if (offsetThirdBlock == widthThirdBlock * (slidesThirdBlock.length - 1)) {
+    //         offsetThirdBlock = 0
+    //     } else {
+    //         offsetThirdBlock += widthThirdBlock
+    //     }
+        
+        
+    //     slidesFieldThirdBlock.style.transform = `translateX(-${offsetThirdBlock}px)`
+    // })
+
+
+    // prevThirdBlock.addEventListener('click', () => {
+        
+    //     if ( offsetThirdBlock == 0) {
+    //         offsetThirdBlock = widthThirdBlock * (slidesThirdBlock.length - 1)
+    //     } else {
+    //         offsetThirdBlock -= widthThirdBlock
+    //     }
+
+
+    //     slidesFieldThirdBlock.style.transform = `translateX(-${offsetThirdBlock}px)`
+    // })
+
+    // slidesThirdBlock.forEach(slide => {
+    //     slide.addEventListener('mouseenter', (e) => {
+    //         console.log(e.target)
+    //     });
+    // });
 
 
     // slider baths
 
-    const slidesFourthBlock = document.querySelectorAll('.fourthBlock__tile')
-    const prevFourthBlock = document.querySelector('.fourthBlock__button-left')
-    const nextFourthBlock = document.querySelector('.fourthBlock__button-right')
-    const slidesWrapperFourthBlock = document.querySelector('.fourthBlock__tiles')
-    const slidesFieldFourthBlock = document.querySelector('.fourthBlock__tiles-inner')
-    let widthFourthBlock = window.getComputedStyle(slidesWrapperFourthBlock).width;
+    // const slidesFourthBlock = document.querySelectorAll('.fourthBlock__tile')
+    // const prevFourthBlock = document.querySelector('.fourthBlock__button-left')
+    // const nextFourthBlock = document.querySelector('.fourthBlock__button-right')
+    // const slidesWrapperFourthBlock = document.querySelector('.fourthBlock__tiles')
+    // const slidesFieldFourthBlock = document.querySelector('.fourthBlock__tiles-inner')
+    // let widthFourthBlock = window.getComputedStyle(slidesWrapperFourthBlock).width;
 
-    let slideIndexFourthBlock = 1;
-    let offsetFourthBlock = 0;
+    // let offsetFourthBlock = 0;
 
-    slidesFieldFourthBlock.style.width = 100 * slidesFourthBlock.length + (slidesFourthBlock.length * 20) + '%';
-    slidesFieldFourthBlock.style.display = 'flex';
-    slidesFieldFourthBlock.style.transition = "0.5s all"
-    slidesFieldFourthBlock.style.columnGap = '20px'
+    // slidesFieldFourthBlock.style.width = 100 * slidesFourthBlock.length + (slidesFourthBlock.length * 20) + '%';
+    // slidesFieldFourthBlock.style.display = 'flex';
+    // slidesFieldFourthBlock.style.transition = "0.5s all"
+    // slidesFieldFourthBlock.style.columnGap = '20px'
 
 
-    slidesWrapperFourthBlock.style.overflow = 'hidden'
+    // slidesWrapperFourthBlock.style.overflow = 'hidden'
 
-    slidesFourthBlock.forEach((slide) => {
-        slide.style.width = widthFourthBlock;
-    });
+    // slidesFourthBlock.forEach((slide) => {
+    //     slide.style.width = widthFourthBlock;
+    // });
 
-    widthFourthBlock = +widthFourthBlock.slice(0, widthFourthBlock.length - 2) + 20
+    // widthFourthBlock = +widthFourthBlock.slice(0, widthFourthBlock.length - 2) + 20
 
-    nextFourthBlock.addEventListener('click', () => {
-        if (offsetFourthBlock == widthFourthBlock * (slidesFourthBlock.length - 1)) {
-            offsetFourthBlock = 0
-        } else {
-            offsetFourthBlock += widthFourthBlock
-        }
+
+
+
+    // nextFourthBlock.addEventListener('click', () => {
+    //     if (offsetFourthBlock == widthFourthBlock * (slidesFourthBlock.length - 1)) {
+    //         offsetFourthBlock = 0
+    //     } else {
+    //         offsetFourthBlock += widthFourthBlock
+    //     }
         
         
-        slidesFieldFourthBlock.style.transform = `translateX(-${offsetFourthBlock}px)`
-    })
+    //     slidesFieldFourthBlock.style.transform = `translateX(-${offsetFourthBlock}px)`
+    // })
 
 
-    prevFourthBlock.addEventListener('click', () => {
+    // prevFourthBlock.addEventListener('click', () => {
         
-        if ( offsetFourthBlock == 0) {
-            offsetFourthBlock = widthFourthBlock * (slidesFourthBlock.length - 1)
-        } else {
-            offsetFourthBlock -= widthFourthBlock
-        }
+    //     if ( offsetFourthBlock == 0) {
+    //         offsetFourthBlock = widthFourthBlock * (slidesFourthBlock.length - 1)
+    //     } else {
+    //         offsetFourthBlock -= widthFourthBlock
+    //     }
 
 
-        slidesFieldFourthBlock.style.transform = `translateX(-${offsetFourthBlock}px)`
-    })
+    //     slidesFieldFourthBlock.style.transform = `translateX(-${offsetFourthBlock}px)`
+    // })
 
     // open and close modal 
 
@@ -2228,3 +2253,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     })
 })
+
+
+// const swiper = new Swiper('.swiper', {
+//     spaceBetween: 20
+// })
