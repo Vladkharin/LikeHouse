@@ -346,11 +346,11 @@ window.addEventListener('DOMContentLoaded', () => {
         {
             img: './assets/img/twentySixthTile.webp',
             alt: 'twentySixthTile',
-            size: 'Размер: 21х8',
+            size: 'Размер: 8x21',
             square: 'Площадь: 91 м2',
             coust:  'Стоимость: 5 357 000 руб.',
             type: 'bathhouse',
-            link: '21x8.html'
+            link: '8x21.html'
         }
     ]
 
