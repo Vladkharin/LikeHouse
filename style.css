@@ -2089,6 +2089,12 @@ body {
     line-height: 1.15;
     font-weight: 400;
   }
+
+  .map > .container > iframe {
+    height: 720px;
+  }
+
+  
 }
 
 .none{
