@@ -93,6 +93,7 @@ buttonOpeningHouseSelectionMenu.addEventListener('click', () => {
 })
 
 let priceChange = 0;
+let inputPriceChange = 0
 
 
 
@@ -104,7 +105,7 @@ selectionMenu.addEventListener('click', (e) => {
         // priceChange =  (+e.target.value) - (+buttonOpeningHouseSelectionMenu.value)
         priceChange +=  (+e.target.value) - (+buttonOpeningHouseSelectionMenu.value)
         buttonOpeningHouseSelectionMenu.setAttribute('value', e.target.value)
-        cost.textContent = startCost + priceChange
+        cost.textContent = startCost + priceChange + inputPriceChange
     }
 })
 
@@ -121,7 +122,7 @@ let secondPrice = 0;
 
 sliderInputs[0].addEventListener('input', (e) => {
 
-    priceChange -= secondPrice;
+    inputPriceChange -= secondPrice;
     sliderInputs[1].value = 0;
     secondPositionSlider = 0;
     secondPrice = 0;
@@ -129,33 +130,32 @@ sliderInputs[0].addEventListener('input', (e) => {
     progressBar[1].style.width = 0 + 'px';
     counters[1].style.left = 0 + 'px';
 
-    cost.textContent = startCost + priceChange
+    cost.textContent = startCost + priceChange + inputPriceChange
 
     progressBar[0].style.width =  (e.target.offsetWidth - 20) * (e.target.value/e.target.max) + 'px'
     counters[0].style.left = counters[0].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
     counters[0].textContent = e.target.value
     if ((+e.target.value === 0)){
-        priceChange = 0
+        inputPriceChange -= pricePositionSlider * 8250
         price = 0
         pricePositionSlider = e.target.value
     }else if ((+e.target.value) > pricePositionSlider) {
-        price = e.target.value * 8250
-        priceChange += price - priceChange
+        price = (+e.target.value) * 8250
+        inputPriceChange += price - inputPriceChange
         pricePositionSlider = e.target.value
     } else if ((+e.target.value) < pricePositionSlider) {
-        price = e.target.value * 8250
-        priceChange += price - priceChange 
+        price = (+e.target.value) * 8250
+        inputPriceChange += price - inputPriceChange
         pricePositionSlider = e.target.value
     }
 
-    cost.textContent = startCost + priceChange
+    cost.textContent = startCost + priceChange + inputPriceChange
 
-    
 })
 
 sliderInputs[1].addEventListener('input', (e) => {
 
-    priceChange -= price;
+    inputPriceChange -= price;
     sliderInputs[0].value = 0;
     pricePositionSlider = 0;
     price = 0;
@@ -163,26 +163,26 @@ sliderInputs[1].addEventListener('input', (e) => {
     progressBar[0].style.width = 0 + 'px';
     counters[0].style.left = 0 + 'px';
 
-    cost.textContent = startCost + priceChange
+    cost.textContent = startCost + inputPriceChange
 
     progressBar[1].style.width =  (e.target.offsetWidth - 20) * (e.target.value/e.target.max) + 'px'
     counters[1].style.left = counters[1].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
+    counters[1].textContent = e.target.value
     if ((+e.target.value === 0)){
-        priceChange = 0
+        inputPriceChange -= secondPositionSlider * 3190
         secondPrice = 0
         secondPositionSlider = e.target.value
     }else if ((+e.target.value) > secondPositionSlider) {
         secondPrice = e.target.value * 3190
-        priceChange += secondPrice - priceChange
+        inputPriceChange += secondPrice - inputPriceChange
         secondPositionSlider = e.target.value
     } else if ((+e.target.value) < secondPositionSlider) {
         secondPrice = e.target.value * 3190
-        priceChange -= priceChange - secondPrice 
+        inputPriceChange += secondPrice - inputPriceChange
         secondPositionSlider = e.target.value 
     }
 
-    cost.textContent = startCost + priceChange
-    counters[1].textContent = e.target.value
+    cost.textContent = startCost + priceChange + inputPriceChange
 })
 
 // click select button
@@ -202,9 +202,7 @@ selectFieldButtons.forEach(selectButton => {
                     counter++
                 }
             }
-            console.log(counter)
             if (counter > 1) {
-                console.log('0')
                 for (let i = 0; i < btns.length; i++){
                     if (btns[i] === e.target || btns[i] === e.target.children[0]){
                         btns[i].classList.add('activeBtn')
@@ -212,7 +210,9 @@ selectFieldButtons.forEach(selectButton => {
                         priceChange += +btns[i].value
                     }
                 } 
-                cost.textContent = startCost + priceChange
+                cost.textContent = startCost + priceChange + inputPriceChange
+                
+
             } else if (counter === 1) {
 
                 if (e.target.classList.contains('secondBlock__service-button')){
@@ -235,7 +235,7 @@ selectFieldButtons.forEach(selectButton => {
                         priceChange -= +e.target.children[0].value
                     }
 
-                    cost.textContent = startCost + priceChange
+                    cost.textContent = startCost + priceChange + inputPriceChange
                     
                 } else if (e.target.classList.contains('secondBlock__service-buttonSelector')) {
                     if (e.target.classList.contains('inactiveBtn')){
@@ -256,7 +256,7 @@ selectFieldButtons.forEach(selectButton => {
                         priceChange -= +e.target.value
                     }
 
-                    cost.textContent = startCost + priceChange
+                    cost.textContent = startCost + priceChange + inputPriceChange
                 }
             }
         } else {
@@ -274,9 +274,8 @@ selectFieldButtons.forEach(selectButton => {
                 priceChange -= value
             }
 
-            cost.textContent = startCost + priceChange
+            cost.textContent = startCost + priceChange + inputPriceChange
         }
-
     })
 })
 

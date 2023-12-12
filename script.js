@@ -2159,14 +2159,11 @@ window.addEventListener('DOMContentLoaded', () => {
                 const phone = indexNumber + inputTel
                 
                 formData.set('user_phone', phone)
-                console.log(formData)
-    
     
                 request.send(formData);
     
                 request.addEventListener('load', () => {
                     if (request.status === 200) {
-                        console.log(request.response);
                         showThanksModal()
                         form.reset();
                     } else {
@@ -2190,7 +2187,6 @@ window.addEventListener('DOMContentLoaded', () => {
             formRemoveError(input, errorCar)
             formRemoveError(input, errorInfoTel)
             
-            console.log(input.value.length)
             if (input.value === '' || input.value === '(___) ___-__-__'){
                 formAddError(input, errorCar)
             

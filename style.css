@@ -631,6 +631,23 @@ body {
   cursor: pointer;
 }
 
+.map{
+  padding: 80px 0 0 0;
+  background-color: #f7f7f7;
+}
+
+.map__header{
+  color: #31373e;
+  font-size: 54px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.map > .container > iframe {
+  width: 100%;
+  margin-top: 40px;
+  height: 500px;
+}
 .seventhBlock{
   height: 735px;
   padding-top: 80px;
@@ -1344,6 +1361,19 @@ body {
   .footer__items{
     padding-left: 280px;
   }
+
+  .map__header{
+    color: #31373e;
+    font-size: 54px;
+    line-height: 1.15;
+    font-weight: 400;
+  }
+  
+  .map > .container > iframe {
+    width: 100%;
+    margin-top: 40px;
+    height: 500px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -1485,7 +1515,19 @@ body {
   .fourthAndThirdBlockTogether__inner{
     justify-content: normal;
   }
-
+  .map__header{
+    color: #31373e;
+    font-size: 54px;
+    line-height: 1.15;
+    font-weight: 400;
+    padding-right: 10px;
+  }
+  
+  .map > .container > iframe {
+    width: 100%;
+    margin-top: 40px;
+    height: 500px;
+  }
 
 }
 
@@ -1589,8 +1631,8 @@ body {
 
   .sixthBlock__button{
     position: absolute;
-    right: 0px;
-    bottom: 0px;
+    right: 4px;
+    bottom: 35px;
     width: 220px;
   }
   .sixthBlock__button button{
@@ -1842,6 +1884,11 @@ body {
   .container{
     width: 1160px;
   }
+
+  .sixthBlock__button{
+    right: 0;
+    bottom:0;
+  }
   .sixthBlock__button button{
     width: 260px;
   }
@@ -2034,6 +2081,13 @@ body {
 
   .firstBlock__header span{
     width: 95%;
+  }
+
+  .map__header{
+    color: #31373e;
+    font-size: 74px;
+    line-height: 1.15;
+    font-weight: 400;
   }
 }
 
