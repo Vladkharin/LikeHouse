@@ -404,112 +404,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    // const slidesThirdBlock = document.querySelectorAll('.thirdBlock__tile')
-    // const prevThirdBlock = document.querySelector('.thirdBlock__button-left')
-    // const nextThirdBlock = document.querySelector('.thirdBlock__button-right')
-    // const slidesWrapperThirdBlock = document.querySelector('.thirdBlock__tiles')
-    // const slidesFieldThirdBlock = document.querySelector('.thirdBlock__tiles-inner')
-    // let widthThirdBlock = window.getComputedStyle(slidesWrapperThirdBlock).width;
-
-    // let offsetThirdBlock = 0;
-
-    // slidesFieldThirdBlock.style.width = 100 * slidesThirdBlock.length + (slidesThirdBlock.length * 20) + '%';
-    // slidesFieldThirdBlock.style.display = 'flex';
-    // slidesFieldThirdBlock.style.transition = "0.5s all"
-    // slidesFieldThirdBlock.style.columnGap = '20px'
-
-
-    // slidesWrapperThirdBlock.style.overflow = 'hidden'
-
-    // slidesThirdBlock.forEach((slide) => {
-    //     slide.style.width = widthThirdBlock;
-    // });
-
-    // widthThirdBlock = +widthThirdBlock.slice(0, widthThirdBlock.length - 2) + 20
-
-    // nextThirdBlock.addEventListener('click', () => {
-    //     if (offsetThirdBlock == widthThirdBlock * (slidesThirdBlock.length - 1)) {
-    //         offsetThirdBlock = 0
-    //     } else {
-    //         offsetThirdBlock += widthThirdBlock
-    //     }
-        
-        
-    //     slidesFieldThirdBlock.style.transform = `translateX(-${offsetThirdBlock}px)`
-    // })
-
-
-    // prevThirdBlock.addEventListener('click', () => {
-        
-    //     if ( offsetThirdBlock == 0) {
-    //         offsetThirdBlock = widthThirdBlock * (slidesThirdBlock.length - 1)
-    //     } else {
-    //         offsetThirdBlock -= widthThirdBlock
-    //     }
-
-
-    //     slidesFieldThirdBlock.style.transform = `translateX(-${offsetThirdBlock}px)`
-    // })
-
-    // slidesThirdBlock.forEach(slide => {
-    //     slide.addEventListener('mouseenter', (e) => {
-    //         console.log(e.target)
-    //     });
-    // });
-
-
-    // slider baths
-
-    // const slidesFourthBlock = document.querySelectorAll('.fourthBlock__tile')
-    // const prevFourthBlock = document.querySelector('.fourthBlock__button-left')
-    // const nextFourthBlock = document.querySelector('.fourthBlock__button-right')
-    // const slidesWrapperFourthBlock = document.querySelector('.fourthBlock__tiles')
-    // const slidesFieldFourthBlock = document.querySelector('.fourthBlock__tiles-inner')
-    // let widthFourthBlock = window.getComputedStyle(slidesWrapperFourthBlock).width;
-
-    // let offsetFourthBlock = 0;
-
-    // slidesFieldFourthBlock.style.width = 100 * slidesFourthBlock.length + (slidesFourthBlock.length * 20) + '%';
-    // slidesFieldFourthBlock.style.display = 'flex';
-    // slidesFieldFourthBlock.style.transition = "0.5s all"
-    // slidesFieldFourthBlock.style.columnGap = '20px'
-
-
-    // slidesWrapperFourthBlock.style.overflow = 'hidden'
-
-    // slidesFourthBlock.forEach((slide) => {
-    //     slide.style.width = widthFourthBlock;
-    // });
-
-    // widthFourthBlock = +widthFourthBlock.slice(0, widthFourthBlock.length - 2) + 20
-
-
-
-
-    // nextFourthBlock.addEventListener('click', () => {
-    //     if (offsetFourthBlock == widthFourthBlock * (slidesFourthBlock.length - 1)) {
-    //         offsetFourthBlock = 0
-    //     } else {
-    //         offsetFourthBlock += widthFourthBlock
-    //     }
-        
-        
-    //     slidesFieldFourthBlock.style.transform = `translateX(-${offsetFourthBlock}px)`
-    // })
-
-
-    // prevFourthBlock.addEventListener('click', () => {
-        
-    //     if ( offsetFourthBlock == 0) {
-    //         offsetFourthBlock = widthFourthBlock * (slidesFourthBlock.length - 1)
-    //     } else {
-    //         offsetFourthBlock -= widthFourthBlock
-    //     }
-
-
-    //     slidesFieldFourthBlock.style.transform = `translateX(-${offsetFourthBlock}px)`
-    // })
-
     // open and close modal 
 
     const slidesOpenModal = document.querySelectorAll('.fifthBlock__img')
@@ -811,6 +705,7 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     crestik.addEventListener('click', () => {
+        form.reset()
         feedBack.style.display = 'none'
         document.body.style.overflow = '';
     })
@@ -2180,21 +2075,43 @@ window.addEventListener('DOMContentLoaded', () => {
         let formReq = document.querySelectorAll('._req')
         let errorInfo = document.querySelectorAll('.error')
         let errorInfoTel = document.querySelector('.errorTel')
+        let errorInfoBig = document.querySelector('.errorBig')
+
+
+        formRemoveError(input, errorInfoTel)
+        formRemoveError(input, errorInfoBig)
 
         for (let index = 0; index < formReq.length; index++) {
             const input = formReq[index];
             const errorCar = errorInfo[index]
             formRemoveError(input, errorCar)
-            formRemoveError(input, errorInfoTel)
-            
-            if (input.value === '' || input.value === '(___) ___-__-__'){
-                formAddError(input, errorCar)
-            
-                error++;
-            } else if(input.type === 'tel' && input.value.length < 14) {
-                formAddError(input, errorInfoTel)
+
+            if (input.name === 'user_name'){
+                if (input.value.length > 25){
+                    formAddError(input, errorInfoBig);
+                    error++;
+                }
+
+                if (input.value.trim() === ''){
+                    formAddError(input, errorCar)
+                    error++;
+                }
+                
+                
             }
-            
+
+
+            if (input.name === 'user_phone') {
+                if (input.value === '') {
+                    formAddError(input, errorCar);
+                    error++;
+                }
+
+                if (input.value.length !== 15 && input.value.length > 0) {
+                    formAddError(input, errorInfoTel)
+                    error++;    
+                }
+            }       
         }
 
         return error;
@@ -2249,8 +2166,3 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     })
 })
-
-
-// const swiper = new Swiper('.swiper', {
-//     spaceBetween: 20
-// })

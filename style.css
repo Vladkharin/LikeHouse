@@ -2187,7 +2187,7 @@ body {
   border: 1px solid red;
 }
 
-.error{
+.error, .errorBig{
   position: absolute;
   top: 0;
   color: red;
