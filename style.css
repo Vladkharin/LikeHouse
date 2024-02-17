@@ -37,7 +37,7 @@ body {
 .firstBlock{
   background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('assets/img/BackGround_FirstBlock_320pxMedia.jpg') center center/cover no-repeat;
   width: 100%;
-  height: 700px;
+  height: 790px;
   z-index: 1;
   padding-top: 115px;
   position: relative;
@@ -167,6 +167,39 @@ body {
 }
 
 .firstBlock__buttonMediaMin940px button {
+  font-family: 'FuturaPTWebBold';
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.firstBlock__buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.firstBlock__buttonMap > a{
+  font-family: 'FuturaPTWebBold';
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.firstBlock__buttonMap > a > button {
+  width: 300px;
+  height: 70px;
+  border: #fff solid 3px;
+  background: rgba(0, 0, 0, 0);
   font-family: 'FuturaPTWebBold';
   font-size: 20px;
   line-height: 1.55;
@@ -631,6 +664,23 @@ body {
   cursor: pointer;
 }
 
+.map{
+  padding: 90px 0 0 0;
+  background-color: #f7f7f7;
+}
+
+.map__header{
+  color: #31373e;
+  font-size: 54px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.map > .container > iframe {
+  width: 100%;
+  margin-top: 40px;
+  height: 500px;
+}
 .seventhBlock{
   height: 735px;
   padding-top: 80px;
@@ -1017,6 +1067,11 @@ body {
   padding-left: 4px;
 }
 
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
 
 @media (min-width: 481px) {
   .container{
@@ -1074,7 +1129,7 @@ body {
 
   .firstBlock{
     padding-top: 80px;
-    height: 560px;
+    height: 610px;
     background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('assets/img/BackGround_firstBlock.jpg') center center/cover no-repeat;
   }
 
@@ -1241,7 +1296,7 @@ body {
   }
 
   .fifthBlock{
-    padding-top: 168px;
+    padding-top: 70 px;
   }
 
   .fifthBlock__imgs{
@@ -1339,6 +1394,19 @@ body {
   .footer__items{
     padding-left: 280px;
   }
+
+  .map__header{
+    color: #31373e;
+    font-size: 54px;
+    line-height: 1.15;
+    font-weight: 400;
+  }
+  
+  .map > .container > iframe {
+    width: 100%;
+    margin-top: 40px;
+    height: 500px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -1360,6 +1428,10 @@ body {
 
   .container{
     width: 620px;
+  }
+
+  .firstBlock{
+    height: 660px;
   }
 
   .firstBlock__wrapper{
@@ -1480,7 +1552,19 @@ body {
   .fourthAndThirdBlockTogether__inner{
     justify-content: normal;
   }
-
+  .map__header{
+    color: #31373e;
+    font-size: 54px;
+    line-height: 1.15;
+    font-weight: 400;
+    padding-right: 10px;
+  }
+  
+  .map > .container > iframe {
+    width: 100%;
+    margin-top: 40px;
+    height: 500px;
+  }
 
 }
 
@@ -1506,6 +1590,19 @@ body {
     opacity: 1;
   }
 
+  .firstBlock{
+    height: 570px;
+  }
+
+  .firstBlock__buttons{
+    margin-top: 70px;
+    flex-direction: row;
+  }
+
+
+  .firstBlock__buttonMediaMin940px{
+    margin-top: 0;
+  }
   .secondBlock__secondListItem{
     width: 380px;
   }
@@ -1584,8 +1681,8 @@ body {
 
   .sixthBlock__button{
     position: absolute;
-    right: 0px;
-    bottom: 0px;
+    right: 4px;
+    bottom: 35px;
     width: 220px;
   }
   .sixthBlock__button button{
@@ -1793,8 +1890,9 @@ body {
     border: 1px solid #eee;
     border-radius: 7px;
     overflow-y: scroll;
-    top: 240px;
+    top: 223px;
     right: 35px;
+    z-index: 10;
   }
 
   .feedBack__menu-buttonLeft{
@@ -1836,6 +1934,19 @@ body {
   .container{
     width: 1160px;
   }
+
+  .firstBlock__buttons{
+    margin-top: 210px;
+  }
+
+  .firstBlock__buttonMediaMin940px{
+    margin-top: 0;
+  }
+
+  .sixthBlock__button{
+    right: 0;
+    bottom:0;
+  }
   .sixthBlock__button button{
     width: 260px;
   }
@@ -1859,10 +1970,6 @@ body {
 
   .firstBlock{
     height: 760px;
-  }
-
-  .firstBlock__buttonMediaMin940px{
-    margin-top: 210px;
   }
 
   .smallLine{
@@ -2029,6 +2136,19 @@ body {
   .firstBlock__header span{
     width: 95%;
   }
+
+  .map__header{
+    color: #31373e;
+    font-size: 74px;
+    line-height: 1.15;
+    font-weight: 400;
+  }
+
+  .map > .container > iframe {
+    height: 720px;
+  }
+
+  
 }
 
 .none{
@@ -2067,7 +2187,7 @@ body {
   border: 1px solid red;
 }
 
-.error{
+.error, .errorBig{
   position: absolute;
   top: 0;
   color: red;

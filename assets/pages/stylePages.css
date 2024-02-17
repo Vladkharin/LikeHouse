@@ -305,8 +305,10 @@ body {
 }
 
 .firstBlock__field-img{
-    width: 95px;
-    height: 75px;
+    min-height: 75px;
+    max-width: 95px;
+    max-height: 75px;
+    min-width: 95px;
     transform: scale(.9);
     filter: grayscale(1);
     transition: all .3s ease-in-out;
@@ -550,8 +552,8 @@ body {
     padding-bottom: 30px;
     padding-top: 50px;
     padding-left: 5px;
+    cursor: pointer;
 }
-
 
 .secondBlock__service-input::-moz-slider-thumb {
     width: 20px;
@@ -653,6 +655,7 @@ body {
 .footer{
     background-color: #000000;
     padding: 60px 0;
+    margin-top: 60px;
   }
   
   .footer__wrapper{
@@ -784,6 +787,7 @@ body {
     cursor: pointer;
     background: rgba(0, 0, 0 , 0);
     border: none;
+    z-index: 1;
 }
   
 .modal__close::before,
@@ -794,7 +798,7 @@ body {
     display: block;
     width: 24px;
     height: 2px;
-    background: #000;
+    background: #fff;
 }
   
 .modal__close::before {
@@ -804,13 +808,43 @@ body {
 .modal__close::after {
     transform: rotate(-45deg);
 }
+.modal__closeBlack{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: rgba(0, 0, 0 , 0);
+    border: none;
+    z-index: 1;
+}
+  
+.modal__closeBlack::before,
+.modal__closeBlack::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #000;
+}
+  
+.modal__closeBlack::before {
+    transform: rotate(45deg);
+}
+  
+.modal__closeBlack::after {
+    transform: rotate(-45deg);
+}
 
 .modal__right{
     position: absolute;
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    right: 10%;
+    right: 2%;
     top: 50%;
     transform: translate(0, -50%);
     padding-top: 3px;
@@ -822,7 +856,7 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    left: 10%;
+    left: 2%;
     top: 50%;
     transform: translate(0, -50%);
     padding-top: 3px;
@@ -832,7 +866,11 @@ body {
 .modal__right img{
     width: 15px;
     height: 15px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
 }
+
 
 .modal__left img{
     width: 15px;
@@ -880,6 +918,16 @@ body {
 
 .bgwhite{
     background: #fff;
+}
+
+.imgsquare{
+    height: 210px;
+    width: 210px;
+}
+
+.imgsmall{
+    width: 320px;
+    height: 180px;
 }
 
 @media (min-width: 481px){
@@ -981,7 +1029,7 @@ body {
       }
 
     .firstBlock{
-        min-height: 1750px;
+        min-height: 1200px;
     }
 
     .mortgage iframe{
@@ -1057,7 +1105,7 @@ body {
     .modal__img {
         width: 300px;
         height: 410px;
-        scale: 1.5;
+        scale: 1;
     }
     .modalMain__img {
         width: 300px;
@@ -1096,6 +1144,30 @@ body {
         width: 940px;
     }
 
+    .modal__right{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        right: 10%;
+        top: 50%;
+        transform: translate(0, -50%);
+        padding-top: 3px;
+        border: none;
+    }
+
+    .modal__left{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        left: 10%;
+        top: 50%;
+        transform: translate(0, -50%);
+        padding-top: 3px;
+        border: none;
+    }
+
     .payment__item-text{
         min-width: 300px;
         border-bottom: none;
@@ -1106,6 +1178,52 @@ body {
         border-bottom: 1px solid #e29a01;
         padding-bottom: 30px;
     }
+
+    .modal__img{
+        scale: 1.5;
+    }
+
+    .imgHeight100{
+        height: 560px;
+        width: 670px;
+        scale: 1;
+    }
+    .imgSmallest{
+        width: 592px;
+        height: 498px;
+        scale: 1;
+    }
+
+    .img396560{
+        width: 396px;
+        height: 560px;
+        scale: 1;
+    }
+
+    .imgsquare{
+        width: 560px;
+        height: 560px;
+        scale: 1;
+    }
+    
+    .igmliitleBit{
+        width: 793px;
+        height: 560px;
+        scale: 1;
+    }
+
+    .imgsmall{
+        height: 415px;
+        width: 860px;
+        scale: 1;
+    }
+
+    .imgconvector{
+        width: 750px;
+        height: 560px;
+        scale: 1;
+    }
+
 
     .help__wrapper{
         display: flex;
@@ -1134,7 +1252,7 @@ body {
 
     .requisites__items{
         flex-direction: row;
-        column-gap: 70px;
+        column-gap: 100px;
     }
 
     #phone{
@@ -1165,8 +1283,10 @@ body {
     }
 
     .firstBlock__field-img{
-        width: 190px;
-        height: 135px;
+        min-width: 180px;
+        min-height: 135px;
+        max-width: 180px;
+        max-height: 135px;
     }
 
     .firstBlock__wrapper-field{
@@ -1182,6 +1302,20 @@ body {
         column-gap: 40px;
         align-items: start;
     }   
+
+    .modalBig {
+        height: 85%;
+        width: 720px;
+    }
+    .modalSmall{
+        width: 600px;
+        height: 450px;
+    }
+
+    .modalAverage{
+        width: 960px;
+        height: 720px;
+    }
 
     
     .firstBlock__gridBlock{
@@ -1259,6 +1393,7 @@ body {
         width: 1160px;
     }
 
+
     .line2 {
         width: 415px;
     }
@@ -1330,6 +1465,11 @@ body {
 
     .bath-grid{
         grid-template-rows: minmax(auto, auto);
+    }
+
+    .modalBig {
+        height: 750px;
+        width: 1000px;
     }
 }
 

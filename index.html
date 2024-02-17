@@ -8,9 +8,11 @@
     <meta name="format-detection" content="date=no">
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="email=no">
+    <meta name="description" content="Компания Лайк Хаус строит каркасные дома по фиксированным ценам. В нашем каталоге Вы найдете только актуальные предложения и сможете подобрать свой дом мечты. Проекты по прозрачным ценам. Ваш дом мечты уже рядом. Поможем с ипотекой! Без первоначальных взносов.">
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?ver=3">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -19,14 +21,29 @@
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
     
-        ym(95196437, "init", {
+        ym(95405266, "init", {
             clickmap:true,
             trackLinks:true,
             accurateTrackBounce:true
         });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/95196437" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95405266" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+    <!-- Top.Mail.Ru counter -->
+    <script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({id: "3413554", type: "pageView", start: (new Date()).getTime()});
+    (function (d, w, id) {
+      if (d.getElementById(id)) return;
+      var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+      ts.src = "https://top-fwz1.mail.ru/js/code.js";
+      var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+      if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "tmr-code");
+    </script>
+    <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3413554;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+    <!-- /Top.Mail.Ru counter -->
+    
 </head>
 <body>
     <nav class="nav">
@@ -55,7 +72,7 @@
                     <a id="phone" href="tel:+74951277452" class="nav__icon">
                         <img  src="assets/icons/PhoneIcon.svg" alt="">
                     </a>
-                    <a href="" class="nav__icon">
+                    <a href="https://www.youtube.com/@likehouse_org" class="nav__icon">
                         <img src="assets/icons/YouTubeIcon.svg" alt="">
                     </a>
                     <a href="mailto:info@likehouse.org" class="nav__icon">
@@ -84,19 +101,25 @@
                     Строим каркасные дома и бани  с ориентированием на честное  отношение к клиентам
                 </h1>
             </div>
-            <div class="firstBlock__buttonMediaMax940px">
-                <a href="tel:+74951277452">
-                    <button> 
-                        Позвонить
-                    </button>
-                </a> 
+            <div class="firstBlock__buttons">
+                <div class="firstBlock__buttonMediaMax940px">
+                    <a href="tel:+74951277452">
+                        <button> 
+                            Позвонить
+                        </button>
+                    </a> 
+                </div>
+                <div class="firstBlock__buttonMediaMin940px">
+                    <button>Бесплатная консультация</button>
+                </div>
+                <div class="firstBlock__buttonMap">
+                    <a href="#map">
+                        <button>Земельные участки</button>
+                    </a>
+                </div>
             </div>
-            <div class="firstBlock__buttonMediaMin940px">
-                <button>Бесплатная консультация</button>
-            </div>
-
         </div>
-        <div class="animation"><img src="./assets/icons/partner.svg" alt="partner" class="animation__spin"></div>
+        <div class="animation"><img src="./assets/icons/partner.svg?ver=1" alt="partner" class="animation__spin"></div>
     </div>
     <div id="about" class="secondBlock">
         <div class="container">
@@ -172,8 +195,8 @@
                         <button class="thirdBlock__button-right"></button>
                     </div>
                 </div>
-                <div class="thirdBlock__tiles">
-                    <div class="thirdBlock__tiles-inner">
+                <div class="thirdBlock__tiles swiper">
+                    <div class="thirdBlock__tiles-inner swiper-wrapper">
 
                     </div>
                 </div>
@@ -190,8 +213,8 @@
                         <button class="fourthBlock__button-right"></button>
                     </div>
                 </div>
-                <div class="fourthBlock__tiles">
-                    <div class="fourthBlock__tiles-inner">
+                <div class="fourthBlock__tiles swiper">
+                    <div class="fourthBlock__tiles-inner swiper-wrapper">
                         
                     </div>
                 </div>
@@ -317,13 +340,19 @@
             </div>
         </div>
     </div>
+    <div id="map" class="map">
+        <div class="container">
+            <div class="map__header">Карта земельных участков в продаже</div>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab865a8330be3d851cd0c889034520877f8d4abb48412f35713cc0809d7e7d9b4&amp;source=constructor" width="1024" height="720" frameborder="0"></iframe>
+        </div>
+    </div>
     <div class="seventhBlock">
         <div class="container">
             <div class="seventhBlock__header">Наша команда</div>
             <div class="seventhBlock__items">
                 <div class="seventhBlock__item">
                     <div class="seventhBlock__item-img">
-                        <img src="./assets/img/seventhBlockImg.webp" alt="img">
+                        <img src="./assets/img/seventhBlockImg.png" alt="img">
                     </div>
                     <div class="seventhBlock__item-title">
                         <br> Илья Макачев <br> <br>
@@ -335,7 +364,7 @@
                 </div>
                 <div class="seventhBlock__item">
                     <div class="seventhBlock__item-img">
-                        <img src="./assets/img/seventhBlockSecondImg.webp" alt="img">
+                        <img src="./assets/img/seventhBlockSecondImg.png" alt="img">
                     </div>
                     <div class="seventhBlock__item-title">
                         <br> Орлов Артём<br> <br>
@@ -347,7 +376,7 @@
                 </div>
                 <div class="seventhBlock__item">
                     <div class="seventhBlock__item-img">
-                        <img src="./assets/img/seventhBlockThirdImg.webp" alt="img">
+                        <img src="./assets/img/seventhBlockThirdImg.png" alt="img">
                     </div>
                     <div class="seventhBlock__item-title">
                         <br>Ананкин Павел <br> <br>
@@ -359,7 +388,7 @@
                 </div>
                 <div class="seventhBlock__item">
                     <div class="seventhBlock__item-img">
-                        <img src="./assets/img/seventhBlockFourthImg.jpg" alt="img">
+                        <img src="./assets/img/seventhBlockFourthImg.png" alt="img">
                     </div>
                     <div class="seventhBlock__item-title">
                         <br>Дмитрий Сорокин <br> <br>
@@ -371,7 +400,7 @@
                 </div>
                 <div class="seventhBlock__item">
                     <div class="seventhBlock__item-img">
-                        <img src="./assets/img/seventhBlockFifthImg.webp" alt="img">
+                        <img src="./assets/img/seventhBlockFifthImg.png" alt="img">
                     </div>
                     <div class="seventhBlock__item-title">
                         <br>Иван Бирюков <br> <br>
@@ -428,7 +457,7 @@
                         <div class="footer__socials">
                             <a href="https://vk.com/like_house"><img src="./assets/icons/VKIcon.svg" alt="" class="footer__social"></a>
                             <a href="https://wa.clck.bar/79251047452"><img src="./assets/icons/WhatsappIcon.svg" alt="" class="footer__social"></a>
-                            <a href=""><img src="./assets/icons/YouTubeIcon.svg" alt="" class="footer__social"></a>
+                            <a href="https://www.youtube.com/@likehouse_org"><img src="./assets/icons/YouTubeIcon.svg" alt="" class="footer__social"></a>
                             <a href="https://teleg.run/Like_House_org"><img src="./assets/icons/TelegramIcon.svg" alt="" class="footer__social"></a>
                         </div>
                     </div>
@@ -450,7 +479,7 @@
             </div>
         <button class="menu__Close"> </button>
     </div>
-    <div class="modalImgSlider">
+    <div class="modalImgSlider none">
         <div class="modalImgSlider__field">
             <img class="modalImgSlider__img" src="./assets/img/fifthBlockFirstimg.png" alt="fifthBlockFirstimg">
             <img class="modalImgSlider__img" src="./assets/img/fifthBlockSecondimg.png" alt="fifthBlockSecondimg">
@@ -477,21 +506,22 @@
                     <div class="feedBack__menu-arrow"></div>
                     <div class="feedBack__menu-number">+7</div>
                 </div>
-                <input class="feedBack__from-inputPhone _req" name="user_phone" type="tel" placeholder="99-999-9999"  data-phonemask="+7">
+                <input class="feedBack__from-inputPhone _req" name="user_phone" type="tel" placeholder="(999) 999-99-99"  data-phonemask="+7">
                 <button type="submit" class="feedBack__form-submit">
                     <div class="loader none"></div>
                     <div class="feedBack__form-submitText block">Отправить</div>
                 </button>
-                <div class="feedBack__form-text">Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
+                <div class="feedBack__form-text">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности</div>
                 <div class="feedBack__form-imgs">
-                    <a href=""><img src="./assets/icons/Tilda_Icons_26snw_vk.svg" alt="" class="feedBack__form-img"></a>
-                    <a href=""><img src="./assets/icons/Tilda_Icons_26snw_wh.svg" alt="" class="feedBack__form-img"></a>
+                    <a href="https://vk.com/like_house"><img src="./assets/icons/Tilda_Icons_26snw_vk.svg" alt="" class="feedBack__form-img"></a>
+                    <a href="https://wa.clck.bar/79251047452"><img src="./assets/icons/Tilda_Icons_26snw_wh.svg" alt="" class="feedBack__form-img"></a>
                 </div>
                 <img src="./assets/icons/touch.svg" alt="" class="feedBack__form-touch">
                 <div class="feedBack__menu-buttons" style="display: none;">
                 
                 </div>
                 <div class="error tl17585 notVisible">Обязательное поле</div>
+                <div class="errorBig tl17585">Слишком длиное значение</div>
                 <div class="error tl24085 notVisible">Обязательное поле</div>
                 <div class="errorTel tl24085">Слишком короткое значение</div>
                 <div class="crestik"><img src="./assets/icons/crestik.svg" alt=""></div>
@@ -507,6 +537,7 @@
 
     </div>
     <script src="https://unpkg.com/imask"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js?ver=2"></script>
 </body>
 </html>

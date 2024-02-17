@@ -93,6 +93,7 @@ buttonOpeningHouseSelectionMenu.addEventListener('click', () => {
 })
 
 let priceChange = 0;
+let inputPriceChange = 0
 
 
 
@@ -104,7 +105,7 @@ selectionMenu.addEventListener('click', (e) => {
         // priceChange =  (+e.target.value) - (+buttonOpeningHouseSelectionMenu.value)
         priceChange +=  (+e.target.value) - (+buttonOpeningHouseSelectionMenu.value)
         buttonOpeningHouseSelectionMenu.setAttribute('value', e.target.value)
-        cost.textContent = startCost + priceChange
+        cost.textContent = startCost + priceChange + inputPriceChange
     }
 })
 
@@ -120,59 +121,165 @@ let secondPositionSlider = 0;
 let secondPrice = 0;
 
 sliderInputs[0].addEventListener('input', (e) => {
+
+    inputPriceChange -= secondPrice;
+    sliderInputs[1].value = 0;
+    secondPositionSlider = 0;
+    secondPrice = 0;
+    counters[1].textContent = 0;
+    progressBar[1].style.width = 0 + 'px';
+    counters[1].style.left = 0 + 'px';
+
+    cost.textContent = startCost + priceChange + inputPriceChange
+
     progressBar[0].style.width =  (e.target.offsetWidth - 20) * (e.target.value/e.target.max) + 'px'
     counters[0].style.left = counters[0].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
     counters[0].textContent = e.target.value
-    if ((+e.target.value) > pricePositionSlider) {
-        price = e.target.value * 7500
-        priceChange += price - (pricePositionSlider * 7500)
+    if ((+e.target.value === 0)){
+        inputPriceChange -= pricePositionSlider * 8250
+        price = 0
+        pricePositionSlider = e.target.value
+    }else if ((+e.target.value) > pricePositionSlider) {
+        price = (+e.target.value) * 8250
+        inputPriceChange += price - inputPriceChange
         pricePositionSlider = e.target.value
     } else if ((+e.target.value) < pricePositionSlider) {
-        price = pricePositionSlider * 7500
+        price = (+e.target.value) * 8250
+        inputPriceChange += price - inputPriceChange
         pricePositionSlider = e.target.value
-        priceChange -= price - (e.target.value * 7500)
     }
-    cost.textContent = startCost + priceChange
+
+    cost.textContent = startCost + priceChange + inputPriceChange
+
 })
 
 sliderInputs[1].addEventListener('input', (e) => {
+
+    inputPriceChange -= price;
+    sliderInputs[0].value = 0;
+    pricePositionSlider = 0;
+    price = 0;
+    counters[0].textContent = 0;
+    progressBar[0].style.width = 0 + 'px';
+    counters[0].style.left = 0 + 'px';
+
+    cost.textContent = startCost + inputPriceChange
+
     progressBar[1].style.width =  (e.target.offsetWidth - 20) * (e.target.value/e.target.max) + 'px'
     counters[1].style.left = counters[1].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
-    if ((+e.target.value) > secondPositionSlider) {
-        secondPrice = e.target.value * 2900
-        priceChange += secondPrice - (secondPositionSlider * 2900)
+    counters[1].textContent = e.target.value
+    if ((+e.target.value === 0)){
+        inputPriceChange -= secondPositionSlider * 3190
+        secondPrice = 0
+        secondPositionSlider = e.target.value
+    }else if ((+e.target.value) > secondPositionSlider) {
+        secondPrice = e.target.value * 3190
+        inputPriceChange += secondPrice - inputPriceChange
         secondPositionSlider = e.target.value
     } else if ((+e.target.value) < secondPositionSlider) {
-        secondPrice = secondPositionSlider * 2900
-        secondPositionSlider = e.target.value
-        priceChange -= secondPrice - (e.target.value * 2900)
+        secondPrice = e.target.value * 3190
+        inputPriceChange += secondPrice - inputPriceChange
+        secondPositionSlider = e.target.value 
     }
-    cost.textContent = startCost + priceChange
-    counters[1].textContent = e.target.value
+
+    cost.textContent = startCost + priceChange + inputPriceChange
 })
 
-
-
 // click select button
+
 
 const selectFieldButtons = document.querySelectorAll('.secondBlock__service-button')
 
 selectFieldButtons.forEach(selectButton => {
     selectButton.addEventListener('click', (e) => {
-        let btn = selectButton.children[0]
-        let value = +btn.value
-        if (btn.classList.contains('inactiveBtn')) {
-            btn.classList.add('activeBtn')
-            btn.classList.remove('inactiveBtn')
-            priceChange += value
+
+        if (selectButton.dataset.select){
+
+            const btns = document.querySelectorAll('.secondBlock__service-buttonSelector[data-select="'+e.target.dataset.select+'"]')
+            let counter = 0
+            for (let i = 0; i < btns.length; i++){
+                if(btns[i].classList.contains('inactiveBtn')){
+                    counter++
+                }
+            }
+            if (counter > 1) {
+                for (let i = 0; i < btns.length; i++){
+                    if (btns[i] === e.target || btns[i] === e.target.children[0]){
+                        btns[i].classList.add('activeBtn')
+                        btns[i].classList.remove('inactiveBtn')
+                        priceChange += +btns[i].value
+                    }
+                } 
+                cost.textContent = startCost + priceChange + inputPriceChange
+                
+
+            } else if (counter === 1) {
+
+                if (e.target.classList.contains('secondBlock__service-button')){
+                    
+                    if (e.target.children[0].classList.contains('inactiveBtn')){
+                        for (let i = 0; i < btns.length; i++){
+                            if (e.target.children[0] === btns[i]){
+                                btns[i].classList.add('activeBtn')
+                                btns[i].classList.remove('inactiveBtn')
+                                priceChange += +btns[i].value
+                            } else {
+                                btns[i].classList.remove('activeBtn')
+                                btns[i].classList.add('inactiveBtn')
+                                priceChange -= +btns[i].value
+                            }
+                        } 
+                    } else if (e.target.children[0].classList.contains('activeBtn')) {
+                        e.target.children[0].classList.remove('activeBtn')
+                        e.target.children[0].classList.add('inactiveBtn')
+                        priceChange -= +e.target.children[0].value
+                    }
+
+                    cost.textContent = startCost + priceChange + inputPriceChange
+                    
+                } else if (e.target.classList.contains('secondBlock__service-buttonSelector')) {
+                    if (e.target.classList.contains('inactiveBtn')){
+                        for (let i = 0; i < btns.length; i++){
+                            if (e.target === btns[i]){
+                                btns[i].classList.add('activeBtn')
+                                btns[i].classList.remove('inactiveBtn')
+                                priceChange += +btns[i].value
+                            } else {
+                                btns[i].classList.remove('activeBtn')
+                                btns[i].classList.add('inactiveBtn')
+                                priceChange -= +btns[i].value
+                            }
+                        } 
+                    } else if (e.target.classList.contains('activeBtn')) {
+                        e.target.classList.remove('activeBtn')
+                        e.target.classList.add('inactiveBtn')
+                        priceChange -= +e.target.value
+                    }
+
+                    cost.textContent = startCost + priceChange + inputPriceChange
+                }
+            }
         } else {
-            btn.classList.add('inactiveBtn')
-            btn.classList.remove('activeBtn')
-            priceChange -= value
+
+            const btn = selectButton.querySelector('button')
+            const value = +btn.value
+
+            if (btn.classList.contains('inactiveBtn')) {
+                btn.classList.add('activeBtn')
+                btn.classList.remove('inactiveBtn')
+                priceChange += value
+            } else {
+                btn.classList.add('inactiveBtn')
+                btn.classList.remove('activeBtn')
+                priceChange -= value
+            }
+
+            cost.textContent = startCost + priceChange + inputPriceChange
         }
-        cost.textContent = startCost + priceChange
     })
 })
+
+
 
 const buttonsSpan = document.querySelectorAll('.secondBlock__service-span')
 const imgBtn = document.querySelector('.firstBlock__carousel-item')
@@ -187,7 +294,6 @@ imgBtn.addEventListener('click', () => {
     slidesModal.forEach((slide, i) => {
         if (slide.classList.contains('active')){
             slideIndexModal = i + 1
-            console.log(slideIndexModal)
             showSlidesModal(slideIndexModal)
         }
     }) 
@@ -211,6 +317,7 @@ buttonWrapper.addEventListener('click', (e) => {
     }
 })
 
+const mediaQuerrymax1200 = window.matchMedia('(max-width: 1199px)')
 const sliderImgsModal = modal.querySelectorAll('.modalMain__img')
 const btnNext = buttonWrapper.children[buttonWrapper.children.length - 2]
 const btnPrev = buttonWrapper.children[buttonWrapper.children.length - 1]
@@ -228,8 +335,6 @@ function showSlidesModal(n) {
 
     sliderImgsModal.forEach( slide => slide.classList.add('none'))
     sliderImgsModal.forEach( slide => slide.classList.remove('block'))
-    sliderImgsModal.forEach( slide => slide.style.scale = '1.0')
-
     sliderImgsModal[slideIndexModal - 1].classList.add('block')
     sliderImgsModal[slideIndexModal - 1].classList.remove('none')
 
@@ -318,34 +423,9 @@ modals.forEach(modal => {
     btnNext.addEventListener('click', function(){
         plusSlides(1)
     })
-    
-    sliderImgs.forEach(slide => {
-        slide.addEventListener('click', (e) => {
-            if (slide.style.scale == '2') {
-                slide.style.scale = '1.5'
-                slide.style.cursor ='zoom-in'
-            } else {
-                slide.style.scale = '2'
-                slide.style.cursor ='zoom-out'
-            }
-        })   
-    })
+
 })
 
-
-const sliderImgsModalMain = modal.querySelectorAll('.modalMain__img')
-
-sliderImgsModalMain.forEach(slide => {
-    slide.addEventListener('click', (e) => {
-        if (slide.style.scale == '2') {
-            slide.style.scale = '1.0'
-            slide.style.cursor ='zoom-in'
-        } else {
-            slide.style.scale = '2'
-            slide.style.cursor ='zoom-out'
-        }
-    })   
-})
 
 
 
