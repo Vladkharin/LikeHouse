@@ -1,7 +1,12 @@
-<?php 
+<?php
 
 $name = $_POST['user_name'];
 $phone = $_POST['user_phone'];
+
+if (!$name and !$phone) {
+	header('Location: ' . 'index.html');
+	exit;
+}
 
 require_once('phpmailer/PHPMailerAutoload.php');
 
@@ -17,7 +22,7 @@ $mail->Username = 'v45368337@gmail.com';                 // Наш логин
 $mail->Password = 'ohtr kiam xlig flza ';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
- 
+
 $mail->setFrom('v45368337@gmail.com', 'likehouse');   // От кого письмо 
 $mail->addAddress('info@likehouse.org');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
@@ -29,15 +34,15 @@ $mail->addAddress('info@likehouse.org');     // Add a recipient
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Данные';
-$mail->Body    = '
+$mail->Body = '
 		Пользователь оставил данные <br> 
 	Имя: ' . $name . ' <br>
 	Номер телефона: ' . $phone . '';
 
-if(!$mail->send()) {
-    return false;
+if (!$mail->send()) {
+	return false;
 } else {
-    return true;
+	return true;
 }
 
 ?>
