@@ -191,16 +191,6 @@ window.addEventListener('DOMContentLoaded', () => {
             link: '10x9-anterior.html'
         },
         {
-            img: './assets/img/twelfthTile.webp',
-            alt: 'twelfthTile',
-            size: 'Размер: 12х6',
-            square: 'Площадь: 106  м2',
-            coust:  'Стоимость: 4 873 000 руб.',
-            mortgage: 'В ипотеку: от 24 009 руб.',
-            type: 'two-storey house',
-            link: '12x6.html'
-        },
-        {
             img: './assets/img/thirdteenthTile.webp',
             alt: 'thirdteenthTile',
             size: 'Размер: 12х8',
@@ -342,16 +332,7 @@ window.addEventListener('DOMContentLoaded', () => {
             coust:  'Стоимость: 1 740 000 руб.',
             type: 'bathhouse',
             link: '8x7-bath.html'
-        } ,
-        {
-            img: './assets/img/twentySixthTile.webp',
-            alt: 'twentySixthTile',
-            size: 'Размер: 8x21',
-            square: 'Площадь: 91 м2',
-            coust:  'Стоимость: 5 357 000 руб.',
-            type: 'bathhouse',
-            link: '8x21.html'
-        }
+        } 
     ]
 
 
