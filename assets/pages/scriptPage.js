@@ -1,4 +1,6 @@
 const cost = document.querySelector('.cost__span')
+const COAST_WELL = 3600
+const COAST_FOUNTAIN = 10000
 const startCost = +cost.textContent;
 
 // slider house img 
@@ -136,15 +138,15 @@ sliderInputs[0].addEventListener('input', (e) => {
     counters[0].style.left = counters[0].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
     counters[0].textContent = e.target.value
     if ((+e.target.value === 0)){
-        inputPriceChange -= pricePositionSlider * 8250
+        inputPriceChange -= pricePositionSlider * COAST_FOUNTAIN
         price = 0
         pricePositionSlider = e.target.value
     }else if ((+e.target.value) > pricePositionSlider) {
-        price = (+e.target.value) * 8250
+        price = (+e.target.value) * COAST_FOUNTAIN
         inputPriceChange += price - inputPriceChange
         pricePositionSlider = e.target.value
     } else if ((+e.target.value) < pricePositionSlider) {
-        price = (+e.target.value) * 8250
+        price = (+e.target.value) * COAST_FOUNTAIN
         inputPriceChange += price - inputPriceChange
         pricePositionSlider = e.target.value
     }
@@ -169,15 +171,15 @@ sliderInputs[1].addEventListener('input', (e) => {
     counters[1].style.left = counters[1].style.left = (e.target.offsetWidth - 30) * (e.target.value/e.target.max)  + 'px'
     counters[1].textContent = e.target.value
     if ((+e.target.value === 0)){
-        inputPriceChange -= secondPositionSlider * 3190
+        inputPriceChange -= secondPositionSlider * COAST_WELL
         secondPrice = 0
         secondPositionSlider = e.target.value
     }else if ((+e.target.value) > secondPositionSlider) {
-        secondPrice = e.target.value * 3190
+        secondPrice = e.target.value * COAST_WELL
         inputPriceChange += secondPrice - inputPriceChange
         secondPositionSlider = e.target.value
     } else if ((+e.target.value) < secondPositionSlider) {
-        secondPrice = e.target.value * 3190
+        secondPrice = e.target.value * COAST_WELL
         inputPriceChange += secondPrice - inputPriceChange
         secondPositionSlider = e.target.value 
     }
