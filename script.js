@@ -85,7 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'firstTile',
             size: 'Размер: 6х7',
             square: 'Площадь: 71 м2',
-            coust:  'Стоимость: 3 285 500 руб.',
+            coust:  'Стоимость: 3 286 000 руб.',
             mortgage: 'В ипотеку: от 12 698 руб.',
             type: 'two-storey house', 
             link: '6x7.html'
@@ -95,7 +95,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'secondTile',
             size: 'Размер: 7х7',
             square: 'Площадь: 82.4 м2',
-            coust:  'Стоимость: 3 813 500 руб.',
+            coust:  'Стоимость: 3 814 000 руб.',
             mortgage: 'В ипотеку: от 15 029 руб.',
             type: 'two-storey house',
             link: '7x7.html'
@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'thirdTile',
             size: 'Размер: 12х12',
             square: 'Площадь: 97 м2',
-            coust:  'Стоимость: 5 075 400 руб.',
+            coust:  'Стоимость: 5 075 000 руб.',
             mortgage: 'В ипотеку: от 20 600 руб.',
             type: 'cottage',
             link: '12x12.html'
@@ -115,7 +115,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'fourthTile',
             size: 'Размер: 7х8',
             square: 'Площадь: 94.7 м2',
-            coust:  'Стоимость: 4 237 200 руб.',
+            coust:  'Стоимость: 4 237 000 руб.',
             mortgage: 'В ипотеку: от 16 899 руб.',
             type: 'two-storey house',
             link: '7x8.html'
@@ -125,7 +125,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'fifthTile',
             size: 'Размер: 7х8 одноэтажный',
             square: 'Площадь: 50 м2',
-            coust:  'Стоимость: 3 285 500 руб.',
+            coust:  'Стоимость: 3 286 000 руб.',
             mortgage: 'В ипотеку: от 12 698 руб.',
             type: 'cottage',
             link: '7x8-one.html'
@@ -135,7 +135,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'sixthTile',
             size: 'Размер: 8х8',
             square: 'Площадь: 109 м2',
-            coust:  'Стоимость: 4 605 500 руб.',
+            coust:  'Стоимость: 4 606 000 руб.',
             mortgage: 'В ипотеку: от 18 525 руб.',
             type: 'two-storey house',
             link: '8x8.html'
@@ -145,7 +145,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'seventhTile',
             size: 'Размер: 10х8',
             square: 'Площадь: 73 м2',
-            coust:  'Стоимость: 3 813 500 руб.',
+            coust:  'Стоимость: 3 814 000 руб.',
             mortgage: 'В ипотеку: от 15 029 руб.',
             type: 'cottage',
             link: '10x8.html'
@@ -165,7 +165,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'ninthTile',
             size: 'Размер: 12х8',
             square: 'Площадь: 87 м2',
-            coust:  'Стоимость: 4 473 500 руб.',
+            coust:  'Стоимость: 4 474 000 руб.',
             mortgage: 'В ипотеку: от 17 890 руб.',
             type: 'cottage',
             link: '12x8.html'
@@ -175,7 +175,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'tenthTile',
             size: 'Размер: 10х9.5',
             square: 'Площадь: 133 м2',
-            coust:  'Стоимость: 5 451 600 руб.',
+            coust:  'Стоимость: 5 452 000 руб.',
             mortgage: 'В ипотеку: от 22 260 руб.',
             type: 'two-storey house',
             link: '10x9.html'
@@ -185,7 +185,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'eleventhTile',
             size: 'Размер: 10х9.5 передняя веранда',
             square: 'Площадь: 133 м2',
-            coust:  'Стоимость: 5 557 200 руб.',
+            coust:  'Стоимость: 5 557 000 руб.',
             mortgage: 'В ипотеку: от 22 727 руб.',
             type: 'two-storey house',
             link: '10x9-anterior.html'
@@ -205,7 +205,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'fourteenthTile',
             size: 'Размер: 11х7.5',
             square: 'Площадь: 103 м2',
-            coust:  'Стоимость: 5 529 500 руб.',
+            coust:  'Стоимость: 5 530 000 руб.',
             mortgage: 'В ипотеку: от 22 604 руб.',
             type: 'two-storey house',
             link: '11x7.html'
@@ -215,7 +215,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'fifteenthTile',
             size: 'Размер: 12х9.5',
             square: 'Площадь: 153 м2',
-            coust:  'Стоимость: 6 849 500 руб.',
+            coust:  'Стоимость: 6 850 000 руб.',
             mortgage: 'В ипотеку: от 28 432 руб.',
             type: 'two-storey house',
             link: '12x9.html'
@@ -235,7 +235,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'seventeenthTile',
             size: 'Размер: 10х7.5',
             square: 'Площадь: 114 м2',
-            coust:  'Стоимость: 5 042 400 руб.',
+            coust:  'Стоимость: 5 042 000 руб.',
             mortgage: 'В ипотеку: от 20 454 руб.',
             type: 'two-storey house',
             link: '10x7.html'
@@ -245,7 +245,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'twentyThirdTile',
             size: 'Размер: 8х10',
             square: 'Площадь: 73 м2',
-            coust:  'Стоимость: 3 841 200 руб.',
+            coust:  'Стоимость: 3 841 000 руб.',
             mortgage: 'В ипотеку: от 15 151 руб.',
             type: 'cottage',
             link: '8x10-2.html'
@@ -255,7 +255,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'twentieth',
             size: 'Размер: 12x8',
             square: 'Площадь: 89.7 м2',
-            coust:  'Стоимость: 4 473 500 руб.',
+            coust:  'Стоимость: 4 474 000 руб.',
             mortgage: 'В ипотеку: от 17 890 руб.',
             type: 'cottage',
             link: '12x8-bay_window.html'
@@ -265,7 +265,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'twentyFirstTile',
             size: 'Размер: 6х6',
             square: 'Площадь: 54 м2',
-            coust:  'Стоимость: 2 785 200 руб.',
+            coust:  'Стоимость: 2 785 000 руб.',
             mortgage: 'В ипотеку: от 10 489 руб.',
             type: 'two-storey house',
             link: '6x6.html'
@@ -275,7 +275,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'twentyFirstTile',
             size: 'Размер: 6х6',
             square: 'Площадь: 36 м2',
-            coust:  'Стоимость: 1 991 900 руб.',
+            coust:  'Стоимость: 1 992 000 руб.',
             mortgage: 'В ипотеку: от 6 987 руб.',
             type: 'cottage',
             link: '6x6-one.html'
@@ -285,7 +285,7 @@ window.addEventListener('DOMContentLoaded', () => {
             alt: 'twentySecondTile',
             size: 'Размер: 11х9',
             square: 'Площадь: 90 м2',
-            coust:  'Стоимость: 4 486 700 руб.',
+            coust:  'Стоимость: 4 487 000 руб.',
             mortgage: 'В ипотеку: от 18 001 руб.',
             type: 'cottage',
             link: '11x9.html'
